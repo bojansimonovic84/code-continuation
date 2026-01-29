@@ -21,6 +21,7 @@ export function MessageGenerator({ onMessageGenerated }: MessageGeneratorProps) 
   const [step, setStep] = useState(0);
   const [situation, setSituation] = useState<Situation | null>(null);
   const [goal, setGoal] = useState<Goal | null>(null);
+  const [customGoal, setCustomGoal] = useState("");
   const [tone, setTone] = useState<Tone | null>(null);
   const [context, setContext] = useState("");
   const [generatedMessage, setGeneratedMessage] = useState("");
@@ -37,7 +38,7 @@ export function MessageGenerator({ onMessageGenerated }: MessageGeneratorProps) 
   const canProceed = () => {
     switch (step) {
       case 0: return situation !== null;
-      case 1: return goal !== null;
+      case 1: return goal !== null && (goal !== "custom" || customGoal.trim().length > 3);
       case 2: return tone !== null;
       case 3: return context.trim().length > 5;
       default: return false;
@@ -66,6 +67,7 @@ export function MessageGenerator({ onMessageGenerated }: MessageGeneratorProps) 
     setStep(0);
     setSituation(null);
     setGoal(null);
+    setCustomGoal("");
     setTone(null);
     setContext("");
     setGeneratedMessage("");
@@ -78,8 +80,11 @@ export function MessageGenerator({ onMessageGenerated }: MessageGeneratorProps) 
     setLimitReached(false);
 
     try {
+      // If custom goal is selected, use the custom text instead
+      const finalGoal = goal === "custom" ? customGoal : goal;
+      
       const response = await supabase.functions.invoke("generate-message", {
-        body: { situation, goal, tone, context, language },
+        body: { situation, goal: finalGoal, tone, context, language },
       });
 
       if (response.error) {
@@ -140,7 +145,13 @@ export function MessageGenerator({ onMessageGenerated }: MessageGeneratorProps) 
             <h2 className="font-display text-xl font-semibold text-foreground">
               {t("whatDoYouWantToAchieve")}
             </h2>
-            <GoalSelector value={goal} onChange={setGoal} situation={situation} />
+            <GoalSelector 
+              value={goal} 
+              onChange={setGoal} 
+              situation={situation} 
+              customGoal={customGoal}
+              onCustomGoalChange={setCustomGoal}
+            />
           </div>
         );
       case 2:

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,7 +15,10 @@ const authSchema = z.object({
 });
 
 export default function Auth() {
-  const [isLogin, setIsLogin] = useState(true);
+  const [searchParams] = useSearchParams();
+  // Default to registration mode if coming from landing page
+  const defaultMode = searchParams.get("mode") === "register" ? false : true;
+  const [isLogin, setIsLogin] = useState(defaultMode);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -26,8 +29,9 @@ export default function Auth() {
   const { toast } = useToast();
 
   useEffect(() => {
+    // If user is already logged in, redirect to app
     if (!loading && user) {
-      navigate("/");
+      navigate("/app");
     }
   }, [user, loading, navigate]);
 
@@ -79,11 +83,12 @@ export default function Auth() {
           variant: "destructive",
         });
       } else if (!isLogin) {
+        // After successful registration, auto-login and redirect to app
         toast({
           title: "Uspešno!",
-          description: "Nalog je kreiran. Možete se prijaviti.",
+          description: "Nalog je kreiran. Preusmeravamo vas...",
         });
-        setIsLogin(true);
+        // The auth state listener will handle the redirect to /app
       }
     } finally {
       setIsLoading(false);
