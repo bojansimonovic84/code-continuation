@@ -29,7 +29,7 @@ import {
   Send,
   ThumbsUp,
   User,
-  UserCheck
+  UserCheck,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -62,17 +62,37 @@ const Landing = () => {
       heroContext: "Za posao, privatno, stan, kupoprodaju, muvanje i neprijatne situacije.",
       tryFree: "Isprobaj besplatno",
       noCard: "bez kartice • 5 poruka gratis",
-      
+
       // Enhanced testimonials with names
       testimonials: [
-        { text: "Koristim je svaki dan za poslovne mejlove. Uštedela mi je sate!", name: "Marko", role: "IT Manager", avatar: "👨‍💼" },
-        { text: "Spasila me od glupe poruke bivšem. Preporučujem svima!", name: "Ana", role: "Studentkinja", avatar: "👩‍🎓" },
-        { text: "Kao da mi najbolji drug piše poruke. Prirodno i opušteno.", name: "Stefan", role: "Freelancer", avatar: "🧑‍💻" },
-        { text: "Konačno znam kako da odbijem šefa bez da zvučim bezobrazno.", name: "Jelena", role: "HR Menadžer", avatar: "👩‍💼" },
+        {
+          text: "Koristim je svaki dan za poslovne mejlove. Uštedela mi je sate!",
+          name: "Marko",
+          role: "IT Manager",
+          avatar: "👨‍💼",
+        },
+        {
+          text: "Spasila me od glupe poruke bivšem. Preporučujem svima!",
+          name: "Ana",
+          role: "Studentkinja",
+          avatar: "👩‍🎓",
+        },
+        {
+          text: "Kao da mi najbolji drug piše poruke. Prirodno i opušteno.",
+          name: "Stefan",
+          role: "Freelancer",
+          avatar: "🧑‍💻",
+        },
+        {
+          text: "Konačno znam kako da odbijem šefa bez da zvučim bezobrazno.",
+          name: "Jelena",
+          role: "HR Menadžer",
+          avatar: "👩‍💼",
+        },
         { text: "Za muvanje je savršena! Devojke konačno odgovaraju 😄", name: "Luka", role: "Student", avatar: "🎓" },
         { text: "Pomogla mi da sredim problem sa stanodavcem. 10/10", name: "Milica", role: "Podstanar", avatar: "🏠" },
       ],
-      
+
       problemTitle: "Zvuči poznato?",
       problems: [
         "Gledaš u ekran i ne znaš kako da počneš",
@@ -82,7 +102,7 @@ const Landing = () => {
         "Strah te da ne ispadeš čudno ili napadno",
       ],
       problemSolution: "Poruke.AI to rešava umesto tebe.",
-      
+
       howItWorks: "Kako radi?",
       step1Title: "Izaberi situaciju",
       step1Desc: "Posao • Stan • Kupujem/prodajem • Privatno • Muvanje • Loše vesti",
@@ -91,12 +111,12 @@ const Landing = () => {
       step3Title: 'Klikni „Napiši poruku"',
       step3Desc: "Kopiraš. Pošalješ. Gotovo.",
       timeNote: "Sve traje manje od 20 sekundi.",
-      
+
       whyNotGpt: "Zašto ne ChatGPT?",
       whyReasons: ["Nema pisanja promptova", "Nema razmišljanja", "Nema previše formalnih odgovora"],
       whyBecause: "Poruke.AI piše kao:",
       whyPoints: ["Stvarna osoba", "Sa Balkana", "U realnim situacijama"],
-      
+
       // Before/After with chat bubbles
       exampleTitle: "Pre / Posle",
       exampleScenario: "Situacija: Kolega ti duguje pare već mesec dana",
@@ -108,8 +128,9 @@ const Landing = () => {
         "Možda mogu da sačekam još malo...",
       ],
       exampleAfter: "Poruke.AI generiše:",
-      exampleAfterText: "Ćao! Samo da proverim - da li imaš priliku da mi vratiš onih 3000 koje sam ti pozajmio prošlog meseca? Razumem ako ti nije zgodan trenutak, javi mi samo kad možeš. Hvala! 🙂",
-      
+      exampleAfterText:
+        "Ćao! Samo da proverim - da li imaš priliku da mi vratiš onih 3000 koje sam ti pozajmio prošlog meseca? Razumem ako ti nije zgodan trenutak, javi mi samo kad možeš. Hvala! 🙂",
+
       // Pricing - 4.99 EUR
       pricingTitle: "Jednostavna cena",
       freePlan: "Besplatno",
@@ -122,7 +143,7 @@ const Landing = () => {
       premiumSave: "Uštedi 40%",
       yearlyPrice: "35.99€/godišnje",
       unlockPremium: "Otključaj Premium",
-      
+
       // Expanded target audience
       forWhoTitle: "Za koga je Poruke.AI?",
       forWhoCategories: [
@@ -135,10 +156,10 @@ const Landing = () => {
         { emoji: "🛍️", label: "Kupci/Prodavci", desc: "Za oglase i pregovore" },
         { emoji: "😰", label: "Anksiozni", desc: "Za sve koji mrze konflikte" },
       ],
-      
+
       // Situations showcase
       situationsTitle: "Situacije koje pokrivamo",
-      
+
       finalCta1: "Prestani da razmišljaš šta da napišeš.",
       finalCta2: "Počni da šalješ poruke koje prolaze.",
       tryNow: "Isprobaj Poruke.AI besplatno",
@@ -152,10 +173,30 @@ const Landing = () => {
       tryFree: "Isprobaj besplatno",
       noCard: "bez kartice • 5 poruka gratis",
       testimonials: [
-        { text: "Koristim je svaki dan za poslovne mailove. Uštedjela mi je sate!", name: "Marko", role: "IT Manager", avatar: "👨‍💼" },
-        { text: "Spasila me od glupe poruke bivšem. Preporučujem svima!", name: "Ana", role: "Studentica", avatar: "👩‍🎓" },
-        { text: "Kao da mi najbolji frend piše poruke. Prirodno i opušteno.", name: "Stefan", role: "Freelancer", avatar: "🧑‍💻" },
-        { text: "Konačno znam kako odbiti šefa bez da zvučim bezobrazno.", name: "Jelena", role: "HR Menadžer", avatar: "👩‍💼" },
+        {
+          text: "Koristim je svaki dan za poslovne mailove. Uštedjela mi je sate!",
+          name: "Marko",
+          role: "IT Manager",
+          avatar: "👨‍💼",
+        },
+        {
+          text: "Spasila me od glupe poruke bivšem. Preporučujem svima!",
+          name: "Ana",
+          role: "Studentica",
+          avatar: "👩‍🎓",
+        },
+        {
+          text: "Kao da mi najbolji frend piše poruke. Prirodno i opušteno.",
+          name: "Stefan",
+          role: "Freelancer",
+          avatar: "🧑‍💻",
+        },
+        {
+          text: "Konačno znam kako odbiti šefa bez da zvučim bezobrazno.",
+          name: "Jelena",
+          role: "HR Menadžer",
+          avatar: "👩‍💼",
+        },
         { text: "Za muvanje je savršena! Cure konačno odgovaraju 😄", name: "Luka", role: "Student", avatar: "🎓" },
         { text: "Pomogla mi srediti problem sa stanodavcem. 10/10", name: "Milica", role: "Podstanar", avatar: "🏠" },
       ],
@@ -190,7 +231,8 @@ const Landing = () => {
         "Možda mogu pričekati još malo...",
       ],
       exampleAfter: "Poruke.AI generira:",
-      exampleAfterText: "Bok! Samo da provjerim - imaš li priliku vratiti mi onih 400 kuna koje sam ti posudio prošli mjesec? Razumijem ako ti nije zgodan trenutak, javi mi samo kad možeš. Hvala! 🙂",
+      exampleAfterText:
+        "Bok! Samo da provjerim - imaš li priliku vratiti mi onih 400 kuna koje sam ti posudio prošli mjesec? Razumijem ako ti nije zgodan trenutak, javi mi samo kad možeš. Hvala! 🙂",
       pricingTitle: "Jednostavna cijena",
       freePlan: "Besplatno",
       freeFeatures: ["5 poruka", "Sve situacije", "Svi tonovi", "Bez kartice"],
@@ -227,10 +269,30 @@ const Landing = () => {
       tryFree: "Isprobaj besplatno",
       noCard: "bez kartice • 5 poruka gratis",
       testimonials: [
-        { text: "Koristim je svaki dan za poslovne mailove. Uštedjela mi je sate!", name: "Marko", role: "IT Manager", avatar: "👨‍💼" },
-        { text: "Spasila me od glupe poruke bivšem. Preporučujem svima!", name: "Ana", role: "Studentica", avatar: "👩‍🎓" },
-        { text: "Kao da mi najbolji drug piše poruke. Prirodno i opušteno.", name: "Stefan", role: "Freelancer", avatar: "🧑‍💻" },
-        { text: "Konačno znam kako odbiti šefa bez da zvučim bezobrazno.", name: "Jelena", role: "HR Menadžer", avatar: "👩‍💼" },
+        {
+          text: "Koristim je svaki dan za poslovne mailove. Uštedjela mi je sate!",
+          name: "Marko",
+          role: "IT Manager",
+          avatar: "👨‍💼",
+        },
+        {
+          text: "Spasila me od glupe poruke bivšem. Preporučujem svima!",
+          name: "Ana",
+          role: "Studentica",
+          avatar: "👩‍🎓",
+        },
+        {
+          text: "Kao da mi najbolji drug piše poruke. Prirodno i opušteno.",
+          name: "Stefan",
+          role: "Freelancer",
+          avatar: "🧑‍💻",
+        },
+        {
+          text: "Konačno znam kako odbiti šefa bez da zvučim bezobrazno.",
+          name: "Jelena",
+          role: "HR Menadžer",
+          avatar: "👩‍💼",
+        },
         { text: "Za muvanje je savršena! Cure konačno odgovaraju 😄", name: "Luka", role: "Student", avatar: "🎓" },
         { text: "Pomogla mi srediti problem sa stanodavcem. 10/10", name: "Milica", role: "Podstanar", avatar: "🏠" },
       ],
@@ -265,7 +327,8 @@ const Landing = () => {
         "Možda mogu sačekati još malo...",
       ],
       exampleAfter: "Poruke.AI generiše:",
-      exampleAfterText: "Ćao! Samo da provjerim - imaš li priliku da mi vratiš onih 50 KM koje sam ti pozajmio prošlog mjeseca? Razumijem ako ti nije zgodan trenutak, javi mi samo kad možeš. Hvala! 🙂",
+      exampleAfterText:
+        "Ćao! Samo da provjerim - imaš li priliku da mi vratiš onih 50 KM koje sam ti pozajmio prošlog mjeseca? Razumijem ako ti nije zgodan trenutak, javi mi samo kad možeš. Hvala! 🙂",
       pricingTitle: "Jednostavna cijena",
       freePlan: "Besplatno",
       freeFeatures: ["5 poruka", "Sve situacije", "Svi tonovi", "Bez kartice"],
@@ -302,10 +365,30 @@ const Landing = () => {
       tryFree: "Isprobaj besplatno",
       noCard: "bez kartice • 5 poruka gratis",
       testimonials: [
-        { text: "Koristim je svaki dan za poslovne mejlove. Ušteđela mi je sate!", name: "Marko", role: "IT Manager", avatar: "👨‍💼" },
-        { text: "Spasila me od glupe poruke bivšem. Preporučujem svima!", name: "Ana", role: "Studentkinja", avatar: "👩‍🎓" },
-        { text: "Kao da mi najbolji drug piše poruke. Prirodno i opušteno.", name: "Stefan", role: "Freelancer", avatar: "🧑‍💻" },
-        { text: "Konačno znam kako odbiti šefa bez da zvučim bezobrazno.", name: "Jelena", role: "HR Menadžer", avatar: "👩‍💼" },
+        {
+          text: "Koristim je svaki dan za poslovne mejlove. Ušteđela mi je sate!",
+          name: "Marko",
+          role: "IT Manager",
+          avatar: "👨‍💼",
+        },
+        {
+          text: "Spasila me od glupe poruke bivšem. Preporučujem svima!",
+          name: "Ana",
+          role: "Studentkinja",
+          avatar: "👩‍🎓",
+        },
+        {
+          text: "Kao da mi najbolji drug piše poruke. Prirodno i opušteno.",
+          name: "Stefan",
+          role: "Freelancer",
+          avatar: "🧑‍💻",
+        },
+        {
+          text: "Konačno znam kako odbiti šefa bez da zvučim bezobrazno.",
+          name: "Jelena",
+          role: "HR Menadžer",
+          avatar: "👩‍💼",
+        },
         { text: "Za muvanje je savršena! Đevojke konačno odgovaraju 😄", name: "Luka", role: "Student", avatar: "🎓" },
         { text: "Pomogla mi srediti problem sa stanodavcem. 10/10", name: "Milica", role: "Podstanar", avatar: "🏠" },
       ],
@@ -340,7 +423,8 @@ const Landing = () => {
         "Možda mogu sačekati još malo...",
       ],
       exampleAfter: "Poruke.AI generiše:",
-      exampleAfterText: "Đe si! Samo da provjerim - imaš li priliku da mi vratiš onih 50€ koje sam ti pozajmio prošlog mjeseca? Razumijem ako ti nije zgodan trenutak, javi mi samo kad možeš. Hvala! 🙂",
+      exampleAfterText:
+        "Đe si! Samo da provjerim - imaš li priliku da mi vratiš onih 50€ koje sam ti pozajmio prošlog mjeseca? Razumijem ako ti nije zgodan trenutak, javi mi samo kad možeš. Hvala! 🙂",
       pricingTitle: "Jednostavna cijena",
       freePlan: "Besplatno",
       freeFeatures: ["5 poruka", "Sve situacije", "Svi tonovi", "Bez kartice"],
@@ -348,7 +432,7 @@ const Landing = () => {
       premiumFeatures: ["Neograničeno poruka", "Sve situacije i tonovi", "Istorija poruka", "Prioritetna podrška"],
       premiumPrice: "4.99€",
       premiumPeriod: "/mjesečno",
-      premiumNote: "Manje od jedne kafe neđeljno. Otkaz u bilo kom trenutku.",
+      premiumNote: "Za cenu pola pice — rešenja za muvanje, biznis i chat. 🍕💬 Otkaz u bilo kom trenutku.",
       premiumSave: "Uštedi 40%",
       yearlyPrice: "35.99€/godišnje",
       unlockPremium: "Otključaj Premium",
@@ -372,17 +456,43 @@ const Landing = () => {
     mk: {
       heroTitle1: "Не знаеш како да напишеш порака?",
       heroTitle2: "Ние знаеме. 💬",
-      heroSubtitle: "Poruke.AI ти помага да напишеш вистинска порака, со вистински тон, за вистинска ситуација — за 10 секунди.",
+      heroSubtitle:
+        "Poruke.AI ти помага да напишеш вистинска порака, со вистински тон, за вистинска ситуација — за 10 секунди.",
       heroContext: "За работа, приватно, стан, купопродажба, мување и непријатни ситуации.",
       tryFree: "Пробај бесплатно",
       noCard: "без картичка • 5 пораки гратис",
       testimonials: [
-        { text: "Ја користам секој ден за деловни мејлови. Ми заштеди саати!", name: "Марко", role: "IT Менаџер", avatar: "👨‍💼" },
-        { text: "Ме спаси од глупа порака на бившиот. Препорачувам на сите!", name: "Ана", role: "Студентка", avatar: "👩‍🎓" },
-        { text: "Како да ми најдобар пријател пишува пораки. Природно и опуштено.", name: "Стефан", role: "Фриленсер", avatar: "🧑‍💻" },
-        { text: "Конечно знам како да одбијам шеф без да звучам безобразно.", name: "Јелена", role: "HR Менаџер", avatar: "👩‍💼" },
+        {
+          text: "Ја користам секој ден за деловни мејлови. Ми заштеди саати!",
+          name: "Марко",
+          role: "IT Менаџер",
+          avatar: "👨‍💼",
+        },
+        {
+          text: "Ме спаси од глупа порака на бившиот. Препорачувам на сите!",
+          name: "Ана",
+          role: "Студентка",
+          avatar: "👩‍🎓",
+        },
+        {
+          text: "Како да ми најдобар пријател пишува пораки. Природно и опуштено.",
+          name: "Стефан",
+          role: "Фриленсер",
+          avatar: "🧑‍💻",
+        },
+        {
+          text: "Конечно знам како да одбијам шеф без да звучам безобразно.",
+          name: "Јелена",
+          role: "HR Менаџер",
+          avatar: "👩‍💼",
+        },
         { text: "За мување е совршена! Девојките конечно одговараат 😄", name: "Лука", role: "Студент", avatar: "🎓" },
-        { text: "Ми помогна да средам проблем со станодавецот. 10/10", name: "Милица", role: "Подстанар", avatar: "🏠" },
+        {
+          text: "Ми помогна да средам проблем со станодавецот. 10/10",
+          name: "Милица",
+          role: "Подстанар",
+          avatar: "🏠",
+        },
       ],
       problemTitle: "Звучи познато?",
       problems: [
@@ -415,7 +525,8 @@ const Landing = () => {
         "Можеби можам да почекам уште малку...",
       ],
       exampleAfter: "Poruke.AI генерира:",
-      exampleAfterText: "Здраво! Само да проверам - имаш ли можност да ми ги вратиш оние 3000 денари што ти ги позајмив минатиот месец? Разбирам ако не ти е згодно сега, јави ми само кога можеш. Благодарам! 🙂",
+      exampleAfterText:
+        "Здраво! Само да проверам - имаш ли можност да ми ги вратиш оние 3000 денари што ти ги позајмив минатиот месец? Разбирам ако не ти е згодно сега, јави ми само кога можеш. Благодарам! 🙂",
       pricingTitle: "Едноставна цена",
       freePlan: "Бесплатно",
       freeFeatures: ["5 пораки", "Сите ситуации", "Сите тонови", "Без картичка"],
@@ -452,12 +563,42 @@ const Landing = () => {
       tryFree: "Preizkusi brezplačno",
       noCard: "brez kartice • 5 sporočil gratis",
       testimonials: [
-        { text: "Uporabljam jo vsak dan za poslovne maile. Prihranila mi je ure!", name: "Marko", role: "IT Manager", avatar: "👨‍💼" },
-        { text: "Rešila me je od neumnega sporočila bivšemu. Priporočam vsem!", name: "Ana", role: "Študentka", avatar: "👩‍🎓" },
-        { text: "Kot da mi najboljši prijatelj piše sporočila. Naravno in sproščeno.", name: "Stefan", role: "Freelancer", avatar: "🧑‍💻" },
-        { text: "Končno vem, kako zavrniti šefa brez da zvenim nesramno.", name: "Jelena", role: "HR Menedžer", avatar: "👩‍💼" },
-        { text: "Za zapeljevanje je popolna! Punce končno odgovarjajo 😄", name: "Luka", role: "Študent", avatar: "🎓" },
-        { text: "Pomagala mi je urediti problem z najemodajalcem. 10/10", name: "Milica", role: "Najemnik", avatar: "🏠" },
+        {
+          text: "Uporabljam jo vsak dan za poslovne maile. Prihranila mi je ure!",
+          name: "Marko",
+          role: "IT Manager",
+          avatar: "👨‍💼",
+        },
+        {
+          text: "Rešila me je od neumnega sporočila bivšemu. Priporočam vsem!",
+          name: "Ana",
+          role: "Študentka",
+          avatar: "👩‍🎓",
+        },
+        {
+          text: "Kot da mi najboljši prijatelj piše sporočila. Naravno in sproščeno.",
+          name: "Stefan",
+          role: "Freelancer",
+          avatar: "🧑‍💻",
+        },
+        {
+          text: "Končno vem, kako zavrniti šefa brez da zvenim nesramno.",
+          name: "Jelena",
+          role: "HR Menedžer",
+          avatar: "👩‍💼",
+        },
+        {
+          text: "Za zapeljevanje je popolna! Punce končno odgovarjajo 😄",
+          name: "Luka",
+          role: "Študent",
+          avatar: "🎓",
+        },
+        {
+          text: "Pomagala mi je urediti problem z najemodajalcem. 10/10",
+          name: "Milica",
+          role: "Najemnik",
+          avatar: "🏠",
+        },
       ],
       problemTitle: "Zveni znano?",
       problems: [
@@ -490,7 +631,8 @@ const Landing = () => {
         "Morda lahko počakam še malo...",
       ],
       exampleAfter: "Poruke.AI generira:",
-      exampleAfterText: "Živijo! Samo da preverim - imaš mogoče priložnost, da mi vrneš tistih 50€, ki sem ti jih posodil prejšnji mesec? Razumem, če ti zdaj ni primerno, samo javi mi ko boš lahko. Hvala! 🙂",
+      exampleAfterText:
+        "Živijo! Samo da preverim - imaš mogoče priložnost, da mi vrneš tistih 50€, ki sem ti jih posodil prejšnji mesec? Razumem, če ti zdaj ni primerno, samo javi mi ko boš lahko. Hvala! 🙂",
       pricingTitle: "Preprosta cena",
       freePlan: "Brezplačno",
       freeFeatures: ["5 sporočil", "Vse situacije", "Vsi toni", "Brez kartice"],
@@ -525,12 +667,48 @@ const Landing = () => {
 
   // Situation cards with colorful icons and animations
   const situations = [
-    { icon: Heart, color: "text-pink-500", bg: "bg-pink-500/10", label: language === "mk" ? "Мување и љубов" : "Muvanje i ljubav", desc: "💕" },
-    { icon: Briefcase, color: "text-blue-500", bg: "bg-blue-500/10", label: language === "mk" ? "Работа и бизнис" : "Posao i biznis", desc: "💼" },
-    { icon: Home, color: "text-emerald-500", bg: "bg-emerald-500/10", label: language === "mk" ? "Стан и комшии" : "Stan i komšije", desc: "🏠" },
-    { icon: ShoppingCart, color: "text-violet-500", bg: "bg-violet-500/10", label: language === "mk" ? "Купопродажба" : "Kupoprodaja", desc: "🛍️" },
-    { icon: Users, color: "text-orange-500", bg: "bg-orange-500/10", label: language === "mk" ? "Приватно и пријатели" : "Privatno i prijatelji", desc: "👥" },
-    { icon: AlertTriangle, color: "text-slate-500", bg: "bg-slate-500/10", label: language === "mk" ? "Лоши вести" : "Loše vesti", desc: "😔" },
+    {
+      icon: Heart,
+      color: "text-pink-500",
+      bg: "bg-pink-500/10",
+      label: language === "mk" ? "Мување и љубов" : "Muvanje i ljubav",
+      desc: "💕",
+    },
+    {
+      icon: Briefcase,
+      color: "text-blue-500",
+      bg: "bg-blue-500/10",
+      label: language === "mk" ? "Работа и бизнис" : "Posao i biznis",
+      desc: "💼",
+    },
+    {
+      icon: Home,
+      color: "text-emerald-500",
+      bg: "bg-emerald-500/10",
+      label: language === "mk" ? "Стан и комшии" : "Stan i komšije",
+      desc: "🏠",
+    },
+    {
+      icon: ShoppingCart,
+      color: "text-violet-500",
+      bg: "bg-violet-500/10",
+      label: language === "mk" ? "Купопродажба" : "Kupoprodaja",
+      desc: "🛍️",
+    },
+    {
+      icon: Users,
+      color: "text-orange-500",
+      bg: "bg-orange-500/10",
+      label: language === "mk" ? "Приватно и пријатели" : "Privatno i prijatelji",
+      desc: "👥",
+    },
+    {
+      icon: AlertTriangle,
+      color: "text-slate-500",
+      bg: "bg-slate-500/10",
+      label: language === "mk" ? "Лоши вести" : "Loše vesti",
+      desc: "😔",
+    },
   ];
 
   return (
@@ -539,7 +717,7 @@ const Landing = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <motion.div 
+            <motion.div
               className="w-9 h-9 rounded-xl gradient-primary flex items-center justify-center shadow-glow"
               whileHover={{ scale: 1.1, rotate: 5 }}
               transition={{ type: "spring", stiffness: 400 }}
@@ -563,31 +741,31 @@ const Landing = () => {
           <div className="absolute inset-0 gradient-surface" />
           {/* Floating emojis background */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {['💬', '✨', '❤️', '👍', '🎯', '💡'].map((emoji, i) => (
+            {["💬", "✨", "❤️", "👍", "🎯", "💡"].map((emoji, i) => (
               <motion.span
                 key={i}
                 className="absolute text-4xl opacity-10"
                 initial={{ y: "100vh", x: `${10 + i * 15}%` }}
                 animate={{ y: "-100vh" }}
-                transition={{ 
-                  duration: 15 + i * 2, 
-                  repeat: Infinity, 
+                transition={{
+                  duration: 15 + i * 2,
+                  repeat: Infinity,
                   delay: i * 2,
-                  ease: "linear"
+                  ease: "linear",
                 }}
               >
                 {emoji}
               </motion.span>
             ))}
           </div>
-          
-          <motion.div 
+
+          <motion.div
             className="relative max-w-4xl mx-auto text-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.div 
+            <motion.div
               className="inline-flex items-center gap-2 bg-destructive/10 text-destructive px-4 py-2 rounded-full text-sm font-medium mb-6"
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
@@ -595,8 +773,8 @@ const Landing = () => {
             >
               <span className="text-lg">❌</span> {c.heroTitle1}
             </motion.div>
-            
-            <motion.h1 
+
+            <motion.h1
               className="font-display text-4xl md:text-6xl font-bold text-foreground mb-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -604,8 +782,8 @@ const Landing = () => {
             >
               <span className="text-primary">✅</span> {c.heroTitle2}
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               className="text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl mx-auto"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -613,8 +791,8 @@ const Landing = () => {
             >
               {c.heroSubtitle}
             </motion.p>
-            
-            <motion.p 
+
+            <motion.p
               className="text-base text-muted-foreground mb-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -622,17 +800,17 @@ const Landing = () => {
             >
               👉 {c.heroContext}
             </motion.p>
-            
-            <motion.div 
+
+            <motion.div
               className="flex flex-col items-center gap-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
             >
-              <Button 
-                variant="hero" 
-                size="lg" 
-                className="text-lg px-8 py-6 shadow-glow animate-pulse hover:animate-none" 
+              <Button
+                variant="hero"
+                size="lg"
+                className="text-lg px-8 py-6 shadow-glow animate-pulse hover:animate-none"
                 onClick={handleStartClick}
               >
                 <Sparkles className="w-5 h-5 mr-2" />
@@ -648,8 +826,8 @@ const Landing = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-3 gap-4">
               {c.testimonials.slice(0, 6).map((testimonial, i) => (
-                <motion.div 
-                  key={i} 
+                <motion.div
+                  key={i}
                   className="bg-background rounded-2xl p-6 shadow-sm border border-border"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -675,7 +853,7 @@ const Landing = () => {
         {/* Situations Showcase - Colorful animated icons */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
-            <motion.h2 
+            <motion.h2
               className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -695,7 +873,7 @@ const Landing = () => {
                   whileHover={{ scale: 1.05, y: -5 }}
                   onClick={handleStartClick}
                 >
-                  <motion.div 
+                  <motion.div
                     className={`w-16 h-16 rounded-2xl ${sit.bg} flex items-center justify-center mx-auto mb-3`}
                     whileHover={{ rotate: [0, -10, 10, -10, 0] }}
                     transition={{ duration: 0.5 }}
@@ -713,7 +891,7 @@ const Landing = () => {
         {/* Problem Section */}
         <section className="py-16 px-4 bg-muted/30">
           <div className="max-w-3xl mx-auto text-center">
-            <motion.h2 
+            <motion.h2
               className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -723,8 +901,8 @@ const Landing = () => {
             </motion.h2>
             <div className="space-y-4 mb-8">
               {c.problems.map((problem, i) => (
-                <motion.div 
-                  key={i} 
+                <motion.div
+                  key={i}
                   className="flex items-center gap-3 justify-center text-muted-foreground"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -736,7 +914,7 @@ const Landing = () => {
                 </motion.div>
               ))}
             </div>
-            <motion.div 
+            <motion.div
               className="inline-flex items-center gap-2 bg-primary/10 text-primary px-6 py-3 rounded-full font-semibold"
               whileHover={{ scale: 1.05 }}
             >
@@ -749,7 +927,7 @@ const Landing = () => {
         {/* Before/After - Chat bubble style */}
         <section className="py-16 px-4">
           <div className="max-w-3xl mx-auto">
-            <motion.h2 
+            <motion.h2
               className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-4"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -757,7 +935,7 @@ const Landing = () => {
             >
               {c.exampleTitle}
             </motion.h2>
-            <motion.p 
+            <motion.p
               className="text-center text-muted-foreground mb-8"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -765,10 +943,10 @@ const Landing = () => {
             >
               💰 {c.exampleScenario}
             </motion.p>
-            
+
             <div className="grid md:grid-cols-2 gap-6">
               {/* Before - Multiple attempts */}
-              <motion.div 
+              <motion.div
                 className="bg-background rounded-2xl p-6 border border-border"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -780,12 +958,12 @@ const Landing = () => {
                 </div>
                 <div className="space-y-3">
                   {c.exampleBeforeTexts.map((text, i) => (
-                    <motion.div 
+                    <motion.div
                       key={i}
                       className={`p-3 rounded-xl text-sm ${
-                        text.includes('[') 
-                          ? 'bg-destructive/10 text-destructive line-through' 
-                          : 'bg-muted text-muted-foreground'
+                        text.includes("[")
+                          ? "bg-destructive/10 text-destructive line-through"
+                          : "bg-muted text-muted-foreground"
                       }`}
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
@@ -798,9 +976,9 @@ const Landing = () => {
                 </div>
                 <p className="text-xs text-destructive mt-4 text-center">⏱️ 15 minuta kasnije...</p>
               </motion.div>
-              
+
               {/* After - Perfect message */}
-              <motion.div 
+              <motion.div
                 className="bg-primary/5 rounded-2xl p-6 border-2 border-primary/30"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -810,7 +988,7 @@ const Landing = () => {
                   <span className="text-2xl">✨</span>
                   <span className="text-sm font-medium text-primary">{c.exampleAfter}</span>
                 </div>
-                <motion.div 
+                <motion.div
                   className="bg-primary/10 p-4 rounded-xl text-foreground"
                   initial={{ scale: 0.95 }}
                   whileInView={{ scale: 1 }}
@@ -834,7 +1012,7 @@ const Landing = () => {
         {/* How It Works */}
         <section className="py-16 px-4 bg-muted/30">
           <div className="max-w-4xl mx-auto">
-            <motion.h2 
+            <motion.h2
               className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -844,12 +1022,24 @@ const Landing = () => {
             </motion.h2>
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { num: "1", title: c.step1Title, desc: c.step1Desc, icon: MessageCircle, color: "from-pink-500 to-rose-500" },
-                { num: "2", title: c.step2Title, desc: c.step2Desc, icon: Smile, color: "from-amber-500 to-orange-500" },
+                {
+                  num: "1",
+                  title: c.step1Title,
+                  desc: c.step1Desc,
+                  icon: MessageCircle,
+                  color: "from-pink-500 to-rose-500",
+                },
+                {
+                  num: "2",
+                  title: c.step2Title,
+                  desc: c.step2Desc,
+                  icon: Smile,
+                  color: "from-amber-500 to-orange-500",
+                },
                 { num: "3", title: c.step3Title, desc: c.step3Desc, icon: Send, color: "from-primary to-teal-400" },
               ].map((step, i) => (
-                <motion.div 
-                  key={i} 
+                <motion.div
+                  key={i}
                   className="bg-background rounded-2xl p-6 shadow-sm border border-border text-center"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -857,7 +1047,7 @@ const Landing = () => {
                   transition={{ delay: i * 0.2 }}
                   whileHover={{ y: -5 }}
                 >
-                  <motion.div 
+                  <motion.div
                     className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center mx-auto mb-4`}
                     whileHover={{ scale: 1.1, rotate: 5 }}
                   >
@@ -869,7 +1059,7 @@ const Landing = () => {
                 </motion.div>
               ))}
             </div>
-            <motion.div 
+            <motion.div
               className="flex items-center justify-center gap-2 mt-8 text-muted-foreground"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -884,7 +1074,7 @@ const Landing = () => {
         {/* Why Not ChatGPT */}
         <section className="py-16 px-4">
           <div className="max-w-3xl mx-auto">
-            <motion.h2 
+            <motion.h2
               className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-8"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -895,8 +1085,8 @@ const Landing = () => {
             <div className="bg-muted/50 rounded-2xl p-8">
               <div className="space-y-3 mb-6">
                 {c.whyReasons.map((reason, i) => (
-                  <motion.div 
-                    key={i} 
+                  <motion.div
+                    key={i}
                     className="flex items-center gap-3 text-foreground"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -912,8 +1102,8 @@ const Landing = () => {
                 <p className="text-muted-foreground mb-3">{c.whyBecause}</p>
                 <div className="space-y-2">
                   {c.whyPoints.map((point, i) => (
-                    <motion.div 
-                      key={i} 
+                    <motion.div
+                      key={i}
                       className="flex items-center gap-2 text-foreground font-medium"
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
@@ -933,7 +1123,7 @@ const Landing = () => {
         {/* For Who - Expanded */}
         <section className="py-16 px-4 bg-muted/30">
           <div className="max-w-4xl mx-auto">
-            <motion.h2 
+            <motion.h2
               className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -964,7 +1154,7 @@ const Landing = () => {
         {/* Pricing - 4.99 EUR */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
-            <motion.h2 
+            <motion.h2
               className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -974,7 +1164,7 @@ const Landing = () => {
             </motion.h2>
             <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
               {/* Free Plan */}
-              <motion.div 
+              <motion.div
                 className="bg-background rounded-2xl p-8 border border-border"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -996,7 +1186,7 @@ const Landing = () => {
               </motion.div>
 
               {/* Premium Plan */}
-              <motion.div 
+              <motion.div
                 className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 border-2 border-primary/30 relative"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -1024,7 +1214,9 @@ const Landing = () => {
                 </ul>
                 <p className="text-sm text-muted-foreground mb-2">👉 {c.premiumNote}</p>
                 <div className="bg-primary/10 rounded-lg p-2 mb-4 text-center">
-                  <span className="text-xs text-primary font-semibold">{c.premiumSave}: {c.yearlyPrice}</span>
+                  <span className="text-xs text-primary font-semibold">
+                    {c.premiumSave}: {c.yearlyPrice}
+                  </span>
                 </div>
                 <Button variant="hero" className="w-full shadow-glow">
                   {c.unlockPremium}
@@ -1036,24 +1228,15 @@ const Landing = () => {
 
         {/* Final CTA */}
         <section className="py-20 px-4 gradient-surface">
-          <motion.div 
+          <motion.div
             className="max-w-3xl mx-auto text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
-              {c.finalCta1}
-            </h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              {c.finalCta2}
-            </p>
-            <Button 
-              variant="hero" 
-              size="lg" 
-              className="text-lg px-8 py-6 shadow-glow" 
-              onClick={handleStartClick}
-            >
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">{c.finalCta1}</h2>
+            <p className="text-xl text-muted-foreground mb-8">{c.finalCta2}</p>
+            <Button variant="hero" size="lg" className="text-lg px-8 py-6 shadow-glow" onClick={handleStartClick}>
               <ArrowRight className="w-5 h-5 mr-2" />
               {c.startNow}
             </Button>
