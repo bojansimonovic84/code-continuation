@@ -336,7 +336,7 @@ const Landing = () => {
       premiumFeatures: ["Neograničeno poruka", "Sve situacije i tonovi", "Historija poruka", "Prioritetna podrška"],
       premiumPrice: "9.99 KM",
       premiumPeriod: "/mjesečno",
-      premiumNote: "Manje od jedne kafe sedmično. Otkaz u bilo kom trenutku.",
+      premiumNote: "Za cenu pola pice — rešenja za muvanje, biznis i chat.🍕💬 Otkaz u bilo kom trenutku.",
       premiumSave: "Uštedi 40%",
       yearlyPrice: "69.99 KM/godišnje",
       unlockPremium: "Otključaj Premium",
