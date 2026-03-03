@@ -736,89 +736,254 @@ const Landing = () => {
       </header>
 
       <main className="pt-16">
-        {/* Hero Section - Enhanced with animation */}
-        <section className="relative overflow-hidden py-16 md:py-24 px-4">
+        {/* Hero Section - Clickbait visual with phone mockup */}
+        <section className="relative overflow-hidden py-12 md:py-20 px-4">
           <div className="absolute inset-0 gradient-surface" />
-          {/* Floating emojis background */}
+          {/* Animated gradient blobs */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {["💬", "✨", "❤️", "👍", "🎯", "💡"].map((emoji, i) => (
-              <motion.span
-                key={i}
-                className="absolute text-4xl opacity-10"
-                initial={{ y: "100vh", x: `${10 + i * 15}%` }}
-                animate={{ y: "-100vh" }}
-                transition={{
-                  duration: 15 + i * 2,
-                  repeat: Infinity,
-                  delay: i * 2,
-                  ease: "linear",
-                }}
-              >
-                {emoji}
-              </motion.span>
-            ))}
+            <motion.div
+              className="absolute w-[500px] h-[500px] rounded-full opacity-20 blur-3xl"
+              style={{ background: "radial-gradient(circle, hsl(168 76% 36% / 0.4), transparent)" }}
+              animate={{ x: ["-20%", "10%", "-20%"], y: ["-10%", "20%", "-10%"] }}
+              transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+            />
+            <motion.div
+              className="absolute right-0 bottom-0 w-[400px] h-[400px] rounded-full opacity-15 blur-3xl"
+              style={{ background: "radial-gradient(circle, hsl(12 80% 62% / 0.4), transparent)" }}
+              animate={{ x: ["10%", "-15%", "10%"], y: ["10%", "-20%", "10%"] }}
+              transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+            />
           </div>
 
-          <motion.div
-            className="relative max-w-4xl mx-auto text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+            {/* Left - Text */}
             <motion.div
-              className="inline-flex items-center gap-2 bg-destructive/10 text-destructive px-4 py-2 rounded-full text-sm font-medium mb-6"
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.2 }}
+              className="text-center md:text-left"
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
             >
-              <span className="text-lg">❌</span> {c.heroTitle1}
-            </motion.div>
-
-            <motion.h1
-              className="font-display text-4xl md:text-6xl font-bold text-foreground mb-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-            >
-              <span className="text-primary">✅</span> {c.heroTitle2}
-            </motion.h1>
-
-            <motion.p
-              className="text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl mx-auto"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-            >
-              {c.heroSubtitle}
-            </motion.p>
-
-            <motion.p
-              className="text-base text-muted-foreground mb-8"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-            >
-              👉 {c.heroContext}
-            </motion.p>
-
-            <motion.div
-              className="flex flex-col items-center gap-3"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-            >
-              <Button
-                variant="hero"
-                size="lg"
-                className="text-lg px-8 py-6 shadow-glow animate-pulse hover:animate-none"
-                onClick={handleStartClick}
+              <motion.div
+                className="inline-flex items-center gap-2 bg-destructive/10 text-destructive px-4 py-2 rounded-full text-sm font-medium mb-5"
+                initial={{ scale: 0.9 }}
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
               >
-                <Sparkles className="w-5 h-5 mr-2" />
-                {c.tryFree}
-              </Button>
-              <span className="text-sm text-muted-foreground">({c.noCard})</span>
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-destructive opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-destructive"></span>
+                </span>
+                🔥 30,000+ {language === "mk" ? "пораки веќе генерирани" : "poruka već generisano"}
+              </motion.div>
+
+              <motion.h1
+                className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-5 leading-tight"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+              >
+                {c.heroTitle1}
+                <br />
+                <span className="relative">
+                  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    {c.heroTitle2}
+                  </span>
+                  <motion.span
+                    className="absolute -bottom-2 left-0 right-0 h-1 rounded-full bg-gradient-to-r from-primary to-accent"
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ delay: 0.8, duration: 0.6 }}
+                  />
+                </span>
+              </motion.h1>
+
+              <motion.p
+                className="text-lg md:text-xl text-muted-foreground mb-3 max-w-lg"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+              >
+                {c.heroSubtitle}
+              </motion.p>
+
+              <motion.p
+                className="text-sm text-muted-foreground mb-6"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+              >
+                👉 {c.heroContext}
+              </motion.p>
+
+              <motion.div
+                className="flex flex-col sm:flex-row items-center md:items-start gap-3"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+              >
+                <Button
+                  variant="hero"
+                  size="lg"
+                  className="text-lg px-8 py-6 shadow-glow group"
+                  onClick={handleStartClick}
+                >
+                  <Sparkles className="w-5 h-5 mr-2 group-hover:animate-spin" />
+                  {c.tryFree}
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+                <span className="text-sm text-muted-foreground">({c.noCard})</span>
+              </motion.div>
+
+              {/* Social proof mini */}
+              <motion.div
+                className="flex items-center gap-3 mt-6 justify-center md:justify-start"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.9 }}
+              >
+                <div className="flex -space-x-2">
+                  {["👩‍💼", "🧑‍💻", "👨‍🎓", "👩‍🎓", "🧔"].map((emoji, i) => (
+                    <div key={i} className="w-8 h-8 rounded-full bg-secondary border-2 border-background flex items-center justify-center text-sm">
+                      {emoji}
+                    </div>
+                  ))}
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  <span className="text-primary font-semibold">4.9★</span> • 2,400+ {language === "mk" ? "задоволни корисници" : "zadovoljnih korisnika"}
+                </div>
+              </motion.div>
             </motion.div>
-          </motion.div>
+
+            {/* Right - Phone mockup with animated chat */}
+            <motion.div
+              className="relative flex justify-center"
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              {/* Phone frame */}
+              <div className="relative w-[280px] md:w-[320px]">
+                <div className="bg-card rounded-[2.5rem] border-4 border-foreground/10 shadow-elevated p-3 relative overflow-hidden">
+                  {/* Notch */}
+                  <div className="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-foreground/10 rounded-full z-10" />
+                  
+                  {/* Screen content */}
+                  <div className="bg-background rounded-[2rem] pt-10 pb-4 px-3 min-h-[420px] md:min-h-[480px] flex flex-col">
+                    {/* App header inside phone */}
+                    <div className="flex items-center gap-2 mb-4 px-1">
+                      <div className="w-7 h-7 rounded-lg gradient-primary flex items-center justify-center">
+                        <MessageSquareText className="w-4 h-4 text-primary-foreground" />
+                      </div>
+                      <span className="font-display text-sm font-bold text-foreground">Poruke.AI</span>
+                    </div>
+
+                    {/* Animated chat bubbles */}
+                    <div className="flex-1 space-y-3 overflow-hidden">
+                      {/* User message */}
+                      <motion.div
+                        className="flex justify-end"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.0 }}
+                      >
+                        <div className="bg-primary/15 rounded-2xl rounded-br-sm px-3 py-2 max-w-[85%]">
+                          <p className="text-xs text-foreground">
+                            {language === "mk" ? "Колега ми должи пари..." : "Kolega mi duguje pare..."}
+                          </p>
+                        </div>
+                      </motion.div>
+
+                      {/* AI thinking */}
+                      <motion.div
+                        className="flex justify-start"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: [0, 1, 1, 0] }}
+                        transition={{ delay: 1.5, duration: 2 }}
+                      >
+                        <div className="bg-secondary rounded-2xl rounded-bl-sm px-4 py-2">
+                          <motion.div className="flex gap-1">
+                            {[0, 1, 2].map(i => (
+                              <motion.div
+                                key={i}
+                                className="w-2 h-2 rounded-full bg-primary/50"
+                                animate={{ y: [0, -4, 0] }}
+                                transition={{ duration: 0.6, repeat: Infinity, delay: i * 0.15 }}
+                              />
+                            ))}
+                          </motion.div>
+                        </div>
+                      </motion.div>
+
+                      {/* AI response */}
+                      <motion.div
+                        className="flex justify-start"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 3.0 }}
+                      >
+                        <div className="bg-secondary rounded-2xl rounded-bl-sm px-3 py-2 max-w-[90%] border border-primary/20">
+                          <div className="flex items-center gap-1 mb-1">
+                            <Sparkles className="w-3 h-3 text-primary" />
+                            <span className="text-[10px] text-primary font-semibold">AI</span>
+                          </div>
+                          <p className="text-xs text-foreground leading-relaxed">
+                            {language === "mk" 
+                              ? "Здраво! Само да проверам - дали имаш можност да ми ги вратиш парите? Разбирам ако не ти одговара, јави ми кога ќе можеш. Фала! 🙂"
+                              : "Ćao! Samo da proverim - imaš li priliku da mi vratiš pare? Razumem ako ti ne odgovara, javi mi kad možeš. Hvala! 🙂"
+                            }
+                          </p>
+                        </div>
+                      </motion.div>
+
+                      {/* Copy button animation */}
+                      <motion.div
+                        className="flex justify-center"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 3.8 }}
+                      >
+                        <div className="bg-primary/10 text-primary text-xs font-medium px-4 py-1.5 rounded-full flex items-center gap-1.5">
+                          <Check className="w-3 h-3" />
+                          {language === "mk" ? "Копирано!" : "Kopirano!"}
+                        </div>
+                      </motion.div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Floating badges around phone */}
+                <motion.div
+                  className="absolute -top-4 -right-4 bg-card border border-border rounded-xl px-3 py-2 shadow-elevated"
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <span className="text-xs font-semibold text-foreground flex items-center gap-1">
+                    ⚡ 10 sec
+                  </span>
+                </motion.div>
+
+                <motion.div
+                  className="absolute -bottom-2 -left-6 bg-card border border-border rounded-xl px-3 py-2 shadow-elevated"
+                  animate={{ y: [0, 6, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                >
+                  <span className="text-xs font-semibold text-foreground flex items-center gap-1">
+                    💬 {language === "mk" ? "Совршена порака!" : "Savršena poruka!"}
+                  </span>
+                </motion.div>
+
+                <motion.div
+                  className="absolute top-1/3 -left-8 bg-card border border-border rounded-xl px-3 py-2 shadow-elevated"
+                  animate={{ y: [0, -5, 0], x: [0, -3, 0] }}
+                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                >
+                  <span className="text-xs font-semibold text-foreground flex items-center gap-1">
+                    ❤️ 4.9★
+                  </span>
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
         </section>
 
         {/* Testimonials - Carousel with avatars */}
