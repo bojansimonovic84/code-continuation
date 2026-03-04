@@ -888,7 +888,10 @@ const Landing = () => {
                       >
                         <div className="bg-primary/15 rounded-2xl rounded-br-sm px-3 py-2 max-w-[85%]">
                           <p className="text-xs text-foreground">
-                            {language === "mk" ? "Колега ми должи пари..." : "Kolega mi duguje pare..."}
+                            {language === "mk" 
+                              ? "Комшивката ми се јавува секој ден и ми се смешка... Како да ја поканам на пиво? 😏"
+                              : "Komšinica mi se javlja svaki dan i smeje mi se... Kako da je pozovem na piće? 😏"
+                            }
                           </p>
                         </div>
                       </motion.div>
@@ -928,8 +931,8 @@ const Landing = () => {
                           </div>
                           <p className="text-xs text-foreground leading-relaxed">
                             {language === "mk" 
-                              ? "Здраво! Само да проверам - дали имаш можност да ми ги вратиш парите? Разбирам ако не ти одговара, јави ми кога ќе можеш. Фала! 🙂"
-                              : "Ćao! Samo da proverim - imaš li priliku da mi vratiš pare? Razumem ako ti ne odgovara, javi mi kad možeš. Hvala! 🙂"
+                              ? "Еј, забележав дека секој ден ми реагираш на стори 😄 Ајде да одиме на кафе некој ден, ако сакаш? Знам едно супер место блиску 🙂"
+                              : "Ej, primetio sam da mi svaki dan reagiješ na stori 😄 Ajde da odemo na kafu neki dan, ako si za? Znam jedno super mesto u blizini 🙂"
                             }
                           </p>
                         </div>
