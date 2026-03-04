@@ -889,8 +889,8 @@ const Landing = () => {
                         <div className="bg-primary/15 rounded-2xl rounded-br-sm px-3 py-2 max-w-[85%]">
                           <p className="text-xs text-foreground">
                             {language === "mk" 
-                              ? "Комшивката ми се јавува секој ден и ми се смешка... Како да ја поканам на пиво? 😏"
-                              : "Komšinica mi se javlja svaki dan i smeje mi se... Kako da je pozovem na piće? 😏"
+                              ? "Комшивката ми се смешка секој пат кога се сретнеме... Како да ја поканам на пиво а да знае дека ќе ја мувам? 😏"
+                              : "Komšinica mi se smeška svaki put kad se sretnemo... Kako da je pozovem na piće a da zna da ću je muvati? 😏"
                             }
                           </p>
                         </div>
@@ -931,8 +931,8 @@ const Landing = () => {
                           </div>
                           <p className="text-xs text-foreground leading-relaxed">
                             {language === "mk" 
-                              ? "Еј, забележав дека секој ден ми реагираш на стори 😄 Ајде да одиме на кафе некој ден, ако сакаш? Знам едно супер место блиску 🙂"
-                              : "Ej, primetio sam da mi svaki dan reagiješ na stori 😄 Ajde da odemo na kafu neki dan, ako si za? Znam jedno super mesto u blizini 🙂"
+                              ? "Еј, знам дека ова може да звучи директно, ама — ајде на пиво вечерва? Нема притисок, ама да знаеш... нема да зборам само за времето 😏☕"
+                              : "Ej, znam da ovo zvuči direktno, ali — ajde na piće večeras? Nema pritiska, ali da znaš... neću pričati samo o vremenu 😏☕"
                             }
                           </p>
                         </div>
