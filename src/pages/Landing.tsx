@@ -135,6 +135,7 @@ const Landing = () => {
       // Pricing hook
       pricingHook: "Za cenu pola pice",
       pricingHookSub: "Rešenja za muvanje, biznis, porodicu i sve neugodne poruke 💬",
+      pricingPills: ["💕 Muvanje", "💼 Biznis", "👨‍👩‍👧 Porodica", "😰 Neugodne poruke"],
       // Pricing - 4.99 EUR
       pricingTitle: "Jednostavna cena",
       freePlan: "Besplatno",
@@ -239,6 +240,7 @@ const Landing = () => {
         "Mama, u nedjelju nažalost neću moći doći na ručak — imam nešto zakazano što ne mogu pomicati. Ali ajde sljedeći vikend da dođem ranije pa da ti pomognem oko kuhanja? Jedva čekam tvoje sarme 😊❤️",
       pricingHook: "Za cijenu pola pizze",
       pricingHookSub: "Rješenja za muvanje, biznis, obitelj i sve neugodne poruke 💬",
+      pricingPills: ["💕 Muvanje", "💼 Biznis", "👨‍👩‍👧 Obitelj", "😰 Neugodne poruke"],
       pricingTitle: "Jednostavna cijena",
       freePlan: "Besplatno",
       freeFeatures: ["5 poruka", "Sve situacije", "Svi tonovi", "Bez kartice"],
@@ -337,6 +339,7 @@ const Landing = () => {
         "Mama, u nedjelju nažalost neću moći doći na ručak — imam nešto zakazano što ne mogu pomjerati. Ali ajde sljedeći vikend da dođem ranije pa da ti pomognem oko kuhanja? Jedva čekam tvoje sarme 😊❤️",
       pricingHook: "Za cijenu pola pice",
       pricingHookSub: "Rješenja za muvanje, biznis, porodicu i sve neugodne poruke 💬",
+      pricingPills: ["💕 Muvanje", "💼 Biznis", "👨‍👩‍👧 Porodica", "😰 Neugodne poruke"],
       pricingTitle: "Jednostavna cijena",
       freePlan: "Besplatno",
       freeFeatures: ["5 poruka", "Sve situacije", "Svi tonovi", "Bez kartice"],
@@ -435,6 +438,7 @@ const Landing = () => {
         "Mama, u nedjelju nažalost neću moći doći na ručak — imam nešto zakazano što ne mogu pomjerati. Ali ajde sljedeći vikend da dođem ranije pa da ti pomognem oko kuvanja? Jedva čekam tvoje sarme 😊❤️",
       pricingHook: "Za cijenu pola pice",
       pricingHookSub: "Rješenja za muvanje, biznis, porodicu i sve neugodne poruke 💬",
+      pricingPills: ["💕 Muvanje", "💼 Biznis", "👨‍👩‍👧 Porodica", "😰 Neugodne poruke"],
       pricingTitle: "Jednostavna cijena",
       freePlan: "Besplatno",
       freeFeatures: ["5 poruka", "Sve situacije", "Svi tonovi", "Bez kartice"],
@@ -539,6 +543,7 @@ const Landing = () => {
         "Мамо, во недела нажалост нема да можам да дојдам на ручек — имам нешто закажано што не можам да го поместам. Ама ајде следниот викенд да дојдам порано и да ти помогнам со готвењето? Едвај чекам твоите сарми 😊❤️",
       pricingHook: "За цена на половина пица",
       pricingHookSub: "Решенија за мување, бизнис, семејство и сите незгодни пораки 💬",
+      pricingPills: ["💕 Мување", "💼 Бизнис", "👨‍👩‍👧 Семејство", "😰 Незгодни пораки"],
       pricingTitle: "Едноставна цена",
       freePlan: "Бесплатно",
       freeFeatures: ["5 пораки", "Сите ситуации", "Сите тонови", "Без картичка"],
@@ -647,6 +652,7 @@ const Landing = () => {
         "Mama, v nedeljo žal ne bom mogel/mogla priti na kosilo — imam nekaj dogovorjenega, česar ne morem prestaviti. Ampak daj naslednji vikend pridem prej, pa ti pomagam pri kuhanju? Komaj čakam tvoje sarme 😊❤️",
       pricingHook: "Za ceno pol pice",
       pricingHookSub: "Rešitve za flirtanje, biznis, družino in vsa neprijetna sporočila 💬",
+      pricingPills: ["💕 Flirtanje", "💼 Biznis", "👨‍👩‍👧 Družina", "😰 Neprijetna sporočila"],
       pricingTitle: "Preprosta cena",
       freePlan: "Brezplačno",
       freeFeatures: ["5 sporočil", "Vse situacije", "Vsi toni", "Brez kartice"],
@@ -1393,7 +1399,7 @@ const Landing = () => {
 
               {/* Animated feature pills */}
               <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-6">
-                {["💕 Muvanje", "💼 Biznis", "👨‍👩‍👧 Porodica", "😰 Neugodne poruke"].map((item, i) => (
+                {c.pricingPills.map((item, i) => (
                   <motion.span
                     key={item}
                     className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold border border-primary/20"
