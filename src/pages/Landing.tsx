@@ -1342,31 +1342,41 @@ const Landing = () => {
               transition={{ duration: 0.6, type: "spring" }}
               className="relative"
             >
-              {/* Big pizza animation */}
+              {/* Real pizza image */}
               <motion.div
                 className="relative inline-block mb-6"
-                initial={{ rotate: -180, scale: 0 }}
+                initial={{ rotate: -10, scale: 0 }}
                 whileInView={{ rotate: 0, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
               >
-                <motion.span 
-                  className="text-[80px] md:text-[120px] inline-block"
-                  animate={{ rotate: [0, -3, 3, 0] }}
+                <motion.img 
+                  src={pizzaImg}
+                  alt="Pizza"
+                  className="w-40 h-40 md:w-56 md:h-56 object-contain inline-block drop-shadow-xl"
+                  animate={{ rotate: [0, -2, 2, 0] }}
                   transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                >
-                  🍕
-                </motion.span>
-                {/* Floating "half" indicator */}
+                />
+                {/* Price tag on pizza */}
                 <motion.div
-                  className="absolute -top-2 -right-2 bg-primary text-primary-foreground rounded-full px-3 py-1 text-sm font-bold shadow-lg"
+                  className="absolute top-0 -right-3 bg-destructive text-destructive-foreground rounded-full px-3 py-1.5 text-sm font-bold shadow-lg"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.6, type: "spring", stiffness: 300 }}
                   animate={{ y: [0, -4, 0] }}
                 >
-                  ½
+                  ~10€
+                </motion.div>
+                {/* Half price indicator */}
+                <motion.div
+                  className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full px-4 py-1.5 text-sm font-bold shadow-lg whitespace-nowrap"
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.8, type: "spring", stiffness: 300 }}
+                >
+                  ½ = 4.99€ 💬
                 </motion.div>
               </motion.div>
 
