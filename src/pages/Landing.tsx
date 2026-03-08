@@ -339,6 +339,7 @@ const Landing = () => {
         "Mama, u nedjelju nažalost neću moći doći na ručak — imam nešto zakazano što ne mogu pomjerati. Ali ajde sljedeći vikend da dođem ranije pa da ti pomognem oko kuhanja? Jedva čekam tvoje sarme 😊❤️",
       pricingHook: "Za cijenu pola pice",
       pricingHookSub: "Rješenja za muvanje, biznis, porodicu i sve neugodne poruke 💬",
+      pricingPills: ["💕 Muvanje", "💼 Biznis", "👨‍👩‍👧 Porodica", "😰 Neugodne poruke"],
       pricingTitle: "Jednostavna cijena",
       freePlan: "Besplatno",
       freeFeatures: ["5 poruka", "Sve situacije", "Svi tonovi", "Bez kartice"],
