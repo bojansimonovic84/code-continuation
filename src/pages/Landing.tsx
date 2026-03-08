@@ -78,7 +78,7 @@ const Landing = () => {
           avatar: "👩‍🎓",
         },
         {
-          text: "Kao da mi najbolji drug piše poruke. Prirodno i opušteno.",
+          text: "Napisao sam klijentu poruku za kašnjenje projekta — odgovorio je sa 'hvala na iskrenosti'. Bez drame!",
           name: "Stefan",
           role: "Freelancer",
           avatar: "🧑‍💻",
@@ -282,7 +282,7 @@ const Landing = () => {
           avatar: "👩‍🎓",
         },
         {
-          text: "Kao da mi najbolji drug piše poruke. Prirodno i opušteno.",
+          text: "Napisao sam klijentu poruku za kašnjenje projekta — odgovorio je sa 'hvala na iskrenosti'. Bez drame!",
           name: "Stefan",
           role: "Freelancer",
           avatar: "🧑‍💻",
@@ -378,7 +378,7 @@ const Landing = () => {
           avatar: "👩‍🎓",
         },
         {
-          text: "Kao da mi najbolji drug piše poruke. Prirodno i opušteno.",
+          text: "Napisao sam klijentu poruku za kašnjenje projekta — odgovorio je sa 'hvala na iskrenosti'. Bez drame!",
           name: "Stefan",
           role: "Freelancer",
           avatar: "🧑‍💻",
@@ -475,7 +475,7 @@ const Landing = () => {
           avatar: "👩‍🎓",
         },
         {
-          text: "Како да ми најдобар пријател пишува пораки. Природно и опуштено.",
+          text: "Му напишав на клиент порака за доцнење на проект — одговори со 'благодарам на искреноста'. Без драма!",
           name: "Стефан",
           role: "Фриленсер",
           avatar: "🧑‍💻",
@@ -576,7 +576,7 @@ const Landing = () => {
           avatar: "👩‍🎓",
         },
         {
-          text: "Kot da mi najboljši prijatelj piše sporočila. Naravno in sproščeno.",
+          text: "Stranki sem napisal sporočilo o zamudi projekta — odgovorila je s 'hvala za iskrenost'. Brez drame!",
           name: "Stefan",
           role: "Freelancer",
           avatar: "🧑‍💻",
