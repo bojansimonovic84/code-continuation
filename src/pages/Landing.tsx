@@ -1332,6 +1332,94 @@ const Landing = () => {
           </div>
         </section>
 
+        {/* Pricing Hook - Visual */}
+        <section className="py-12 px-4 overflow-hidden">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, type: "spring" }}
+              className="relative"
+            >
+              {/* Animated coffee cup comparison */}
+              <div className="flex items-center justify-center gap-4 md:gap-8 mb-8">
+                <motion.div
+                  className="flex flex-col items-center"
+                  initial={{ x: -50, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <motion.span 
+                    className="text-6xl md:text-8xl"
+                    animate={{ rotate: [0, -5, 5, 0] }}
+                    transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+                  >
+                    ☕
+                  </motion.span>
+                  <span className="text-sm text-muted-foreground mt-2 font-medium">~2-3€</span>
+                </motion.div>
+
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
+                  className="flex flex-col items-center"
+                >
+                  <span className="text-3xl md:text-5xl font-bold text-primary">VS</span>
+                </motion.div>
+
+                <motion.div
+                  className="flex flex-col items-center"
+                  initial={{ x: 50, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <motion.span 
+                    className="text-6xl md:text-8xl"
+                    animate={{ y: [0, -8, 0] }}
+                    transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+                  >
+                    💬
+                  </motion.span>
+                  <span className="text-sm text-primary mt-2 font-bold">4.99€</span>
+                </motion.div>
+              </div>
+
+              <motion.h3
+                className="font-display text-2xl md:text-4xl font-bold text-foreground mb-3"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 }}
+              >
+                {c.pricingHook}
+              </motion.h3>
+              <motion.p
+                className="text-lg text-muted-foreground"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.7 }}
+              >
+                {c.pricingHookSub}
+              </motion.p>
+
+              {/* Animated arrow pointing down */}
+              <motion.div
+                className="mt-8"
+                animate={{ y: [0, 10, 0] }}
+                transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+              >
+                <span className="text-4xl">👇</span>
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Pricing - 4.99 EUR */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
