@@ -576,7 +576,7 @@ const Landing = () => {
           avatar: "👩‍🎓",
         },
         {
-          text: "Kot da mi najboljši prijatelj piše sporočila. Naravno in sproščeno.",
+          text: "Stranki sem napisal sporočilo o zamudi projekta — odgovorila je s 'hvala za iskrenost'. Brez drame!",
           name: "Stefan",
           role: "Freelancer",
           avatar: "🧑‍💻",
