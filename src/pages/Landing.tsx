@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import pizzaImg from "@/assets/pizza-half.png";
+import { PizzaAnimation } from "@/components/PizzaAnimation";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LanguageSelector } from "@/components/LanguageSelector";
