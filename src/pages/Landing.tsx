@@ -432,8 +432,8 @@ const Landing = () => {
       exampleAfter: "Poruke.AI generiše:",
       exampleAfterText:
         "Mama, u nedjelju nažalost neću moći doći na ručak — imam nešto zakazano što ne mogu pomjerati. Ali ajde sljedeći vikend da dođem ranije pa da ti pomognem oko kuvanja? Jedva čekam tvoje sarme 😊❤️",
-      pricingHook: "Jeftinije od kafe koju piješ svako jutro",
-      pricingHookSub: "A riješi ti više problema nego 10 kafana sa drugovima 😄",
+      pricingHook: "Za cijenu pola pice",
+      pricingHookSub: "Rješenja za muvanje, biznis, porodicu i sve neugodne poruke 💬",
       pricingTitle: "Jednostavna cijena",
       freePlan: "Besplatno",
       freeFeatures: ["5 poruka", "Sve situacije", "Svi tonovi", "Bez kartice"],
