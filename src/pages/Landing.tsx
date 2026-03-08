@@ -119,17 +119,17 @@ const Landing = () => {
 
       // Before/After with chat bubbles
       exampleTitle: "Pre / Posle",
-      exampleScenario: "Situacija: Kolega ti duguje pare već mesec dana",
+      exampleScenario: "Situacija: Moraš da kažeš kevi da ne dolaziš na nedeljni ručak",
       exampleBefore: "Ti pokušavaš da napišeš:",
       exampleBeforeTexts: [
-        "Ej, jel možeš da mi javiš oko onog što smo pričali?",
-        "Hej, znam da si zauzet ali...",
+        "Mama, moram ti nešto reći...",
+        "Neću moći u nedelju, nemoj da se ljutiš...",
         "[obrisano]",
-        "Možda mogu da sačekam još malo...",
+        "Ma ništa, doći ću ipak... 😩",
       ],
       exampleAfter: "Poruke.AI generiše:",
       exampleAfterText:
-        "Ćao! Samo da proverim - da li imaš priliku da mi vratiš onih 3000 koje sam ti pozajmio prošlog meseca? Razumem ako ti nije zgodan trenutak, javi mi samo kad možeš. Hvala! 🙂",
+        "Mama, u nedelju nažalost neću moći da dođem na ručak — imam nešto zakazano što ne mogu da pomeram. Ali ajde sledeći vikend da dođem ranije pa da ti pomognem oko kuvanja? Jedva čekam tvoje sarme 😊❤️",
 
       // Pricing - 4.99 EUR
       pricingTitle: "Jednostavna cena",
