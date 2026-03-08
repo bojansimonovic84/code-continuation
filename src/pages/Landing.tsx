@@ -135,6 +135,7 @@ const Landing = () => {
       // Pricing hook
       pricingHook: "Za cenu pola pice",
       pricingHookSub: "Rešenja za muvanje, biznis, porodicu i sve neugodne poruke 💬",
+      pricingPills: ["💕 Muvanje", "💼 Biznis", "👨‍👩‍👧 Porodica", "😰 Neugodne poruke"],
       // Pricing - 4.99 EUR
       pricingTitle: "Jednostavna cena",
       freePlan: "Besplatno",
