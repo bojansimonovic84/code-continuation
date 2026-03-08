@@ -1349,7 +1349,7 @@ const Landing = () => {
               transition={{ duration: 0.6, type: "spring" }}
               className="relative"
             >
-              {/* Real pizza image */}
+              {/* Animated pizza with disappearing slices */}
               <motion.div
                 className="relative inline-block mb-6"
                 initial={{ rotate: -10, scale: 0 }}
@@ -1357,16 +1357,10 @@ const Landing = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
               >
-                <motion.img 
-                  src={pizzaImg}
-                  alt="Pizza"
-                  className="w-40 h-40 md:w-56 md:h-56 object-contain inline-block drop-shadow-xl"
-                  animate={{ rotate: [0, -2, 2, 0] }}
-                  transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                />
+                <PizzaAnimation />
                 {/* Price tag on pizza */}
                 <motion.div
-                  className="absolute top-0 -right-3 bg-destructive text-destructive-foreground rounded-full px-3 py-1.5 text-sm font-bold shadow-lg"
+                  className="absolute top-0 -right-3 bg-destructive text-destructive-foreground rounded-full px-3 py-1.5 text-sm font-bold shadow-lg z-10"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
@@ -1377,7 +1371,7 @@ const Landing = () => {
                 </motion.div>
                 {/* Half price indicator */}
                 <motion.div
-                  className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full px-4 py-1.5 text-sm font-bold shadow-lg whitespace-nowrap"
+                  className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full px-4 py-1.5 text-sm font-bold shadow-lg whitespace-nowrap z-10"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
