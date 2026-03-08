@@ -1332,8 +1332,8 @@ const Landing = () => {
           </div>
         </section>
 
-        {/* Pricing Hook - Visual */}
-        <section className="py-12 px-4 overflow-hidden">
+        {/* Pricing Hook - Pizza Visual */}
+        <section className="py-16 px-4 overflow-hidden">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -1342,75 +1342,93 @@ const Landing = () => {
               transition={{ duration: 0.6, type: "spring" }}
               className="relative"
             >
-              {/* Animated coffee cup comparison */}
-              <div className="flex items-center justify-center gap-4 md:gap-8 mb-8">
-                <motion.div
-                  className="flex flex-col items-center"
-                  initial={{ x: -50, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 }}
+              {/* Big pizza animation */}
+              <motion.div
+                className="relative inline-block mb-6"
+                initial={{ rotate: -180, scale: 0 }}
+                whileInView={{ rotate: 0, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+              >
+                <motion.span 
+                  className="text-[80px] md:text-[120px] inline-block"
+                  animate={{ rotate: [0, -3, 3, 0] }}
+                  transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
                 >
-                  <motion.span 
-                    className="text-6xl md:text-8xl"
-                    animate={{ rotate: [0, -5, 5, 0] }}
-                    transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-                  >
-                    ☕
-                  </motion.span>
-                  <span className="text-sm text-muted-foreground mt-2 font-medium">~2-3€</span>
-                </motion.div>
-
+                  🍕
+                </motion.span>
+                {/* Floating "half" indicator */}
                 <motion.div
+                  className="absolute -top-2 -right-2 bg-primary text-primary-foreground rounded-full px-3 py-1 text-sm font-bold shadow-lg"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
-                  className="flex flex-col items-center"
+                  transition={{ delay: 0.6, type: "spring", stiffness: 300 }}
+                  animate={{ y: [0, -4, 0] }}
                 >
-                  <span className="text-3xl md:text-5xl font-bold text-primary">VS</span>
+                  ½
                 </motion.div>
-
-                <motion.div
-                  className="flex flex-col items-center"
-                  initial={{ x: 50, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 }}
-                >
-                  <motion.span 
-                    className="text-6xl md:text-8xl"
-                    animate={{ y: [0, -8, 0] }}
-                    transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-                  >
-                    💬
-                  </motion.span>
-                  <span className="text-sm text-primary mt-2 font-bold">4.99€</span>
-                </motion.div>
-              </div>
+              </motion.div>
 
               <motion.h3
-                className="font-display text-2xl md:text-4xl font-bold text-foreground mb-3"
+                className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.5 }}
+                transition={{ delay: 0.4 }}
               >
                 {c.pricingHook}
               </motion.h3>
+
+              {/* Animated feature pills */}
+              <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-6">
+                {["💕 Muvanje", "💼 Biznis", "👨‍👩‍👧 Porodica", "😰 Neugodne poruke"].map((item, i) => (
+                  <motion.span
+                    key={item}
+                    className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold border border-primary/20"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.5 + i * 0.1 }}
+                    whileHover={{ scale: 1.05, backgroundColor: "hsl(var(--primary) / 0.2)" }}
+                  >
+                    {item}
+                  </motion.span>
+                ))}
+              </div>
+
               <motion.p
-                className="text-lg text-muted-foreground"
+                className="text-lg md:text-xl text-muted-foreground mb-2"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.7 }}
+                transition={{ delay: 0.8 }}
               >
                 {c.pricingHookSub}
               </motion.p>
 
+              {/* Price comparison line */}
+              <motion.div
+                className="flex items-center justify-center gap-3 mt-6 mb-4"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1 }}
+              >
+                <span className="text-muted-foreground line-through text-lg">🍕 ~10€</span>
+                <span className="text-2xl">→</span>
+                <motion.span 
+                  className="text-primary font-bold text-2xl md:text-3xl"
+                  animate={{ scale: [1, 1.05, 1] }}
+                  transition={{ repeat: Infinity, duration: 2 }}
+                >
+                  💬 4.99€
+                </motion.span>
+              </motion.div>
+
               {/* Animated arrow pointing down */}
               <motion.div
-                className="mt-8"
+                className="mt-6"
                 animate={{ y: [0, 10, 0] }}
                 transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
               >
