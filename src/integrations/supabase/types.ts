@@ -14,6 +14,30 @@ export type Database = {
   }
   public: {
     Tables: {
+      coupons: {
+        Row: {
+          code: string
+          created_at: string
+          current_uses: number
+          id: string
+          max_uses: number | null
+        }
+        Insert: {
+          code: string
+          created_at?: string
+          current_uses?: number
+          id?: string
+          max_uses?: number | null
+        }
+        Update: {
+          code?: string
+          created_at?: string
+          current_uses?: number
+          id?: string
+          max_uses?: number | null
+        }
+        Relationships: []
+      }
       messages: {
         Row: {
           context: string | null
@@ -54,6 +78,7 @@ export type Database = {
           email: string | null
           full_name: string | null
           id: string
+          is_lifetime_premium: boolean | null
           updated_at: string
           user_id: string
         }
@@ -63,6 +88,7 @@ export type Database = {
           email?: string | null
           full_name?: string | null
           id?: string
+          is_lifetime_premium?: boolean | null
           updated_at?: string
           user_id: string
         }
@@ -72,6 +98,7 @@ export type Database = {
           email?: string | null
           full_name?: string | null
           id?: string
+          is_lifetime_premium?: boolean | null
           updated_at?: string
           user_id?: string
         }
@@ -83,6 +110,7 @@ export type Database = {
     }
     Functions: {
       get_user_message_count: { Args: { p_user_id: string }; Returns: number }
+      redeem_coupon: { Args: { coupon_code: string }; Returns: boolean }
     }
     Enums: {
       [_ in never]: never
