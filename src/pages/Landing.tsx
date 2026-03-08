@@ -131,6 +131,9 @@ const Landing = () => {
       exampleAfterText:
         "Mama, u nedelju nažalost neću moći da dođem na ručak — imam nešto zakazano što ne mogu da pomeram. Ali ajde sledeći vikend da dođem ranije pa da ti pomognem oko kuvanja? Jedva čekam tvoje sarme 😊❤️",
 
+      // Pricing hook
+      pricingHook: "Jeftinije od kafe koju piješ svako jutro",
+      pricingHookSub: "A reši ti više problema nego 10 kafića sa drugarima 😄",
       // Pricing - 4.99 EUR
       pricingTitle: "Jednostavna cena",
       freePlan: "Besplatno",
@@ -233,6 +236,8 @@ const Landing = () => {
       exampleAfter: "Poruke.AI generira:",
       exampleAfterText:
         "Mama, u nedjelju nažalost neću moći doći na ručak — imam nešto zakazano što ne mogu pomicati. Ali ajde sljedeći vikend da dođem ranije pa da ti pomognem oko kuhanja? Jedva čekam tvoje sarme 😊❤️",
+      pricingHook: "Jeftinije od kave koju piješ svako jutro",
+      pricingHookSub: "A riješi ti više problema nego 10 kavica s prijateljima 😄",
       pricingTitle: "Jednostavna cijena",
       freePlan: "Besplatno",
       freeFeatures: ["5 poruka", "Sve situacije", "Svi tonovi", "Bez kartice"],
@@ -329,6 +334,8 @@ const Landing = () => {
       exampleAfter: "Poruke.AI generiše:",
       exampleAfterText:
         "Mama, u nedjelju nažalost neću moći doći na ručak — imam nešto zakazano što ne mogu pomjerati. Ali ajde sljedeći vikend da dođem ranije pa da ti pomognem oko kuhanja? Jedva čekam tvoje sarme 😊❤️",
+      pricingHook: "Jeftinije od kafe koju piješ svako jutro",
+      pricingHookSub: "A riješi ti više problema nego 10 kafana sa drugovima 😄",
       pricingTitle: "Jednostavna cijena",
       freePlan: "Besplatno",
       freeFeatures: ["5 poruka", "Sve situacije", "Svi tonovi", "Bez kartice"],
@@ -425,6 +432,8 @@ const Landing = () => {
       exampleAfter: "Poruke.AI generiše:",
       exampleAfterText:
         "Mama, u nedjelju nažalost neću moći doći na ručak — imam nešto zakazano što ne mogu pomjerati. Ali ajde sljedeći vikend da dođem ranije pa da ti pomognem oko kuvanja? Jedva čekam tvoje sarme 😊❤️",
+      pricingHook: "Jeftinije od kafe koju piješ svako jutro",
+      pricingHookSub: "A riješi ti više problema nego 10 kafana sa drugovima 😄",
       pricingTitle: "Jednostavna cijena",
       freePlan: "Besplatno",
       freeFeatures: ["5 poruka", "Sve situacije", "Svi tonovi", "Bez kartice"],
@@ -527,6 +536,8 @@ const Landing = () => {
       exampleAfter: "Poruke.AI генерира:",
       exampleAfterText:
         "Мамо, во недела нажалост нема да можам да дојдам на ручек — имам нешто закажано што не можам да го поместам. Ама ајде следниот викенд да дојдам порано и да ти помогнам со готвењето? Едвај чекам твоите сарми 😊❤️",
+      pricingHook: "Поевтино од кафето што го пиеш секое утро",
+      pricingHookSub: "А ти решава повеќе проблеми од 10 кафиња со другари 😄",
       pricingTitle: "Едноставна цена",
       freePlan: "Бесплатно",
       freeFeatures: ["5 пораки", "Сите ситуации", "Сите тонови", "Без картичка"],
@@ -633,6 +644,8 @@ const Landing = () => {
       exampleAfter: "Poruke.AI generira:",
       exampleAfterText:
         "Mama, v nedeljo žal ne bom mogel/mogla priti na kosilo — imam nekaj dogovorjenega, česar ne morem prestaviti. Ampak daj naslednji vikend pridem prej, pa ti pomagam pri kuhanju? Komaj čakam tvoje sarme 😊❤️",
+      pricingHook: "Cenejše od kave, ki jo piješ vsako jutro",
+      pricingHookSub: "Pa ti reši več problemov kot 10 kavic s prijatelji 😄",
       pricingTitle: "Preprosta cena",
       freePlan: "Brezplačno",
       freeFeatures: ["5 sporočil", "Vse situacije", "Vsi toni", "Brez kartice"],
@@ -1316,6 +1329,94 @@ const Landing = () => {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Pricing Hook - Visual */}
+        <section className="py-12 px-4 overflow-hidden">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, type: "spring" }}
+              className="relative"
+            >
+              {/* Animated coffee cup comparison */}
+              <div className="flex items-center justify-center gap-4 md:gap-8 mb-8">
+                <motion.div
+                  className="flex flex-col items-center"
+                  initial={{ x: -50, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <motion.span 
+                    className="text-6xl md:text-8xl"
+                    animate={{ rotate: [0, -5, 5, 0] }}
+                    transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+                  >
+                    ☕
+                  </motion.span>
+                  <span className="text-sm text-muted-foreground mt-2 font-medium">~2-3€</span>
+                </motion.div>
+
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
+                  className="flex flex-col items-center"
+                >
+                  <span className="text-3xl md:text-5xl font-bold text-primary">VS</span>
+                </motion.div>
+
+                <motion.div
+                  className="flex flex-col items-center"
+                  initial={{ x: 50, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <motion.span 
+                    className="text-6xl md:text-8xl"
+                    animate={{ y: [0, -8, 0] }}
+                    transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+                  >
+                    💬
+                  </motion.span>
+                  <span className="text-sm text-primary mt-2 font-bold">4.99€</span>
+                </motion.div>
+              </div>
+
+              <motion.h3
+                className="font-display text-2xl md:text-4xl font-bold text-foreground mb-3"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 }}
+              >
+                {c.pricingHook}
+              </motion.h3>
+              <motion.p
+                className="text-lg text-muted-foreground"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.7 }}
+              >
+                {c.pricingHookSub}
+              </motion.p>
+
+              {/* Animated arrow pointing down */}
+              <motion.div
+                className="mt-8"
+                animate={{ y: [0, 10, 0] }}
+                transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+              >
+                <span className="text-4xl">👇</span>
+              </motion.div>
+            </motion.div>
           </div>
         </section>
 
