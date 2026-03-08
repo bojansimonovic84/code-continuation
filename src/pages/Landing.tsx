@@ -1399,7 +1399,7 @@ const Landing = () => {
 
               {/* Animated feature pills */}
               <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-6">
-                {["💕 Muvanje", "💼 Biznis", "👨‍👩‍👧 Porodica", "😰 Neugodne poruke"].map((item, i) => (
+                {c.pricingPills.map((item, i) => (
                   <motion.span
                     key={item}
                     className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold border border-primary/20"
