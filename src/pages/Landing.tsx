@@ -132,8 +132,8 @@ const Landing = () => {
         "Mama, u nedelju nažalost neću moći da dođem na ručak — imam nešto zakazano što ne mogu da pomeram. Ali ajde sledeći vikend da dođem ranije pa da ti pomognem oko kuvanja? Jedva čekam tvoje sarme 😊❤️",
 
       // Pricing hook
-      pricingHook: "Jeftinije od kafe koju piješ svako jutro",
-      pricingHookSub: "A reši ti više problema nego 10 kafića sa drugarima 😄",
+      pricingHook: "Za cenu pola pice",
+      pricingHookSub: "Rešenja za muvanje, biznis, porodicu i sve neugodne poruke 💬",
       // Pricing - 4.99 EUR
       pricingTitle: "Jednostavna cena",
       freePlan: "Besplatno",
