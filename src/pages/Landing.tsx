@@ -1429,7 +1429,7 @@ const Landing = () => {
                   <p className="text-xs text-primary">⚡ {language === "en" ? "10 seconds" : language === "mk" ? "10 секунди" : language === "ru" ? "10 секунд" : language === "uk" ? "10 секунд" : "10 sekundi"}</p>
                   <div className="flex gap-1">
                     <ThumbsUp className="w-4 h-4 text-primary" />
-                    <span className="text-xs text-primary">{language === "mk" ? "Совршено!" : language === "en" ? "Perfect!" : "Savršeno!"}</span>
+                    <span className="text-xs text-primary">{language === "mk" ? "Совршено!" : language === "en" ? "Perfect!" : language === "ru" ? "Идеально!" : language === "uk" ? "Ідеально!" : "Savršeno!"}</span>
                   </div>
                 </div>
               </motion.div>
