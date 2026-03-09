@@ -1176,13 +1176,27 @@ interface LanguageContextType {
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
-
 const STORAGE_KEY = "poruke-language";
+
+function detectBrowserLanguage(): Language {
+  const browserLangs = navigator.languages || [navigator.language];
+  const langMap: Record<string, Language> = {
+    sr: "sr", hr: "hr", bs: "bs", mk: "mk", sl: "sl",
+    en: "en", ru: "ru", uk: "uk",
+  };
+  for (const bl of browserLangs) {
+    const code = bl.toLowerCase().split("-")[0];
+    if (code === "cnr") return "me";
+    if (langMap[code]) return langMap[code];
+  }
+  return "sr";
+}
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
-    return (saved as Language) || "sr";
+    if (saved && languages.some(l => l.code === saved)) return saved as Language;
+    return detectBrowserLanguage();
   });
 
   useEffect(() => {
