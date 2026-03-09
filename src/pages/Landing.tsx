@@ -1231,7 +1231,7 @@ const Landing = () => {
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 >
                   <span className="text-xs font-semibold text-foreground flex items-center gap-1">
-                    💬 {language === "mk" ? "Совршена порака!" : language === "en" ? "Perfect message!" : "Savršena poruka!"}
+                    💬 {language === "mk" ? "Совршена порака!" : language === "en" ? "Perfect message!" : language === "ru" ? "Идеальное сообщение!" : language === "uk" ? "Ідеальне повідомлення!" : "Savršena poruka!"}
                   </span>
                 </motion.div>
 
