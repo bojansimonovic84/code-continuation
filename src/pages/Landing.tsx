@@ -1426,7 +1426,7 @@ const Landing = () => {
                   <p>{c.exampleAfterText}</p>
                 </motion.div>
                 <div className="flex items-center justify-between mt-4">
-                  <p className="text-xs text-primary">⚡ {language === "en" ? "10 seconds" : language === "mk" ? "10 секунди" : "10 sekundi"}</p>
+                  <p className="text-xs text-primary">⚡ {language === "en" ? "10 seconds" : language === "mk" ? "10 секунди" : language === "ru" ? "10 секунд" : language === "uk" ? "10 секунд" : "10 sekundi"}</p>
                   <div className="flex gap-1">
                     <ThumbsUp className="w-4 h-4 text-primary" />
                     <span className="text-xs text-primary">{language === "mk" ? "Совршено!" : language === "en" ? "Perfect!" : "Savršeno!"}</span>
