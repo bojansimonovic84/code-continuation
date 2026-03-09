@@ -681,54 +681,124 @@ const Landing = () => {
       tryNow: "Preizkusi Poruke.AI brezplačno",
       startNow: "Začni zdaj",
     },
+    en: {
+      heroTitle1: "Don't know how to write that message?",
+      heroTitle2: "We do. 💬",
+      heroSubtitle: "Poruke.AI helps you write the perfect message, in the right tone, for any situation — in 10 seconds.",
+      heroContext: "For work, personal life, housing, buying/selling, dating, and awkward situations.",
+      tryFree: "Try for free",
+      noCard: "no card needed • 5 messages free",
+      testimonials: [
+        {
+          text: "I use it every day for work emails. Saved me hours!",
+          name: "Mark",
+          role: "IT Manager",
+          avatar: "👨‍💼",
+        },
+        {
+          text: "Saved me from sending a stupid text to my ex. Highly recommend!",
+          name: "Anna",
+          role: "Student",
+          avatar: "👩‍🎓",
+        },
+        {
+          text: "I wrote a client about a project delay — they replied 'thanks for being honest'. No drama!",
+          name: "Stefan",
+          role: "Freelancer",
+          avatar: "🧑‍💻",
+        },
+        {
+          text: "Finally know how to say no to my boss without sounding rude.",
+          name: "Elena",
+          role: "HR Manager",
+          avatar: "👩‍💼",
+        },
+        { text: "Perfect for dating! Girls finally respond 😄", name: "Luke", role: "Student", avatar: "🎓" },
+        { text: "Helped me sort out a problem with my landlord. 10/10", name: "Milica", role: "Tenant", avatar: "🏠" },
+      ],
+      problemTitle: "Sound familiar?",
+      problems: [
+        "You stare at the screen and don't know how to start",
+        "You don't want to sound rude or too soft",
+        "You delete the message 5 times before sending it",
+        "You delay replying for hours because you don't know what to write",
+        "You're afraid of coming across as weird or pushy",
+      ],
+      problemSolution: "Poruke.AI solves that for you.",
+      howItWorks: "How does it work?",
+      step1Title: "Choose a situation",
+      step1Desc: "Work • Housing • Buying/Selling • Personal • Dating • Bad news",
+      step2Title: "Choose a tone",
+      step2Desc: "Polite • Confident • Calm • Playful • Gentle",
+      step3Title: 'Click "Write message"',
+      step3Desc: "Copy. Send. Done.",
+      timeNote: "Everything takes less than 20 seconds.",
+      whyNotGpt: "Why not ChatGPT?",
+      whyReasons: ["No writing prompts", "No overthinking", "No overly formal replies"],
+      whyBecause: "Poruke.AI writes like:",
+      whyPoints: ["A real person", "From the Balkans", "In real situations"],
+      exampleTitle: "Before / After",
+      exampleScenario: "Situation: You need to tell your mom you're not coming to Sunday lunch",
+      exampleBefore: "You try to write:",
+      exampleBeforeTexts: [
+        "Mom, I need to tell you something...",
+        "I can't make it on Sunday, please don't be mad...",
+        "[deleted]",
+        "Nevermind, I'll come after all... 😩",
+      ],
+      exampleAfter: "Poruke.AI generates:",
+      exampleAfterText:
+        "Hey Mom, unfortunately I won't be able to make it to lunch on Sunday — I have something scheduled that I can't move. But how about I come earlier next weekend and help you with the cooking? Can't wait for your famous sarma 😊❤️",
+      pricingHook: "For half a pizza's price",
+      pricingHookSub: "Solutions for dating, business, family, and all those awkward messages 💬",
+      pricingPills: ["💕 Dating", "💼 Business", "👨‍👩‍👧 Family", "😰 Awkward messages"],
+      pricingTitle: "Simple pricing",
+      freePlan: "Free",
+      freeFeatures: ["5 messages", "All situations", "All tones", "No card needed"],
+      premiumPlan: "Premium",
+      premiumFeatures: ["Unlimited messages", "All situations & tones", "Message history", "Priority support"],
+      premiumPrice: "4.99€",
+      premiumPeriod: "/monthly",
+      premiumNote: "For half a pizza's price — solutions for dating, business & chat. 🍕💬",
+      premiumSave: "Save 40%",
+      yearlyPrice: "35.99€/yearly",
+      unlockPremium: "Unlock Premium",
+      forWhoTitle: "Who is Poruke.AI for?",
+      forWhoCategories: [
+        { emoji: "👨‍💼", label: "Employees", desc: "Emails to boss, colleagues, clients" },
+        { emoji: "🧑‍💻", label: "Freelancers", desc: "Professional client communication" },
+        { emoji: "🎓", label: "Students", desc: "Professors, peers, internships" },
+        { emoji: "🏠", label: "Tenants", desc: "Landlords and neighbors" },
+        { emoji: "💕", label: "Teenagers", desc: "Dating and friends" },
+        { emoji: "👨‍👩‍👧", label: "Parents", desc: "School, daycare, other parents" },
+        { emoji: "🛍️", label: "Buyers/Sellers", desc: "Listings and negotiations" },
+        { emoji: "😰", label: "Anxious people", desc: "For everyone who hates conflict" },
+      ],
+      situationsTitle: "Situations we cover",
+      finalCta1: "Stop overthinking what to write.",
+      finalCta2: "Start sending messages that work.",
+      tryNow: "Try Poruke.AI for free",
+      startNow: "Start now",
+    },
   };
 
   const c = content[language as keyof typeof content] || content.sr;
 
   // Situation cards with colorful icons and animations
+  const sitLabels: Record<string, string[]> = {
+    mk: ["Мување и љубов", "Работа и бизнис", "Стан и комшии", "Купопродажба", "Приватно и пријатели", "Лоши вести"],
+    en: ["Dating & love", "Work & business", "Housing & neighbors", "Buying & selling", "Personal & friends", "Bad news"],
+  };
+  const defaultSitLabels = ["Muvanje i ljubav", "Posao i biznis", "Stan i komšije", "Kupoprodaja", "Privatno i prijatelji", "Loše vesti"];
+  const sl = sitLabels[language] || defaultSitLabels;
+
   const situations = [
-    {
-      icon: Heart,
-      color: "text-pink-500",
-      bg: "bg-pink-500/10",
-      label: language === "mk" ? "Мување и љубов" : "Muvanje i ljubav",
-      desc: "💕",
-    },
-    {
-      icon: Briefcase,
-      color: "text-blue-500",
-      bg: "bg-blue-500/10",
-      label: language === "mk" ? "Работа и бизнис" : "Posao i biznis",
-      desc: "💼",
-    },
-    {
-      icon: Home,
-      color: "text-emerald-500",
-      bg: "bg-emerald-500/10",
-      label: language === "mk" ? "Стан и комшии" : "Stan i komšije",
-      desc: "🏠",
-    },
-    {
-      icon: ShoppingCart,
-      color: "text-violet-500",
-      bg: "bg-violet-500/10",
-      label: language === "mk" ? "Купопродажба" : "Kupoprodaja",
-      desc: "🛍️",
-    },
-    {
-      icon: Users,
-      color: "text-orange-500",
-      bg: "bg-orange-500/10",
-      label: language === "mk" ? "Приватно и пријатели" : "Privatno i prijatelji",
-      desc: "👥",
-    },
-    {
-      icon: AlertTriangle,
-      color: "text-slate-500",
-      bg: "bg-slate-500/10",
-      label: language === "mk" ? "Лоши вести" : "Loše vesti",
-      desc: "😔",
-    },
+    { icon: Heart, color: "text-pink-500", bg: "bg-pink-500/10", label: sl[0], desc: "💕" },
+    { icon: Briefcase, color: "text-blue-500", bg: "bg-blue-500/10", label: sl[1], desc: "💼" },
+    { icon: Home, color: "text-emerald-500", bg: "bg-emerald-500/10", label: sl[2], desc: "🏠" },
+    { icon: ShoppingCart, color: "text-violet-500", bg: "bg-violet-500/10", label: sl[3], desc: "🛍️" },
+    { icon: Users, color: "text-orange-500", bg: "bg-orange-500/10", label: sl[4], desc: "👥" },
+    { icon: AlertTriangle, color: "text-slate-500", bg: "bg-slate-500/10", label: sl[5], desc: "😔" },
   ];
 
   return (
@@ -793,7 +863,7 @@ const Landing = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-destructive opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-destructive"></span>
                 </span>
-                🔥 30,000+ {language === "mk" ? "пораки веќе генерирани" : "poruka već generisano"}
+                🔥 30,000+ {language === "mk" ? "пораки веќе генерирани" : language === "en" ? "messages already generated" : "poruka već generisano"}
               </motion.div>
 
               <motion.h1
@@ -869,7 +939,7 @@ const Landing = () => {
                   ))}
                 </div>
                 <div className="text-sm text-muted-foreground">
-                  <span className="text-primary font-semibold">4.9★</span> • 2,400+ {language === "mk" ? "задоволни корисници" : "zadovoljnih korisnika"}
+                  <span className="text-primary font-semibold">4.9★</span> • 2,400+ {language === "mk" ? "задоволни корисници" : language === "en" ? "happy users" : "zadovoljnih korisnika"}
                 </div>
               </motion.div>
             </motion.div>
@@ -910,6 +980,8 @@ const Landing = () => {
                           <p className="text-xs text-foreground">
                             {language === "mk" 
                               ? "Комшивката ми реагира на секое стори и ми се смешка кога се сретнеме... Како да ја поканам на пиво а да знае на што мислам? 😏"
+                              : language === "en"
+                              ? "My neighbor reacts to every story and smiles at me when we meet... How do I ask her out so she knows what I mean? 😏"
                               : "Komšinica mi reaguje na svaki stori i smeška mi se kad se sretnemo... Kako da je pozovem na piće a da zna na šta mislim? 😏"
                             }
                           </p>
@@ -952,6 +1024,8 @@ const Landing = () => {
                           <p className="text-xs text-foreground leading-relaxed">
                             {language === "mk" 
                               ? "Еј, гледам ми реагираш на секое стори... ајде да видиме дали сме исто толку интересни и во живо 😏 Кафе утре? Ветувам — нема да зборам за времето ☀️"
+                              : language === "en"
+                              ? "Hey, I notice you react to every story of mine... let's see if we're just as interesting in person 😏 Coffee tomorrow? I promise — I won't talk about the weather ☀️"
                               : "Ej, vidim da mi reagiješ na svaki stori... ajde da vidimo jesmo li isto toliko zanimljivi i uživo 😏 Kafica sutra? Obećavam — neću pričati o vremenu ☀️"
                             }
                           </p>
@@ -967,7 +1041,7 @@ const Landing = () => {
                       >
                         <div className="bg-primary/10 text-primary text-xs font-medium px-4 py-1.5 rounded-full flex items-center gap-1.5">
                           <Check className="w-3 h-3" />
-                          {language === "mk" ? "Копирано!" : "Kopirano!"}
+                          {language === "mk" ? "Копирано!" : language === "en" ? "Copied!" : "Kopirano!"}
                         </div>
                       </motion.div>
                     </div>
@@ -991,7 +1065,7 @@ const Landing = () => {
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 >
                   <span className="text-xs font-semibold text-foreground flex items-center gap-1">
-                    💬 {language === "mk" ? "Совршена порака!" : "Savršena poruka!"}
+                    💬 {language === "mk" ? "Совршена порака!" : language === "en" ? "Perfect message!" : "Savršena poruka!"}
                   </span>
                 </motion.div>
 
@@ -1162,7 +1236,7 @@ const Landing = () => {
                     </motion.div>
                   ))}
                 </div>
-                <p className="text-xs text-destructive mt-4 text-center">⏱️ 15 minuta kasnije...</p>
+                <p className="text-xs text-destructive mt-4 text-center">⏱️ {language === "mk" ? "15 минути подоцна..." : language === "en" ? "15 minutes later..." : "15 minuta kasnije..."}</p>
               </motion.div>
 
               {/* After - Perfect message */}
@@ -1186,10 +1260,10 @@ const Landing = () => {
                   <p>{c.exampleAfterText}</p>
                 </motion.div>
                 <div className="flex items-center justify-between mt-4">
-                  <p className="text-xs text-primary">⚡ 10 sekundi</p>
+                  <p className="text-xs text-primary">⚡ {language === "en" ? "10 seconds" : language === "mk" ? "10 секунди" : "10 sekundi"}</p>
                   <div className="flex gap-1">
                     <ThumbsUp className="w-4 h-4 text-primary" />
-                    <span className="text-xs text-primary">Savršeno!</span>
+                    <span className="text-xs text-primary">{language === "mk" ? "Совршено!" : language === "en" ? "Perfect!" : "Savršeno!"}</span>
                   </div>
                 </div>
               </motion.div>
@@ -1552,7 +1626,7 @@ const Landing = () => {
             <span className="font-display font-bold text-foreground">Poruke.AI</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            © 2026 Poruke.AI. {language === "mk" ? "Сите права задржани." : "Sva prava zadržana."}
+            © 2026 Poruke.AI. {language === "mk" ? "Сите права задржани." : language === "en" ? "All rights reserved." : "Sva prava zadržana."}
           </p>
         </div>
       </footer>
