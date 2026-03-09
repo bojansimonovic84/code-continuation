@@ -1021,7 +1021,7 @@ const Landing = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-destructive opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-destructive"></span>
                 </span>
-                🔥 30,000+ {language === "mk" ? "пораки веќе генерирани" : language === "en" ? "messages already generated" : language === "ru" ? "сообщений уже сгенерировано" : language === "uk" ? "повідомлень вже згенеровано" : language === "ru" ? "сообщений уже сгенерировано" : language === "uk" ? "повідомлень вже згенеровано" : "poruka već generisano"}
+                🔥 30,000+ {language === "mk" ? "пораки веќе генерирани" : language === "en" ? "messages already generated" : language === "ru" ? "сообщений уже сгенерировано" : language === "uk" ? "повідомлень вже згенеровано" : "poruka već generisano"}
               </motion.div>
 
               <motion.h1
