@@ -1041,7 +1041,7 @@ const Landing = () => {
                       >
                         <div className="bg-primary/10 text-primary text-xs font-medium px-4 py-1.5 rounded-full flex items-center gap-1.5">
                           <Check className="w-3 h-3" />
-                          {language === "mk" ? "Копирано!" : "Kopirano!"}
+                          {language === "mk" ? "Копирано!" : language === "en" ? "Copied!" : "Kopirano!"}
                         </div>
                       </motion.div>
                     </div>
