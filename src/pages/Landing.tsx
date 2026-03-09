@@ -944,6 +944,8 @@ const Landing = () => {
   const sitLabels: Record<string, string[]> = {
     mk: ["Мување и љубов", "Работа и бизнис", "Стан и комшии", "Купопродажба", "Приватно и пријатели", "Лоши вести"],
     en: ["Dating & love", "Work & business", "Housing & neighbors", "Buying & selling", "Personal & friends", "Bad news"],
+    ru: ["Флирт и любовь", "Работа и бизнес", "Жильё и соседи", "Купля-продажа", "Личное и друзья", "Плохие новости"],
+    uk: ["Флірт і кохання", "Робота і бізнес", "Житло і сусіди", "Купівля-продаж", "Особисте і друзі", "Погані новини"],
   };
   const defaultSitLabels = ["Muvanje i ljubav", "Posao i biznis", "Stan i komšije", "Kupoprodaja", "Privatno i prijatelji", "Loše vesti"];
   const sl = sitLabels[language] || defaultSitLabels;
