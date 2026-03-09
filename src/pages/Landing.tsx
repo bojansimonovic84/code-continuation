@@ -780,6 +780,162 @@ const Landing = () => {
       tryNow: "Try Poruke.AI for free",
       startNow: "Start now",
     },
+    ru: {
+      heroTitle1: "Не знаете, как написать сообщение?",
+      heroTitle2: "Мы знаем. 💬",
+      heroSubtitle: "Poruke.AI помогает написать идеальное сообщение, в нужном тоне, для любой ситуации — за 10 секунд.",
+      heroContext: "Для работы, личной жизни, жилья, купли-продажи, флирта и неловких ситуаций.",
+      tryFree: "Попробовать бесплатно",
+      noCard: "без карты • 5 сообщений бесплатно",
+      testimonials: [
+        { text: "Использую каждый день для рабочих писем. Сэкономил часы!", name: "Марк", role: "IT Manager", avatar: "👨‍💼" },
+        { text: "Спасла от глупого сообщения бывшему. Рекомендую всем!", name: "Анна", role: "Студентка", avatar: "👩‍🎓" },
+        { text: "Написал клиенту про задержку проекта — ответил 'спасибо за честность'. Без драмы!", name: "Стефан", role: "Фрилансер", avatar: "🧑‍💻" },
+        { text: "Наконец знаю, как отказать начальнику, не звуча грубо.", name: "Елена", role: "HR Менеджер", avatar: "👩‍💼" },
+        { text: "Для флирта — идеально! Девушки наконец отвечают 😄", name: "Лука", role: "Студент", avatar: "🎓" },
+        { text: "Помогла решить проблему с арендодателем. 10/10", name: "Милица", role: "Арендатор", avatar: "🏠" },
+      ],
+      problemTitle: "Знакомо?",
+      problems: [
+        "Смотрите на экран и не знаете, с чего начать",
+        "Не хотите звучать грубо или слишком мягко",
+        "Удаляете сообщение 5 раз, прежде чем отправить",
+        "Откладываете ответ часами, потому что не знаете, что написать",
+        "Боитесь показаться странным или навязчивым",
+      ],
+      problemSolution: "Poruke.AI решает это за вас.",
+      howItWorks: "Как это работает?",
+      step1Title: "Выберите ситуацию",
+      step1Desc: "Работа • Жильё • Купля-продажа • Личное • Флирт • Плохие новости",
+      step2Title: "Выберите тон",
+      step2Desc: "Вежливо • Уверенно • Спокойно • Игриво • Мягко",
+      step3Title: 'Нажмите «Написать сообщение»',
+      step3Desc: "Копируете. Отправляете. Готово.",
+      timeNote: "Всё занимает меньше 20 секунд.",
+      whyNotGpt: "Почему не ChatGPT?",
+      whyReasons: ["Не нужно писать промпты", "Не нужно думать", "Никаких слишком формальных ответов"],
+      whyBecause: "Poruke.AI пишет как:",
+      whyPoints: ["Реальный человек", "С Балкан", "В реальных ситуациях"],
+      exampleTitle: "До / После",
+      exampleScenario: "Ситуация: Нужно сказать маме, что не придёте на воскресный обед",
+      exampleBefore: "Вы пытаетесь написать:",
+      exampleBeforeTexts: [
+        "Мам, я должен тебе кое-что сказать...",
+        "Не смогу в воскресенье, не обижайся...",
+        "[удалено]",
+        "А ладно, приду всё-таки... 😩",
+      ],
+      exampleAfter: "Poruke.AI генерирует:",
+      exampleAfterText: "Мам, в воскресенье, к сожалению, не смогу прийти на обед — у меня запланировано кое-что, что нельзя перенести. Но давай в следующие выходные приеду пораньше и помогу с готовкой? Жду не дождусь твоих голубцов 😊❤️",
+      pricingHook: "За цену половины пиццы",
+      pricingHookSub: "Решения для флирта, бизнеса, семьи и всех неловких сообщений 💬",
+      pricingPills: ["💕 Флирт", "💼 Бизнес", "👨‍👩‍👧 Семья", "😰 Неловкие сообщения"],
+      pricingTitle: "Простая цена",
+      freePlan: "Бесплатно",
+      freeFeatures: ["5 сообщений", "Все ситуации", "Все тона", "Без карты"],
+      premiumPlan: "Премиум",
+      premiumFeatures: ["Безлимитные сообщения", "Все ситуации и тона", "История сообщений", "Приоритетная поддержка"],
+      premiumPrice: "4.99€",
+      premiumPeriod: "/месяц",
+      premiumNote: "За цену половины пиццы — решения для флирта, бизнеса и чатов. 🍕💬",
+      premiumSave: "Экономия 40%",
+      yearlyPrice: "35.99€/год",
+      unlockPremium: "Открыть Премиум",
+      forWhoTitle: "Для кого Poruke.AI?",
+      forWhoCategories: [
+        { emoji: "👨‍💼", label: "Работники", desc: "Для писем начальнику, коллегам, клиентам" },
+        { emoji: "🧑‍💻", label: "Фрилансеры", desc: "Для профессионального общения с клиентами" },
+        { emoji: "🎓", label: "Студенты", desc: "Для преподавателей, коллег, стажировки" },
+        { emoji: "🏠", label: "Арендаторы", desc: "Для арендодателей и соседей" },
+        { emoji: "💕", label: "Подростки", desc: "Для флирта и друзей" },
+        { emoji: "👨‍👩‍👧", label: "Родители", desc: "Для школы, сада, других родителей" },
+        { emoji: "🛍️", label: "Покупатели/Продавцы", desc: "Для объявлений и переговоров" },
+        { emoji: "😰", label: "Тревожные", desc: "Для всех, кто ненавидит конфликты" },
+      ],
+      situationsTitle: "Ситуации, которые мы покрываем",
+      finalCta1: "Перестаньте думать, что написать.",
+      finalCta2: "Начните отправлять сообщения, которые работают.",
+      tryNow: "Попробуйте Poruke.AI бесплатно",
+      startNow: "Начать сейчас",
+    },
+    uk: {
+      heroTitle1: "Не знаєте, як написати повідомлення?",
+      heroTitle2: "Ми знаємо. 💬",
+      heroSubtitle: "Poruke.AI допомагає написати ідеальне повідомлення, в потрібному тоні, для будь-якої ситуації — за 10 секунд.",
+      heroContext: "Для роботи, особистого життя, житла, купівлі-продажу, флірту та незручних ситуацій.",
+      tryFree: "Спробувати безкоштовно",
+      noCard: "без картки • 5 повідомлень безкоштовно",
+      testimonials: [
+        { text: "Використовую щодня для робочих листів. Заощадив години!", name: "Марк", role: "IT Manager", avatar: "👨‍💼" },
+        { text: "Врятувала від дурного повідомлення колишньому. Рекомендую всім!", name: "Анна", role: "Студентка", avatar: "👩‍🎓" },
+        { text: "Написав клієнту про затримку проєкту — відповів 'дякую за чесність'. Без драми!", name: "Стефан", role: "Фрілансер", avatar: "🧑‍💻" },
+        { text: "Нарешті знаю, як відмовити начальнику, не звучачи грубо.", name: "Олена", role: "HR Менеджер", avatar: "👩‍💼" },
+        { text: "Для флірту — ідеально! Дівчата нарешті відповідають 😄", name: "Лука", role: "Студент", avatar: "🎓" },
+        { text: "Допомогла вирішити проблему з орендодавцем. 10/10", name: "Мілиця", role: "Орендар", avatar: "🏠" },
+      ],
+      problemTitle: "Знайомо?",
+      problems: [
+        "Дивитесь на екран і не знаєте, з чого почати",
+        "Не хочете звучати грубо або занадто м'яко",
+        "Видаляєте повідомлення 5 разів, перш ніж відправити",
+        "Відкладаєте відповідь на години, бо не знаєте, що написати",
+        "Боїтесь виглядати дивно або нав'язливо",
+      ],
+      problemSolution: "Poruke.AI вирішує це за вас.",
+      howItWorks: "Як це працює?",
+      step1Title: "Оберіть ситуацію",
+      step1Desc: "Робота • Житло • Купівля-продаж • Особисте • Флірт • Погані новини",
+      step2Title: "Оберіть тон",
+      step2Desc: "Ввічливо • Впевнено • Спокійно • Грайливо • М'яко",
+      step3Title: 'Натисніть «Написати повідомлення»',
+      step3Desc: "Копіюєте. Відправляєте. Готово.",
+      timeNote: "Все займає менше 20 секунд.",
+      whyNotGpt: "Чому не ChatGPT?",
+      whyReasons: ["Не потрібно писати промпти", "Не потрібно думати", "Ніяких занадто формальних відповідей"],
+      whyBecause: "Poruke.AI пише як:",
+      whyPoints: ["Реальна людина", "З Балкан", "У реальних ситуаціях"],
+      exampleTitle: "До / Після",
+      exampleScenario: "Ситуація: Потрібно сказати мамі, що не прийдете на недільний обід",
+      exampleBefore: "Ви намагаєтесь написати:",
+      exampleBeforeTexts: [
+        "Мам, я маю тобі дещо сказати...",
+        "Не зможу в неділю, не ображайся...",
+        "[видалено]",
+        "А ладно, прийду все-таки... 😩",
+      ],
+      exampleAfter: "Poruke.AI генерує:",
+      exampleAfterText: "Мам, у неділю, на жаль, не зможу прийти на обід — у мене заплановане дещо, що не можна перенести. Але давай наступних вихідних приїду раніше й допоможу з готуванням? Чекаю не дочекаюся твоїх голубців 😊❤️",
+      pricingHook: "За ціну половини піци",
+      pricingHookSub: "Рішення для флірту, бізнесу, сім'ї та всіх незручних повідомлень 💬",
+      pricingPills: ["💕 Флірт", "💼 Бізнес", "👨‍👩‍👧 Сім'я", "😰 Незручні повідомлення"],
+      pricingTitle: "Проста ціна",
+      freePlan: "Безкоштовно",
+      freeFeatures: ["5 повідомлень", "Всі ситуації", "Всі тони", "Без картки"],
+      premiumPlan: "Преміум",
+      premiumFeatures: ["Безлімітні повідомлення", "Всі ситуації та тони", "Історія повідомлень", "Пріоритетна підтримка"],
+      premiumPrice: "4.99€",
+      premiumPeriod: "/місяць",
+      premiumNote: "За ціну половини піци — рішення для флірту, бізнесу та чатів. 🍕💬",
+      premiumSave: "Економія 40%",
+      yearlyPrice: "35.99€/рік",
+      unlockPremium: "Відкрити Преміум",
+      forWhoTitle: "Для кого Poruke.AI?",
+      forWhoCategories: [
+        { emoji: "👨‍💼", label: "Працівники", desc: "Для листів начальнику, колегам, клієнтам" },
+        { emoji: "🧑‍💻", label: "Фрілансери", desc: "Для професійного спілкування з клієнтами" },
+        { emoji: "🎓", label: "Студенти", desc: "Для викладачів, колег, стажування" },
+        { emoji: "🏠", label: "Орендарі", desc: "Для орендодавців та сусідів" },
+        { emoji: "💕", label: "Підлітки", desc: "Для флірту та друзів" },
+        { emoji: "👨‍👩‍👧", label: "Батьки", desc: "Для школи, садка, інших батьків" },
+        { emoji: "🛍️", label: "Покупці/Продавці", desc: "Для оголошень та переговорів" },
+        { emoji: "😰", label: "Тривожні", desc: "Для всіх, хто ненавидить конфлікти" },
+      ],
+      situationsTitle: "Ситуації, які ми покриваємо",
+      finalCta1: "Перестаньте думати, що написати.",
+      finalCta2: "Починайте надсилати повідомлення, які працюють.",
+      tryNow: "Спробуйте Poruke.AI безкоштовно",
+      startNow: "Почати зараз",
+    },
   };
 
   const c = content[language as keyof typeof content] || content.sr;
@@ -788,6 +944,8 @@ const Landing = () => {
   const sitLabels: Record<string, string[]> = {
     mk: ["Мување и љубов", "Работа и бизнис", "Стан и комшии", "Купопродажба", "Приватно и пријатели", "Лоши вести"],
     en: ["Dating & love", "Work & business", "Housing & neighbors", "Buying & selling", "Personal & friends", "Bad news"],
+    ru: ["Флирт и любовь", "Работа и бизнес", "Жильё и соседи", "Купля-продажа", "Личное и друзья", "Плохие новости"],
+    uk: ["Флірт і кохання", "Робота і бізнес", "Житло і сусіди", "Купівля-продаж", "Особисте і друзі", "Погані новини"],
   };
   const defaultSitLabels = ["Muvanje i ljubav", "Posao i biznis", "Stan i komšije", "Kupoprodaja", "Privatno i prijatelji", "Loše vesti"];
   const sl = sitLabels[language] || defaultSitLabels;
@@ -863,7 +1021,7 @@ const Landing = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-destructive opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-destructive"></span>
                 </span>
-                🔥 30,000+ {language === "mk" ? "пораки веќе генерирани" : language === "en" ? "messages already generated" : "poruka već generisano"}
+                🔥 30,000+ {language === "mk" ? "пораки веќе генерирани" : language === "en" ? "messages already generated" : language === "ru" ? "сообщений уже сгенерировано" : language === "uk" ? "повідомлень вже згенеровано" : "poruka već generisano"}
               </motion.div>
 
               <motion.h1
@@ -939,7 +1097,7 @@ const Landing = () => {
                   ))}
                 </div>
                 <div className="text-sm text-muted-foreground">
-                  <span className="text-primary font-semibold">4.9★</span> • 2,400+ {language === "mk" ? "задоволни корисници" : language === "en" ? "happy users" : "zadovoljnih korisnika"}
+                  <span className="text-primary font-semibold">4.9★</span> • 2,400+ {language === "mk" ? "задоволни корисници" : language === "en" ? "happy users" : language === "ru" ? "довольных пользователей" : language === "uk" ? "задоволених користувачів" : "zadovoljnih korisnika"}
                 </div>
               </motion.div>
             </motion.div>
@@ -982,6 +1140,10 @@ const Landing = () => {
                               ? "Комшивката ми реагира на секое стори и ми се смешка кога се сретнеме... Како да ја поканам на пиво а да знае на што мислам? 😏"
                               : language === "en"
                               ? "My neighbor reacts to every story and smiles at me when we meet... How do I ask her out so she knows what I mean? 😏"
+                              : language === "ru"
+                              ? "Соседка реагирует на каждую сторис и улыбается мне при встрече... Как пригласить её на кофе, чтобы она поняла, что я имею в виду? 😏"
+                              : language === "uk"
+                              ? "Сусідка реагує на кожну сторіс і посміхається мені при зустрічі... Як запросити її на каву, щоб вона зрозуміла, що я маю на увазі? 😏"
                               : "Komšinica mi reaguje na svaki stori i smeška mi se kad se sretnemo... Kako da je pozovem na piće a da zna na šta mislim? 😏"
                             }
                           </p>
@@ -1026,6 +1188,10 @@ const Landing = () => {
                               ? "Еј, гледам ми реагираш на секое стори... ајде да видиме дали сме исто толку интересни и во живо 😏 Кафе утре? Ветувам — нема да зборам за времето ☀️"
                               : language === "en"
                               ? "Hey, I notice you react to every story of mine... let's see if we're just as interesting in person 😏 Coffee tomorrow? I promise — I won't talk about the weather ☀️"
+                              : language === "ru"
+                              ? "Эй, замечаю, ты реагируешь на каждую мою сторис... давай проверим, так ли мы интересны вживую 😏 Кофе завтра? Обещаю — не буду говорить о погоде ☀️"
+                              : language === "uk"
+                              ? "Гей, бачу, ти реагуєш на кожну мою сторіс... давай перевіримо, чи ми такі ж цікаві наживо 😏 Кава завтра? Обіцяю — не буду говорити про погоду ☀️"
                               : "Ej, vidim da mi reagiješ na svaki stori... ajde da vidimo jesmo li isto toliko zanimljivi i uživo 😏 Kafica sutra? Obećavam — neću pričati o vremenu ☀️"
                             }
                           </p>
@@ -1041,7 +1207,7 @@ const Landing = () => {
                       >
                         <div className="bg-primary/10 text-primary text-xs font-medium px-4 py-1.5 rounded-full flex items-center gap-1.5">
                           <Check className="w-3 h-3" />
-                          {language === "mk" ? "Копирано!" : language === "en" ? "Copied!" : "Kopirano!"}
+                          {language === "mk" ? "Копирано!" : language === "en" ? "Copied!" : language === "ru" ? "Скопировано!" : language === "uk" ? "Скопійовано!" : "Kopirano!"}
                         </div>
                       </motion.div>
                     </div>
@@ -1065,7 +1231,7 @@ const Landing = () => {
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 >
                   <span className="text-xs font-semibold text-foreground flex items-center gap-1">
-                    💬 {language === "mk" ? "Совршена порака!" : language === "en" ? "Perfect message!" : "Savršena poruka!"}
+                    💬 {language === "mk" ? "Совршена порака!" : language === "en" ? "Perfect message!" : language === "ru" ? "Идеальное сообщение!" : language === "uk" ? "Ідеальне повідомлення!" : "Savršena poruka!"}
                   </span>
                 </motion.div>
 
@@ -1236,7 +1402,7 @@ const Landing = () => {
                     </motion.div>
                   ))}
                 </div>
-                <p className="text-xs text-destructive mt-4 text-center">⏱️ {language === "mk" ? "15 минути подоцна..." : language === "en" ? "15 minutes later..." : "15 minuta kasnije..."}</p>
+                <p className="text-xs text-destructive mt-4 text-center">⏱️ {language === "mk" ? "15 минути подоцна..." : language === "en" ? "15 minutes later..." : language === "ru" ? "15 минут спустя..." : language === "uk" ? "15 хвилин потому..." : "15 minuta kasnije..."}</p>
               </motion.div>
 
               {/* After - Perfect message */}
@@ -1260,10 +1426,10 @@ const Landing = () => {
                   <p>{c.exampleAfterText}</p>
                 </motion.div>
                 <div className="flex items-center justify-between mt-4">
-                  <p className="text-xs text-primary">⚡ {language === "en" ? "10 seconds" : language === "mk" ? "10 секунди" : "10 sekundi"}</p>
+                  <p className="text-xs text-primary">⚡ {language === "en" ? "10 seconds" : language === "mk" ? "10 секунди" : language === "ru" ? "10 секунд" : language === "uk" ? "10 секунд" : "10 sekundi"}</p>
                   <div className="flex gap-1">
                     <ThumbsUp className="w-4 h-4 text-primary" />
-                    <span className="text-xs text-primary">{language === "mk" ? "Совршено!" : language === "en" ? "Perfect!" : "Savršeno!"}</span>
+                    <span className="text-xs text-primary">{language === "mk" ? "Совршено!" : language === "en" ? "Perfect!" : language === "ru" ? "Идеально!" : language === "uk" ? "Ідеально!" : "Savršeno!"}</span>
                   </div>
                 </div>
               </motion.div>
@@ -1626,7 +1792,7 @@ const Landing = () => {
             <span className="font-display font-bold text-foreground">Poruke.AI</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            © 2026 Poruke.AI. {language === "mk" ? "Сите права задржани." : language === "en" ? "All rights reserved." : "Sva prava zadržana."}
+            © 2026 Poruke.AI. {language === "mk" ? "Сите права задржани." : language === "en" ? "All rights reserved." : language === "ru" ? "Все права защищены." : language === "uk" ? "Всі права захищені." : "Sva prava zadržana."}
           </p>
         </div>
       </footer>
