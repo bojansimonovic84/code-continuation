@@ -1236,7 +1236,7 @@ const Landing = () => {
                     </motion.div>
                   ))}
                 </div>
-                <p className="text-xs text-destructive mt-4 text-center">⏱️ 15 minuta kasnije...</p>
+                <p className="text-xs text-destructive mt-4 text-center">⏱️ {language === "mk" ? "15 минути подоцна..." : language === "en" ? "15 minutes later..." : "15 minuta kasnije..."}</p>
               </motion.div>
 
               {/* After - Perfect message */}
