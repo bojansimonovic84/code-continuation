@@ -1626,7 +1626,7 @@ const Landing = () => {
             <span className="font-display font-bold text-foreground">Poruke.AI</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            © 2026 Poruke.AI. {language === "mk" ? "Сите права задржани." : "Sva prava zadržana."}
+            © 2026 Poruke.AI. {language === "mk" ? "Сите права задржани." : language === "en" ? "All rights reserved." : "Sva prava zadržana."}
           </p>
         </div>
       </footer>
