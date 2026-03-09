@@ -1188,6 +1188,10 @@ const Landing = () => {
                               ? "Еј, гледам ми реагираш на секое стори... ајде да видиме дали сме исто толку интересни и во живо 😏 Кафе утре? Ветувам — нема да зборам за времето ☀️"
                               : language === "en"
                               ? "Hey, I notice you react to every story of mine... let's see if we're just as interesting in person 😏 Coffee tomorrow? I promise — I won't talk about the weather ☀️"
+                              : language === "ru"
+                              ? "Эй, замечаю, ты реагируешь на каждую мою сторис... давай проверим, так ли мы интересны вживую 😏 Кофе завтра? Обещаю — не буду говорить о погоде ☀️"
+                              : language === "uk"
+                              ? "Гей, бачу, ти реагуєш на кожну мою сторіс... давай перевіримо, чи ми такі ж цікаві наживо 😏 Кава завтра? Обіцяю — не буду говорити про погоду ☀️"
                               : "Ej, vidim da mi reagiješ na svaki stori... ajde da vidimo jesmo li isto toliko zanimljivi i uživo 😏 Kafica sutra? Obećavam — neću pričati o vremenu ☀️"
                             }
                           </p>
