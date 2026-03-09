@@ -18,6 +18,7 @@ const languagePrompts: Record<string, string> = {
   me: "Odgovaraj na crnogorskom jeziku. Piši prirodno, kao da si lokalna osoba sa Balkana.",
   mk: "Одговарај на македонски јазик. Пишувај природно, како да си локална личност од Балканот.",
   sl: "Odgovarjaj v slovenščini. Piši naravno, kot da si lokalna oseba z Balkana.",
+  en: "Respond in English. Write naturally, as if you're a native English speaker.",
 };
 
 const situationLabels: Record<string, Record<string, string>> = {
