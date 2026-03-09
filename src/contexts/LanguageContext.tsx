@@ -17,6 +17,8 @@ export const languages: LanguageInfo[] = [
   { code: "mk", name: "Macedonian", nativeName: "Македонски", flag: "🇲🇰" },
   { code: "sl", name: "Slovenian", nativeName: "Slovenščina", flag: "🇸🇮" },
   { code: "en", name: "English", nativeName: "English", flag: "🇬🇧" },
+  { code: "ru", name: "Russian", nativeName: "Русский", flag: "🇷🇺" },
+  { code: "uk", name: "Ukrainian", nativeName: "Українська", flag: "🇺🇦" },
 ];
 
 // UI translations for each language
