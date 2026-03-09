@@ -939,7 +939,7 @@ const Landing = () => {
                   ))}
                 </div>
                 <div className="text-sm text-muted-foreground">
-                  <span className="text-primary font-semibold">4.9★</span> • 2,400+ {language === "mk" ? "задоволни корисници" : "zadovoljnih korisnika"}
+                  <span className="text-primary font-semibold">4.9★</span> • 2,400+ {language === "mk" ? "задоволни корисници" : language === "en" ? "happy users" : "zadovoljnih korisnika"}
                 </div>
               </motion.div>
             </motion.div>
