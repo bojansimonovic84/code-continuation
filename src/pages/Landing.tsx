@@ -1024,6 +1024,8 @@ const Landing = () => {
                           <p className="text-xs text-foreground leading-relaxed">
                             {language === "mk" 
                               ? "Еј, гледам ми реагираш на секое стори... ајде да видиме дали сме исто толку интересни и во живо 😏 Кафе утре? Ветувам — нема да зборам за времето ☀️"
+                              : language === "en"
+                              ? "Hey, I notice you react to every story of mine... let's see if we're just as interesting in person 😏 Coffee tomorrow? I promise — I won't talk about the weather ☀️"
                               : "Ej, vidim da mi reagiješ na svaki stori... ajde da vidimo jesmo li isto toliko zanimljivi i uživo 😏 Kafica sutra? Obećavam — neću pričati o vremenu ☀️"
                             }
                           </p>
