@@ -1140,6 +1140,10 @@ const Landing = () => {
                               ? "Комшивката ми реагира на секое стори и ми се смешка кога се сретнеме... Како да ја поканам на пиво а да знае на што мислам? 😏"
                               : language === "en"
                               ? "My neighbor reacts to every story and smiles at me when we meet... How do I ask her out so she knows what I mean? 😏"
+                              : language === "ru"
+                              ? "Соседка реагирует на каждую сторис и улыбается мне при встрече... Как пригласить её на кофе, чтобы она поняла, что я имею в виду? 😏"
+                              : language === "uk"
+                              ? "Сусідка реагує на кожну сторіс і посміхається мені при зустрічі... Як запросити її на каву, щоб вона зрозуміла, що я маю на увазі? 😏"
                               : "Komšinica mi reaguje na svaki stori i smeška mi se kad se sretnemo... Kako da je pozovem na piće a da zna na šta mislim? 😏"
                             }
                           </p>
