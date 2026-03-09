@@ -785,49 +785,20 @@ const Landing = () => {
   const c = content[language as keyof typeof content] || content.sr;
 
   // Situation cards with colorful icons and animations
+  const sitLabels: Record<string, string[]> = {
+    mk: ["Мување и љубов", "Работа и бизнис", "Стан и комшии", "Купопродажба", "Приватно и пријатели", "Лоши вести"],
+    en: ["Dating & love", "Work & business", "Housing & neighbors", "Buying & selling", "Personal & friends", "Bad news"],
+  };
+  const defaultSitLabels = ["Muvanje i ljubav", "Posao i biznis", "Stan i komšije", "Kupoprodaja", "Privatno i prijatelji", "Loše vesti"];
+  const sl = sitLabels[language] || defaultSitLabels;
+
   const situations = [
-    {
-      icon: Heart,
-      color: "text-pink-500",
-      bg: "bg-pink-500/10",
-      label: language === "mk" ? "Мување и љубов" : "Muvanje i ljubav",
-      desc: "💕",
-    },
-    {
-      icon: Briefcase,
-      color: "text-blue-500",
-      bg: "bg-blue-500/10",
-      label: language === "mk" ? "Работа и бизнис" : "Posao i biznis",
-      desc: "💼",
-    },
-    {
-      icon: Home,
-      color: "text-emerald-500",
-      bg: "bg-emerald-500/10",
-      label: language === "mk" ? "Стан и комшии" : "Stan i komšije",
-      desc: "🏠",
-    },
-    {
-      icon: ShoppingCart,
-      color: "text-violet-500",
-      bg: "bg-violet-500/10",
-      label: language === "mk" ? "Купопродажба" : "Kupoprodaja",
-      desc: "🛍️",
-    },
-    {
-      icon: Users,
-      color: "text-orange-500",
-      bg: "bg-orange-500/10",
-      label: language === "mk" ? "Приватно и пријатели" : "Privatno i prijatelji",
-      desc: "👥",
-    },
-    {
-      icon: AlertTriangle,
-      color: "text-slate-500",
-      bg: "bg-slate-500/10",
-      label: language === "mk" ? "Лоши вести" : "Loše vesti",
-      desc: "😔",
-    },
+    { icon: Heart, color: "text-pink-500", bg: "bg-pink-500/10", label: sl[0], desc: "💕" },
+    { icon: Briefcase, color: "text-blue-500", bg: "bg-blue-500/10", label: sl[1], desc: "💼" },
+    { icon: Home, color: "text-emerald-500", bg: "bg-emerald-500/10", label: sl[2], desc: "🏠" },
+    { icon: ShoppingCart, color: "text-violet-500", bg: "bg-violet-500/10", label: sl[3], desc: "🛍️" },
+    { icon: Users, color: "text-orange-500", bg: "bg-orange-500/10", label: sl[4], desc: "👥" },
+    { icon: AlertTriangle, color: "text-slate-500", bg: "bg-slate-500/10", label: sl[5], desc: "😔" },
   ];
 
   return (
