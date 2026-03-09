@@ -980,6 +980,8 @@ const Landing = () => {
                           <p className="text-xs text-foreground">
                             {language === "mk" 
                               ? "Комшивката ми реагира на секое стори и ми се смешка кога се сретнеме... Како да ја поканам на пиво а да знае на што мислам? 😏"
+                              : language === "en"
+                              ? "My neighbor reacts to every story and smiles at me when we meet... How do I ask her out so she knows what I mean? 😏"
                               : "Komšinica mi reaguje na svaki stori i smeška mi se kad se sretnemo... Kako da je pozovem na piće a da zna na šta mislim? 😏"
                             }
                           </p>
