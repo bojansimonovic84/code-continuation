@@ -80,6 +80,22 @@ const situationLabels: Record<string, Record<string, string>> = {
     love: "dating/flirting",
     badnews: "bad news",
   },
+  ru: {
+    work: "работа",
+    housing: "жильё/арендодатель",
+    private: "личное",
+    buying: "купля-продажа",
+    love: "флирт/свидания",
+    badnews: "плохие новости",
+  },
+  uk: {
+    work: "робота",
+    housing: "житло/орендодавець",
+    private: "особисте",
+    buying: "купівля-продаж",
+    love: "флірт/побачення",
+    badnews: "погані новини",
+  },
 };
 
 Deno.serve(async (req) => {
