@@ -1493,7 +1493,6 @@ const Landing = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
             >
-              <Clock className="w-5 h-5 text-primary" />
               <span>⏱️ {c.timeNote}</span>
             </motion.div>
           </div>
