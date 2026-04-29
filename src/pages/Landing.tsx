@@ -59,7 +59,7 @@ const Landing = () => {
     sr: {
       heroTitle1: "Ne znaš kako da napišeš poruku?",
       heroTitle2: "Mi znamo. 💬",
-      heroSubtitle: "Poruke.AI ti pomaže da napišeš pravu poruku, u pravom tonu, za pravu situaciju — za 10 sekundi.",
+      heroSubtitle: "Poruke.app ti pomaže da napišeš pravu poruku, u pravom tonu, za pravu situaciju — za 10 sekundi.",
       heroContext: "Za posao, privatno, stan, kupoprodaju, muvanje i neprijatne situacije.",
       tryFree: "Isprobaj besplatno",
       noCard: "bez kartice • 5 poruka gratis",
@@ -102,7 +102,7 @@ const Landing = () => {
         "Odlažeš odgovor satima jer ne znaš šta da napišeš",
         "Strah te da ne ispadeš čudno ili napadno",
       ],
-      problemSolution: "Poruke.AI to rešava umesto tebe.",
+      problemSolution: "Poruke.app to rešava umesto tebe.",
 
       howItWorks: "Kako radi?",
       step1Title: "Izaberi situaciju",
@@ -115,7 +115,7 @@ const Landing = () => {
 
       whyNotGpt: "Zašto ne ChatGPT?",
       whyReasons: ["Nema pisanja promptova", "Nema razmišljanja", "Nema previše formalnih odgovora"],
-      whyBecause: "Poruke.AI piše kao:",
+      whyBecause: "Poruke.app piše kao:",
       whyPoints: ["Stvarna osoba", "Sa Balkana", "U realnim situacijama"],
 
       // Before/After with chat bubbles
@@ -128,7 +128,7 @@ const Landing = () => {
         "[obrisano]",
         "Ma ništa, doći ću ipak... 😩",
       ],
-      exampleAfter: "Poruke.AI generiše:",
+      exampleAfter: "Poruke.app generiše:",
       exampleAfterText:
         "Mama, u nedelju nažalost neću moći da dođem na ručak — imam nešto zakazano što ne mogu da pomeram. Ali ajde sledeći vikend da dođem ranije pa da ti pomognem oko kuvanja? Jedva čekam tvoje sarme 😊❤️",
 
@@ -150,7 +150,7 @@ const Landing = () => {
       unlockPremium: "Otključaj Premium",
 
       // Expanded target audience
-      forWhoTitle: "Za koga je Poruke.AI?",
+      forWhoTitle: "Za koga je Poruke.app?",
       forWhoCategories: [
         { emoji: "👨‍💼", label: "Zaposleni", desc: "Za mejlove šefu, kolegama, klijentima" },
         { emoji: "🧑‍💻", label: "Freelanceri", desc: "Za profesionalnu komunikaciju sa klijentima" },
@@ -167,13 +167,13 @@ const Landing = () => {
 
       finalCta1: "Prestani da razmišljaš šta da napišeš.",
       finalCta2: "Počni da šalješ poruke koje prolaze.",
-      tryNow: "Isprobaj Poruke.AI besplatno",
+      tryNow: "Isprobaj Poruke.app besplatno",
       startNow: "Počni odmah",
     },
     hr: {
       heroTitle1: "Ne znaš kako napisati poruku?",
       heroTitle2: "Mi znamo. 💬",
-      heroSubtitle: "Poruke.AI ti pomaže napisati pravu poruku, u pravom tonu, za pravu situaciju — za 10 sekundi.",
+      heroSubtitle: "Poruke.app ti pomaže napisati pravu poruku, u pravom tonu, za pravu situaciju — za 10 sekundi.",
       heroContext: "Za posao, privatno, stan, kupoprodaju, muvanje i neugodne situacije.",
       tryFree: "Isprobaj besplatno",
       noCard: "bez kartice • 5 poruka gratis",
@@ -213,7 +213,7 @@ const Landing = () => {
         "Odgađaš odgovor satima jer ne znaš što napisati",
         "Strah te da ne ispadneš čudno ili napadno",
       ],
-      problemSolution: "Poruke.AI to rješava umjesto tebe.",
+      problemSolution: "Poruke.app to rješava umjesto tebe.",
       howItWorks: "Kako radi?",
       step1Title: "Izaberi situaciju",
       step1Desc: "Posao • Stan • Kupujem/prodajem • Privatno • Muvanje • Loše vijesti",
@@ -224,7 +224,7 @@ const Landing = () => {
       timeNote: "Sve traje manje od 20 sekundi.",
       whyNotGpt: "Zašto ne ChatGPT?",
       whyReasons: ["Nema pisanja promptova", "Nema razmišljanja", "Nema previše formalnih odgovora"],
-      whyBecause: "Poruke.AI piše kao:",
+      whyBecause: "Poruke.app piše kao:",
       whyPoints: ["Stvarna osoba", "S Balkana", "U realnim situacijama"],
       exampleTitle: "Prije / Poslije",
       exampleScenario: "Situacija: Moraš reći mami da ne dolaziš na nedjeljni ručak",
@@ -235,7 +235,7 @@ const Landing = () => {
         "[obrisano]",
         "Ma ništa, doći ću ipak... 😩",
       ],
-      exampleAfter: "Poruke.AI generira:",
+      exampleAfter: "Poruke.app generira:",
       exampleAfterText:
         "Mama, u nedjelju nažalost neću moći doći na ručak — imam nešto zakazano što ne mogu pomicati. Ali ajde sljedeći vikend da dođem ranije pa da ti pomognem oko kuhanja? Jedva čekam tvoje sarme 😊❤️",
       pricingHook: "Za cijenu pola pizze",
@@ -252,7 +252,7 @@ const Landing = () => {
       premiumSave: "Uštedi 40%",
       yearlyPrice: "35.99€/godišnje",
       unlockPremium: "Otključaj Premium",
-      forWhoTitle: "Za koga je Poruke.AI?",
+      forWhoTitle: "Za koga je Poruke.app?",
       forWhoCategories: [
         { emoji: "👨‍💼", label: "Zaposleni", desc: "Za mailove šefu, kolegama, klijentima" },
         { emoji: "🧑‍💻", label: "Freelanceri", desc: "Za profesionalnu komunikaciju s klijentima" },
@@ -266,13 +266,13 @@ const Landing = () => {
       situationsTitle: "Situacije koje pokrivamo",
       finalCta1: "Prestani razmišljati što napisati.",
       finalCta2: "Počni slati poruke koje prolaze.",
-      tryNow: "Isprobaj Poruke.AI besplatno",
+      tryNow: "Isprobaj Poruke.app besplatno",
       startNow: "Počni odmah",
     },
     bs: {
       heroTitle1: "Ne znaš kako da napišeš poruku?",
       heroTitle2: "Mi znamo. 💬",
-      heroSubtitle: "Poruke.AI ti pomaže da napišeš pravu poruku, u pravom tonu, za pravu situaciju — za 10 sekundi.",
+      heroSubtitle: "Poruke.app ti pomaže da napišeš pravu poruku, u pravom tonu, za pravu situaciju — za 10 sekundi.",
       heroContext: "Za posao, privatno, stan, kupoprodaju, muvanje i neugodne situacije.",
       tryFree: "Isprobaj besplatno",
       noCard: "bez kartice • 5 poruka gratis",
@@ -312,7 +312,7 @@ const Landing = () => {
         "Odgađaš odgovor satima jer ne znaš šta da napišeš",
         "Strah te da ne ispadneš čudno ili napadno",
       ],
-      problemSolution: "Poruke.AI to rješava umjesto tebe.",
+      problemSolution: "Poruke.app to rješava umjesto tebe.",
       howItWorks: "Kako radi?",
       step1Title: "Izaberi situaciju",
       step1Desc: "Posao • Stan • Kupujem/prodajem • Privatno • Muvanje • Loše vijesti",
@@ -323,7 +323,7 @@ const Landing = () => {
       timeNote: "Sve traje manje od 20 sekundi.",
       whyNotGpt: "Zašto ne ChatGPT?",
       whyReasons: ["Nema pisanja promptova", "Nema razmišljanja", "Nema previše formalnih odgovora"],
-      whyBecause: "Poruke.AI piše kao:",
+      whyBecause: "Poruke.app piše kao:",
       whyPoints: ["Stvarna osoba", "Sa Balkana", "U realnim situacijama"],
       exampleTitle: "Prije / Poslije",
       exampleScenario: "Situacija: Moraš reći mami da ne dolaziš na nedjeljni ručak",
@@ -334,7 +334,7 @@ const Landing = () => {
         "[obrisano]",
         "Ma ništa, doći ću ipak... 😩",
       ],
-      exampleAfter: "Poruke.AI generiše:",
+      exampleAfter: "Poruke.app generiše:",
       exampleAfterText:
         "Mama, u nedjelju nažalost neću moći doći na ručak — imam nešto zakazano što ne mogu pomjerati. Ali ajde sljedeći vikend da dođem ranije pa da ti pomognem oko kuhanja? Jedva čekam tvoje sarme 😊❤️",
       pricingHook: "Za cijenu pola pice",
@@ -351,7 +351,7 @@ const Landing = () => {
       premiumSave: "Uštedi 40%",
       yearlyPrice: "69.99 KM/godišnje",
       unlockPremium: "Otključaj Premium",
-      forWhoTitle: "Za koga je Poruke.AI?",
+      forWhoTitle: "Za koga je Poruke.app?",
       forWhoCategories: [
         { emoji: "👨‍💼", label: "Zaposleni", desc: "Za mailove šefu, kolegama, klijentima" },
         { emoji: "🧑‍💻", label: "Freelanceri", desc: "Za profesionalnu komunikaciju s klijentima" },
@@ -365,13 +365,13 @@ const Landing = () => {
       situationsTitle: "Situacije koje pokrivamo",
       finalCta1: "Prestani da razmišljaš šta da napišeš.",
       finalCta2: "Počni da šalješ poruke koje prolaze.",
-      tryNow: "Isprobaj Poruke.AI besplatno",
+      tryNow: "Isprobaj Poruke.app besplatno",
       startNow: "Počni odmah",
     },
     me: {
       heroTitle1: "Ne znaš kako da napišeš poruku?",
       heroTitle2: "Mi znamo. 💬",
-      heroSubtitle: "Poruke.AI ti pomaže da napišeš pravu poruku, u pravom tonu, za pravu situaciju — za 10 sekundi.",
+      heroSubtitle: "Poruke.app ti pomaže da napišeš pravu poruku, u pravom tonu, za pravu situaciju — za 10 sekundi.",
       heroContext: "Za posao, privatno, stan, kupoprodaju, muvanje i neugodne situacije.",
       tryFree: "Isprobaj besplatno",
       noCard: "bez kartice • 5 poruka gratis",
@@ -411,7 +411,7 @@ const Landing = () => {
         "Odlažeš odgovor satima jer ne znaš šta da napišeš",
         "Strah te da ne ispadneš čudno ili napadno",
       ],
-      problemSolution: "Poruke.AI to rješava umjesto tebe.",
+      problemSolution: "Poruke.app to rješava umjesto tebe.",
       howItWorks: "Kako radi?",
       step1Title: "Izaberi situaciju",
       step1Desc: "Posao • Stan • Kupujem/prodajem • Privatno • Muvanje • Loše vijesti",
@@ -422,7 +422,7 @@ const Landing = () => {
       timeNote: "Sve traje manje od 20 sekundi.",
       whyNotGpt: "Zašto ne ChatGPT?",
       whyReasons: ["Nema pisanja promptova", "Nema razmišljanja", "Nema previše formalnih odgovora"],
-      whyBecause: "Poruke.AI piše kao:",
+      whyBecause: "Poruke.app piše kao:",
       whyPoints: ["Stvarna osoba", "Sa Balkana", "U realnim situacijama"],
       exampleTitle: "Prije / Poslije",
       exampleScenario: "Situacija: Moraš reći kevi da ne dolaziš na nedjeljni ručak",
@@ -433,7 +433,7 @@ const Landing = () => {
         "[obrisano]",
         "Ma ništa, doći ću ipak... 😩",
       ],
-      exampleAfter: "Poruke.AI generiše:",
+      exampleAfter: "Poruke.app generiše:",
       exampleAfterText:
         "Mama, u nedjelju nažalost neću moći doći na ručak — imam nešto zakazano što ne mogu pomjerati. Ali ajde sljedeći vikend da dođem ranije pa da ti pomognem oko kuvanja? Jedva čekam tvoje sarme 😊❤️",
       pricingHook: "Za cijenu pola pice",
@@ -450,7 +450,7 @@ const Landing = () => {
       premiumSave: "Uštedi 40%",
       yearlyPrice: "35.99€/godišnje",
       unlockPremium: "Otključaj Premium",
-      forWhoTitle: "Za koga je Poruke.AI?",
+      forWhoTitle: "Za koga je Poruke.app?",
       forWhoCategories: [
         { emoji: "👨‍💼", label: "Zaposleni", desc: "Za mejlove šefu, kolegama, klijentima" },
         { emoji: "🧑‍💻", label: "Freelanceri", desc: "Za profesionalnu komunikaciju s klijentima" },
@@ -464,14 +464,14 @@ const Landing = () => {
       situationsTitle: "Situacije koje pokrivamo",
       finalCta1: "Prestani da razmišljaš šta da napišeš.",
       finalCta2: "Počni da šalješ poruke koje prolaze.",
-      tryNow: "Isprobaj Poruke.AI besplatno",
+      tryNow: "Isprobaj Poruke.app besplatno",
       startNow: "Počni odmah",
     },
     mk: {
       heroTitle1: "Не знаеш како да напишеш порака?",
       heroTitle2: "Ние знаеме. 💬",
       heroSubtitle:
-        "Poruke.AI ти помага да напишеш вистинска порака, со вистински тон, за вистинска ситуација — за 10 секунди.",
+        "Poruke.app ти помага да напишеш вистинска порака, со вистински тон, за вистинска ситуација — за 10 секунди.",
       heroContext: "За работа, приватно, стан, купопродажба, мување и непријатни ситуации.",
       tryFree: "Пробај бесплатно",
       noCard: "без картичка • 5 пораки гратис",
@@ -516,7 +516,7 @@ const Landing = () => {
         "Одлагаш одговор со часови бидејќи не знаеш што да напишеш",
         "Страв те да не испаднеш чудно или напорно",
       ],
-      problemSolution: "Poruke.AI го решава тоа наместо тебе.",
+      problemSolution: "Poruke.app го решава тоа наместо тебе.",
       howItWorks: "Како работи?",
       step1Title: "Избери ситуација",
       step1Desc: "Работа • Стан • Купувам/продавам • Приватно • Мување • Лоши вести",
@@ -527,7 +527,7 @@ const Landing = () => {
       timeNote: "Сè трае помалку од 20 секунди.",
       whyNotGpt: "Зошто не ChatGPT?",
       whyReasons: ["Нема пишување промптови", "Нема размислување", "Нема премногу формални одговори"],
-      whyBecause: "Poruke.AI пишува како:",
+      whyBecause: "Poruke.app пишува како:",
       whyPoints: ["Вистинска личност", "Од Балканот", "Во реални ситуации"],
       exampleTitle: "Пред / Потоа",
       exampleScenario: "Ситуација: Мораш да ѝ кажеш на мајка ти дека нема да дојдеш на неделен ручек",
@@ -538,7 +538,7 @@ const Landing = () => {
         "[избришано]",
         "Ма ништо, ќе дојдам сепак... 😩",
       ],
-      exampleAfter: "Poruke.AI генерира:",
+      exampleAfter: "Poruke.app генерира:",
       exampleAfterText:
         "Мамо, во недела нажалост нема да можам да дојдам на ручек — имам нешто закажано што не можам да го поместам. Ама ајде следниот викенд да дојдам порано и да ти помогнам со готвењето? Едвај чекам твоите сарми 😊❤️",
       pricingHook: "За цена на половина пица",
@@ -555,7 +555,7 @@ const Landing = () => {
       premiumSave: "Заштеди 40%",
       yearlyPrice: "2199 ден/годишно",
       unlockPremium: "Отклучи Премиум",
-      forWhoTitle: "За кого е Poruke.AI?",
+      forWhoTitle: "За кого е Poruke.app?",
       forWhoCategories: [
         { emoji: "👨‍💼", label: "Вработени", desc: "За мејлови до шеф, колеги, клиенти" },
         { emoji: "🧑‍💻", label: "Фриленсери", desc: "За професионална комуникација со клиенти" },
@@ -569,13 +569,13 @@ const Landing = () => {
       situationsTitle: "Ситуации кои ги покриваме",
       finalCta1: "Престани да размислуваш што да напишеш.",
       finalCta2: "Почни да испраќаш пораки кои поминуваат.",
-      tryNow: "Пробај Poruke.AI бесплатно",
+      tryNow: "Пробај Poruke.app бесплатно",
       startNow: "Почни сега",
     },
     sl: {
       heroTitle1: "Ne veš, kako napisati sporočilo?",
       heroTitle2: "Mi vemo. 💬",
-      heroSubtitle: "Poruke.AI ti pomaga napisati pravo sporočilo, v pravem tonu, za pravo situacijo — v 10 sekundah.",
+      heroSubtitle: "Poruke.app ti pomaga napisati pravo sporočilo, v pravem tonu, za pravo situacijo — v 10 sekundah.",
       heroContext: "Za delo, zasebno, stanovanje, nakup/prodajo, zapeljevanje in neprijetne situacije.",
       tryFree: "Preizkusi brezplačno",
       noCard: "brez kartice • 5 sporočil gratis",
@@ -625,7 +625,7 @@ const Landing = () => {
         "Odlašaš z odgovorom ure, ker ne veš kaj napisati",
         "Strah te je, da ne boš izpadel čudno ali vsiljivo",
       ],
-      problemSolution: "Poruke.AI to reši namesto tebe.",
+      problemSolution: "Poruke.app to reši namesto tebe.",
       howItWorks: "Kako deluje?",
       step1Title: "Izberi situacijo",
       step1Desc: "Delo • Stanovanje • Kupujem/prodajam • Zasebno • Zapeljevanje • Slabe novice",
@@ -636,7 +636,7 @@ const Landing = () => {
       timeNote: "Vse traja manj kot 20 sekund.",
       whyNotGpt: "Zakaj ne ChatGPT?",
       whyReasons: ["Ni pisanja promptov", "Ni razmišljanja", "Ni preveč formalnih odgovorov"],
-      whyBecause: "Poruke.AI piše kot:",
+      whyBecause: "Poruke.app piše kot:",
       whyPoints: ["Prava oseba", "Z Balkana", "V realnih situacijah"],
       exampleTitle: "Pred / Po",
       exampleScenario: "Situacija: Mami moraš povedati, da ne prideš na nedeljsko kosilo",
@@ -647,7 +647,7 @@ const Landing = () => {
         "[izbrisano]",
         "A nič, bom že prišel/prišla... 😩",
       ],
-      exampleAfter: "Poruke.AI generira:",
+      exampleAfter: "Poruke.app generira:",
       exampleAfterText:
         "Mama, v nedeljo žal ne bom mogel/mogla priti na kosilo — imam nekaj dogovorjenega, česar ne morem prestaviti. Ampak daj naslednji vikend pridem prej, pa ti pomagam pri kuhanju? Komaj čakam tvoje sarme 😊❤️",
       pricingHook: "Za ceno pol pice",
@@ -664,7 +664,7 @@ const Landing = () => {
       premiumSave: "Prihrani 40%",
       yearlyPrice: "35.99€/letno",
       unlockPremium: "Odkleni Premium",
-      forWhoTitle: "Za koga je Poruke.AI?",
+      forWhoTitle: "Za koga je Poruke.app?",
       forWhoCategories: [
         { emoji: "👨‍💼", label: "Zaposleni", desc: "Za maile šefu, kolegom, strankam" },
         { emoji: "🧑‍💻", label: "Freelancerji", desc: "Za profesionalno komunikacijo s strankami" },
@@ -678,13 +678,13 @@ const Landing = () => {
       situationsTitle: "Situacije, ki jih pokrivamo",
       finalCta1: "Nehaj razmišljati, kaj napisati.",
       finalCta2: "Začni pošiljati sporočila, ki delujejo.",
-      tryNow: "Preizkusi Poruke.AI brezplačno",
+      tryNow: "Preizkusi Poruke.app brezplačno",
       startNow: "Začni zdaj",
     },
     en: {
       heroTitle1: "Don't know how to write that message?",
       heroTitle2: "We do. 💬",
-      heroSubtitle: "Poruke.AI helps you write the perfect message, in the right tone, for any situation — in 10 seconds.",
+      heroSubtitle: "Poruke.app helps you write the perfect message, in the right tone, for any situation — in 10 seconds.",
       heroContext: "For work, personal life, housing, buying/selling, dating, and awkward situations.",
       tryFree: "Try for free",
       noCard: "no card needed • 5 messages free",
@@ -724,7 +724,7 @@ const Landing = () => {
         "You delay replying for hours because you don't know what to write",
         "You're afraid of coming across as weird or pushy",
       ],
-      problemSolution: "Poruke.AI solves that for you.",
+      problemSolution: "Poruke.app solves that for you.",
       howItWorks: "How does it work?",
       step1Title: "Choose a situation",
       step1Desc: "Work • Housing • Buying/Selling • Personal • Dating • Bad news",
@@ -735,7 +735,7 @@ const Landing = () => {
       timeNote: "Everything takes less than 20 seconds.",
       whyNotGpt: "Why not ChatGPT?",
       whyReasons: ["No writing prompts", "No overthinking", "No overly formal replies"],
-      whyBecause: "Poruke.AI writes like:",
+      whyBecause: "Poruke.app writes like:",
       whyPoints: ["A real person", "From the Balkans", "In real situations"],
       exampleTitle: "Before / After",
       exampleScenario: "Situation: You need to tell your mom you're not coming to Sunday lunch",
@@ -746,7 +746,7 @@ const Landing = () => {
         "[deleted]",
         "Nevermind, I'll come after all... 😩",
       ],
-      exampleAfter: "Poruke.AI generates:",
+      exampleAfter: "Poruke.app generates:",
       exampleAfterText:
         "Hey Mom, unfortunately I won't be able to make it to lunch on Sunday — I have something scheduled that I can't move. But how about I come earlier next weekend and help you with the cooking? Can't wait for your famous sarma 😊❤️",
       pricingHook: "For half a pizza's price",
@@ -763,7 +763,7 @@ const Landing = () => {
       premiumSave: "Save 40%",
       yearlyPrice: "35.99€/yearly",
       unlockPremium: "Unlock Premium",
-      forWhoTitle: "Who is Poruke.AI for?",
+      forWhoTitle: "Who is Poruke.app for?",
       forWhoCategories: [
         { emoji: "👨‍💼", label: "Employees", desc: "Emails to boss, colleagues, clients" },
         { emoji: "🧑‍💻", label: "Freelancers", desc: "Professional client communication" },
@@ -777,13 +777,13 @@ const Landing = () => {
       situationsTitle: "Situations we cover",
       finalCta1: "Stop overthinking what to write.",
       finalCta2: "Start sending messages that work.",
-      tryNow: "Try Poruke.AI for free",
+      tryNow: "Try Poruke.app for free",
       startNow: "Start now",
     },
     ru: {
       heroTitle1: "Не знаете, как написать сообщение?",
       heroTitle2: "Мы знаем. 💬",
-      heroSubtitle: "Poruke.AI помогает написать идеальное сообщение, в нужном тоне, для любой ситуации — за 10 секунд.",
+      heroSubtitle: "Poruke.app помогает написать идеальное сообщение, в нужном тоне, для любой ситуации — за 10 секунд.",
       heroContext: "Для работы, личной жизни, жилья, купли-продажи, флирта и неловких ситуаций.",
       tryFree: "Попробовать бесплатно",
       noCard: "без карты • 5 сообщений бесплатно",
@@ -803,7 +803,7 @@ const Landing = () => {
         "Откладываете ответ часами, потому что не знаете, что написать",
         "Боитесь показаться странным или навязчивым",
       ],
-      problemSolution: "Poruke.AI решает это за вас.",
+      problemSolution: "Poruke.app решает это за вас.",
       howItWorks: "Как это работает?",
       step1Title: "Выберите ситуацию",
       step1Desc: "Работа • Жильё • Купля-продажа • Личное • Флирт • Плохие новости",
@@ -814,7 +814,7 @@ const Landing = () => {
       timeNote: "Всё занимает меньше 20 секунд.",
       whyNotGpt: "Почему не ChatGPT?",
       whyReasons: ["Не нужно писать промпты", "Не нужно думать", "Никаких слишком формальных ответов"],
-      whyBecause: "Poruke.AI пишет как:",
+      whyBecause: "Poruke.app пишет как:",
       whyPoints: ["Реальный человек", "С Балкан", "В реальных ситуациях"],
       exampleTitle: "До / После",
       exampleScenario: "Ситуация: Нужно сказать маме, что не придёте на воскресный обед",
@@ -825,7 +825,7 @@ const Landing = () => {
         "[удалено]",
         "А ладно, приду всё-таки... 😩",
       ],
-      exampleAfter: "Poruke.AI генерирует:",
+      exampleAfter: "Poruke.app генерирует:",
       exampleAfterText: "Мам, в воскресенье, к сожалению, не смогу прийти на обед — у меня запланировано кое-что, что нельзя перенести. Но давай в следующие выходные приеду пораньше и помогу с готовкой? Жду не дождусь твоих голубцов 😊❤️",
       pricingHook: "За цену половины пиццы",
       pricingHookSub: "Решения для флирта, бизнеса, семьи и всех неловких сообщений 💬",
@@ -841,7 +841,7 @@ const Landing = () => {
       premiumSave: "Экономия 40%",
       yearlyPrice: "35.99€/год",
       unlockPremium: "Открыть Премиум",
-      forWhoTitle: "Для кого Poruke.AI?",
+      forWhoTitle: "Для кого Poruke.app?",
       forWhoCategories: [
         { emoji: "👨‍💼", label: "Работники", desc: "Для писем начальнику, коллегам, клиентам" },
         { emoji: "🧑‍💻", label: "Фрилансеры", desc: "Для профессионального общения с клиентами" },
@@ -855,13 +855,13 @@ const Landing = () => {
       situationsTitle: "Ситуации, которые мы покрываем",
       finalCta1: "Перестаньте думать, что написать.",
       finalCta2: "Начните отправлять сообщения, которые работают.",
-      tryNow: "Попробуйте Poruke.AI бесплатно",
+      tryNow: "Попробуйте Poruke.app бесплатно",
       startNow: "Начать сейчас",
     },
     uk: {
       heroTitle1: "Не знаєте, як написати повідомлення?",
       heroTitle2: "Ми знаємо. 💬",
-      heroSubtitle: "Poruke.AI допомагає написати ідеальне повідомлення, в потрібному тоні, для будь-якої ситуації — за 10 секунд.",
+      heroSubtitle: "Poruke.app допомагає написати ідеальне повідомлення, в потрібному тоні, для будь-якої ситуації — за 10 секунд.",
       heroContext: "Для роботи, особистого життя, житла, купівлі-продажу, флірту та незручних ситуацій.",
       tryFree: "Спробувати безкоштовно",
       noCard: "без картки • 5 повідомлень безкоштовно",
@@ -881,7 +881,7 @@ const Landing = () => {
         "Відкладаєте відповідь на години, бо не знаєте, що написати",
         "Боїтесь виглядати дивно або нав'язливо",
       ],
-      problemSolution: "Poruke.AI вирішує це за вас.",
+      problemSolution: "Poruke.app вирішує це за вас.",
       howItWorks: "Як це працює?",
       step1Title: "Оберіть ситуацію",
       step1Desc: "Робота • Житло • Купівля-продаж • Особисте • Флірт • Погані новини",
@@ -892,7 +892,7 @@ const Landing = () => {
       timeNote: "Все займає менше 20 секунд.",
       whyNotGpt: "Чому не ChatGPT?",
       whyReasons: ["Не потрібно писати промпти", "Не потрібно думати", "Ніяких занадто формальних відповідей"],
-      whyBecause: "Poruke.AI пише як:",
+      whyBecause: "Poruke.app пише як:",
       whyPoints: ["Реальна людина", "З Балкан", "У реальних ситуаціях"],
       exampleTitle: "До / Після",
       exampleScenario: "Ситуація: Потрібно сказати мамі, що не прийдете на недільний обід",
@@ -903,7 +903,7 @@ const Landing = () => {
         "[видалено]",
         "А ладно, прийду все-таки... 😩",
       ],
-      exampleAfter: "Poruke.AI генерує:",
+      exampleAfter: "Poruke.app генерує:",
       exampleAfterText: "Мам, у неділю, на жаль, не зможу прийти на обід — у мене заплановане дещо, що не можна перенести. Але давай наступних вихідних приїду раніше й допоможу з готуванням? Чекаю не дочекаюся твоїх голубців 😊❤️",
       pricingHook: "За ціну половини піци",
       pricingHookSub: "Рішення для флірту, бізнесу, сім'ї та всіх незручних повідомлень 💬",
@@ -919,7 +919,7 @@ const Landing = () => {
       premiumSave: "Економія 40%",
       yearlyPrice: "35.99€/рік",
       unlockPremium: "Відкрити Преміум",
-      forWhoTitle: "Для кого Poruke.AI?",
+      forWhoTitle: "Для кого Poruke.app?",
       forWhoCategories: [
         { emoji: "👨‍💼", label: "Працівники", desc: "Для листів начальнику, колегам, клієнтам" },
         { emoji: "🧑‍💻", label: "Фрілансери", desc: "Для професійного спілкування з клієнтами" },
@@ -933,7 +933,7 @@ const Landing = () => {
       situationsTitle: "Ситуації, які ми покриваємо",
       finalCta1: "Перестаньте думати, що написати.",
       finalCta2: "Починайте надсилати повідомлення, які працюють.",
-      tryNow: "Спробуйте Poruke.AI безкоштовно",
+      tryNow: "Спробуйте Poruke.app безкоштовно",
       startNow: "Почати зараз",
     },
   };
@@ -972,7 +972,7 @@ const Landing = () => {
             >
               <MessageSquareText className="w-5 h-5 text-primary-foreground" />
             </motion.div>
-            <span className="font-display text-xl font-bold text-foreground">Poruke.AI</span>
+            <span className="font-display text-xl font-bold text-foreground">Poruke.app</span>
           </div>
           <div className="flex items-center gap-3">
             <LanguageSelector />
@@ -1122,7 +1122,7 @@ const Landing = () => {
                       <div className="w-7 h-7 rounded-lg gradient-primary flex items-center justify-center">
                         <MessageSquareText className="w-4 h-4 text-primary-foreground" />
                       </div>
-                      <span className="font-display text-sm font-bold text-foreground">Poruke.AI</span>
+                      <span className="font-display text-sm font-bold text-foreground">Poruke.app</span>
                     </div>
 
                     {/* Animated chat bubbles */}
@@ -1789,10 +1789,10 @@ const Landing = () => {
             <div className="w-8 h-8 rounded-xl gradient-primary flex items-center justify-center">
               <MessageSquareText className="w-4 h-4 text-primary-foreground" />
             </div>
-            <span className="font-display font-bold text-foreground">Poruke.AI</span>
+            <span className="font-display font-bold text-foreground">Poruke.app</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            © 2026 Poruke.AI. {language === "mk" ? "Сите права задржани." : language === "en" ? "All rights reserved." : language === "ru" ? "Все права защищены." : language === "uk" ? "Всі права захищені." : "Sva prava zadržana."}
+            © 2026 Poruke.app. {language === "mk" ? "Сите права задржани." : language === "en" ? "All rights reserved." : language === "ru" ? "Все права защищены." : language === "uk" ? "Всі права захищені." : "Sva prava zadržana."}
           </p>
         </div>
       </footer>

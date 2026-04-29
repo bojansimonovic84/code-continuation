@@ -24,7 +24,7 @@ export const languages: LanguageInfo[] = [
 // UI translations for each language
 export const translations: Record<Language, Record<string, string>> = {
   sr: {
-    appName: "Poruke.AI",
+    appName: "Poruke.app",
     tagline: "Piši bolje, brže, lakše",
     signIn: "Prijavi se",
     signOut: "Odjavi se",
@@ -151,7 +151,7 @@ export const translations: Record<Language, Record<string, string>> = {
     noResponse: "Nema odgovora od AI servisa",
   },
   hr: {
-    appName: "Poruke.AI",
+    appName: "Poruke.app",
     tagline: "Piši bolje, brže, lakše",
     signIn: "Prijavi se",
     signOut: "Odjavi se",
@@ -278,7 +278,7 @@ export const translations: Record<Language, Record<string, string>> = {
     noResponse: "Nema odgovora od AI servisa",
   },
   bs: {
-    appName: "Poruke.AI",
+    appName: "Poruke.app",
     tagline: "Piši bolje, brže, lakše",
     signIn: "Prijavi se",
     signOut: "Odjavi se",
@@ -405,7 +405,7 @@ export const translations: Record<Language, Record<string, string>> = {
     noResponse: "Nema odgovora od AI servisa",
   },
   me: {
-    appName: "Poruke.AI",
+    appName: "Poruke.app",
     tagline: "Piši bolje, brže, lakše",
     signIn: "Prijavi se",
     signOut: "Odjavi se",
@@ -532,7 +532,7 @@ export const translations: Record<Language, Record<string, string>> = {
     noResponse: "Nema odgovora od AI servisa",
   },
   mk: {
-    appName: "Poruke.AI",
+    appName: "Poruke.app",
     tagline: "Пишувај подобро, побрзо, полесно",
     signIn: "Најави се",
     signOut: "Одјави се",
@@ -659,7 +659,7 @@ export const translations: Record<Language, Record<string, string>> = {
     noResponse: "Нема одговор од AI сервисот",
   },
   sl: {
-    appName: "Poruke.AI",
+    appName: "Poruke.app",
     tagline: "Piši bolje, hitreje, lažje",
     signIn: "Prijava",
     signOut: "Odjava",
@@ -786,7 +786,7 @@ export const translations: Record<Language, Record<string, string>> = {
     noResponse: "Ni odgovora od AI storitve",
   },
   en: {
-    appName: "Poruke.AI",
+    appName: "Poruke.app",
     tagline: "Write better, faster, easier",
     signIn: "Sign in",
     signOut: "Sign out",
@@ -913,7 +913,7 @@ export const translations: Record<Language, Record<string, string>> = {
     noResponse: "No response from AI service",
   },
   ru: {
-    appName: "Poruke.AI",
+    appName: "Poruke.app",
     tagline: "Пиши лучше, быстрее, проще",
     signIn: "Войти",
     signOut: "Выйти",
@@ -1040,7 +1040,7 @@ export const translations: Record<Language, Record<string, string>> = {
     noResponse: "Нет ответа от AI сервиса",
   },
   uk: {
-    appName: "Poruke.AI",
+    appName: "Poruke.app",
     tagline: "Пиши краще, швидше, легше",
     signIn: "Увійти",
     signOut: "Вийти",
