@@ -48,7 +48,7 @@ const Index = () => {
             </div>
             <div>
               <h1 className="font-display text-xl font-bold text-foreground">
-                Poruke.AI
+                Poruke.app
               </h1>
               <p className="text-xs text-muted-foreground">
                 {t("tagline")}
