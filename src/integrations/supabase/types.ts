@@ -14,6 +14,35 @@ export type Database = {
   }
   public: {
     Tables: {
+      coupon_redemptions: {
+        Row: {
+          coupon_id: string
+          id: string
+          redeemed_at: string
+          user_id: string
+        }
+        Insert: {
+          coupon_id: string
+          id?: string
+          redeemed_at?: string
+          user_id: string
+        }
+        Update: {
+          coupon_id?: string
+          id?: string
+          redeemed_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "coupon_redemptions_coupon_id_fkey"
+            columns: ["coupon_id"]
+            isOneToOne: false
+            referencedRelation: "coupons"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       coupons: {
         Row: {
           code: string
@@ -109,7 +138,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      get_user_message_count: { Args: { p_user_id: string }; Returns: number }
+      get_user_message_count: { Args: never; Returns: number }
       redeem_coupon: { Args: { coupon_code: string }; Returns: boolean }
     }
     Enums: {
