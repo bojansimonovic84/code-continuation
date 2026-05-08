@@ -17,9 +17,7 @@ const Index = () => {
   useEffect(() => {
     if (user) {
       const fetchUserData = async () => {
-        const { data, error } = await supabase.rpc("get_user_message_count", {
-          p_user_id: user.id,
-        });
+        const { data, error } = await supabase.rpc("get_user_message_count");
 
         if (!error && data !== null) {
           setMessageCount(data);
