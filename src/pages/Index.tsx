@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
+import { useSearchParams } from "react-router-dom";
 import { MessageGenerator } from "@/components/MessageGenerator";
 import { MessageHistory } from "@/components/MessageHistory";
 import { UserMenu } from "@/components/UserMenu";
@@ -6,6 +7,7 @@ import { LanguageSelector } from "@/components/LanguageSelector";
 import { useAuth } from "@/contexts/AuthContext";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 import { MessageSquareText } from "lucide-react";
 
 const Index = () => {
@@ -13,23 +15,60 @@ const Index = () => {
   const { t } = useLanguage();
   const [messageCount, setMessageCount] = useState(0);
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const fetchSubscription = useCallback(async () => {
+    if (!user) return;
+    // 1) Lifetime premium from coupon
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("is_lifetime_premium")
+      .eq("user_id", user.id)
+      .maybeSingle();
+    if (profile?.is_lifetime_premium) {
+      setIsSubscribed(true);
+      return;
+    }
+    // 2) Stripe-backed subscription — re-verify with Stripe
+    try {
+      const { data } = await supabase.functions.invoke("check-subscription");
+      setIsSubscribed(Boolean(data?.subscribed));
+    } catch {
+      // Fallback to cached value in DB
+      const { data: sub } = await supabase
+        .from("subscribers")
+        .select("subscribed")
+        .eq("user_id", user.id)
+        .maybeSingle();
+      setIsSubscribed(Boolean(sub?.subscribed));
+    }
+  }, [user]);
 
   useEffect(() => {
     if (user) {
-      const fetchUserData = async () => {
-        const { data, error } = await supabase.rpc("get_user_message_count");
-
-        if (!error && data !== null) {
-          setMessageCount(data);
-        }
-      };
-
-      fetchUserData();
+      supabase.rpc("get_user_message_count").then(({ data, error }) => {
+        if (!error && data !== null) setMessageCount(data);
+      });
+      fetchSubscription();
     } else {
       setMessageCount(0);
       setIsSubscribed(false);
     }
-  }, [user]);
+  }, [user, fetchSubscription]);
+
+  // Handle return from Stripe checkout
+  useEffect(() => {
+    const checkout = searchParams.get("checkout");
+    if (!checkout) return;
+    if (checkout === "success") {
+      toast({ title: "Plaćanje uspešno!", description: "Premium se aktivira..." });
+      fetchSubscription();
+    } else if (checkout === "cancel") {
+      toast({ title: "Plaćanje otkazano", description: "Možeš pokušati ponovo bilo kad." });
+    }
+    searchParams.delete("checkout");
+    setSearchParams(searchParams, { replace: true });
+  }, [searchParams, setSearchParams, fetchSubscription]);
 
   const handleMessageGenerated = (newCount: number) => {
     setMessageCount(newCount);
@@ -45,18 +84,18 @@ const Index = () => {
               <MessageSquareText className="w-5 h-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="font-display text-xl font-bold text-foreground">
-                Poruke.app
-              </h1>
-              <p className="text-xs text-muted-foreground">
-                {t("tagline")}
-              </p>
+              <h1 className="font-display text-xl font-bold text-foreground">Poruke.app</h1>
+              <p className="text-xs text-muted-foreground">{t("tagline")}</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
             <LanguageSelector />
             {!loading && (
-              <UserMenu messageCount={messageCount} isSubscribed={isSubscribed} />
+              <UserMenu
+                messageCount={messageCount}
+                isSubscribed={isSubscribed}
+                onSubscriptionChange={fetchSubscription}
+              />
             )}
           </div>
         </div>
