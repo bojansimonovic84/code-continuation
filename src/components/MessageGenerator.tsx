@@ -12,6 +12,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/contexts/AuthContext";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
+import { SubscribeDialog } from "./SubscribeDialog";
 
 interface MessageGeneratorProps {
   onMessageGenerated?: (messageCount: number) => void;
@@ -27,6 +28,7 @@ export function MessageGenerator({ onMessageGenerated }: MessageGeneratorProps) 
   const [generatedMessage, setGeneratedMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [limitReached, setLimitReached] = useState(false);
+  const [showSubscribe, setShowSubscribe] = useState(false);
 
   const { user } = useAuth();
   const { t, language } = useLanguage();
@@ -265,7 +267,7 @@ export function MessageGenerator({ onMessageGenerated }: MessageGeneratorProps) 
           <p className="text-sm text-muted-foreground">
             {t("limitReached")}
           </p>
-          <Button variant="hero" size="lg" className="w-full">
+          <Button variant="hero" size="lg" className="w-full" onClick={() => setShowSubscribe(true)}>
             {t("subscribe")}
           </Button>
           <Button variant="ghost" size="sm" onClick={resetForm}>
@@ -273,6 +275,7 @@ export function MessageGenerator({ onMessageGenerated }: MessageGeneratorProps) 
           </Button>
         </div>
       )}
+      <SubscribeDialog open={showSubscribe} onOpenChange={setShowSubscribe} />
     </div>
   );
 }
