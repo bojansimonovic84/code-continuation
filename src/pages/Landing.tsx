@@ -1790,10 +1790,17 @@ const Landing = () => {
             </div>
             <span className="font-display font-bold text-foreground">Poruke.app</span>
           </div>
-          <p className="text-sm text-muted-foreground">
-            © 2026 Poruke.app. {language === "mk" ? "Сите права задржани." : language === "en" ? "All rights reserved." : language === "ru" ? "Все права защищены." : language === "uk" ? "Всі права захищені." : "Sva prava zadržana."}
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
+            <a href="/terms" className="hover:text-foreground transition">Uslovi korišćenja</a>
+            <a href="/privacy" className="hover:text-foreground transition">Privatnost</a>
+            <a href="mailto:getclients.studio@gmail.com" className="hover:text-foreground transition">Kontakt</a>
+          </div>
+          <p className="text-xs text-muted-foreground text-center md:text-right">
+            © 2026 Poruke.app. {language === "mk" ? "Сите права задржани." : language === "en" ? "All rights reserved." : language === "ru" ? "Все права защищены." : language === "uk" ? "Всі права захищені." : "Sva prava zadržana."}<br />
+            Razvija: <a href="mailto:getclients.studio@gmail.com" className="hover:text-foreground">GetClients</a>
           </p>
         </div>
+
       </footer>
     </div>
   );
