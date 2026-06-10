@@ -34,7 +34,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // Set up auth state listener FIRST
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {
-        void ensureProfile(session?.user ?? null);
+        setTimeout(() => void ensureProfile(session?.user ?? null), 0);
         setSession(session);
         setUser(session?.user ?? null);
         setLoading(false);
@@ -43,7 +43,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     // THEN check for existing session
     supabase.auth.getSession().then(({ data: { session } }) => {
-      void ensureProfile(session?.user ?? null);
+      setTimeout(() => void ensureProfile(session?.user ?? null), 0);
       setSession(session);
       setUser(session?.user ?? null);
       setLoading(false);
