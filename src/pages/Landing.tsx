@@ -1185,14 +1185,14 @@ const Landing = () => {
                           </div>
                           <p className="text-xs text-foreground leading-relaxed">
                             {language === "mk" 
-                              ? "Еј, гледам ми реагираш на секое стори... ајде да видиме дали сме исто толку интересни и во живо 😏 Кафе утре? Ветувам — нема да зборам за времето ☀️"
+                              ? "Еј, гледам ми реагираш на секое стори... ајде да видиме дали сме исто толку интересни и во живо 😏 Кафе утре? Частам јас, ти само дојди насмеана ☕️"
                               : language === "en"
-                              ? "Hey, I notice you react to every story of mine... let's see if we're just as interesting in person 😏 Coffee tomorrow? I promise — I won't talk about the weather ☀️"
+                              ? "Hey, I notice you react to every story of mine... let's see if we're just as interesting in person 😏 Coffee tomorrow? My treat — you just bring that smile ☕️"
                               : language === "ru"
-                              ? "Эй, замечаю, ты реагируешь на каждую мою сторис... давай проверим, так ли мы интересны вживую 😏 Кофе завтра? Обещаю — не буду говорить о погоде ☀️"
+                              ? "Эй, замечаю, ты реагируешь на каждую мою сторис... давай проверим, так ли мы интересны вживую 😏 Кофе завтра? Я угощаю — ты только приходи с улыбкой ☕️"
                               : language === "uk"
-                              ? "Гей, бачу, ти реагуєш на кожну мою сторіс... давай перевіримо, чи ми такі ж цікаві наживо 😏 Кава завтра? Обіцяю — не буду говорити про погоду ☀️"
-                              : "Ej, vidim da mi reagiješ na svaki stori... ajde da vidimo jesmo li isto toliko zanimljivi i uživo 😏 Kafica sutra? Obećavam — neću pričati o vremenu ☀️"
+                              ? "Гей, бачу, ти реагуєш на кожну мою сторіс... давай перевіримо, чи ми такі ж цікаві наживо 😏 Кава завтра? Я пригощаю — ти лише прийди з усмішкою ☕️"
+                              : "Ej, vidim da mi reagiješ na svaki stori... ajde da vidimo jesmo li isto toliko zanimljivi i uživo 😏 Kafica sutra? Ja častim — ti samo dođi nasmejana ☕️"
                             }
                           </p>
                         </div>
