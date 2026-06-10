@@ -1084,20 +1084,20 @@ const Landing = () => {
 
               {/* Social proof mini */}
               <motion.div
-                className="flex items-center gap-3 mt-6 justify-center md:justify-start"
+                className="flex items-center gap-2 sm:gap-3 mt-6 justify-center md:justify-start flex-nowrap whitespace-nowrap"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.9 }}
               >
-                <div className="flex -space-x-2">
+                <div className="flex -space-x-2 shrink-0">
                   {["👩‍💼", "🧑‍💻", "👨‍🎓", "👩‍🎓", "🧔"].map((emoji, i) => (
-                    <div key={i} className="w-8 h-8 rounded-full bg-secondary border-2 border-background flex items-center justify-center text-sm">
+                    <div key={i} className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-secondary border-2 border-background flex items-center justify-center text-xs sm:text-sm">
                       {emoji}
                     </div>
                   ))}
                 </div>
-                <div className="text-sm text-muted-foreground">
-                  <span className="text-primary font-semibold">4.9★</span> • 2,400+ {language === "mk" ? "задоволни корисници" : language === "en" ? "happy users" : language === "ru" ? "довольных пользователей" : language === "uk" ? "задоволених користувачів" : "zadovoljnih korisnika"}
+                <div className="text-xs sm:text-sm text-muted-foreground">
+                  <span className="text-primary font-semibold">4.9★</span> · 2,400+ {language === "mk" ? "корисници" : language === "en" ? "users" : language === "ru" ? "пользователей" : language === "uk" ? "користувачів" : "korisnika"}
                 </div>
               </motion.div>
             </motion.div>

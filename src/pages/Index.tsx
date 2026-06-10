@@ -78,17 +78,17 @@ const Index = () => {
     <div className="min-h-screen gradient-surface">
       {/* Header */}
       <header className="pt-6 pb-4 px-4">
-        <div className="max-w-lg mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center shadow-glow">
+        <div className="max-w-lg mx-auto flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2 sm:gap-3 min-w-0 shrink">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl gradient-primary flex items-center justify-center shadow-glow shrink-0">
               <MessageSquareText className="w-5 h-5 text-primary-foreground" />
             </div>
-            <div>
-              <h1 className="font-display text-xl font-bold text-foreground">Poruke.app</h1>
-              <p className="text-xs text-muted-foreground">{t("tagline")}</p>
+            <div className="min-w-0">
+              <h1 className="font-display text-base sm:text-xl font-bold text-foreground leading-tight truncate">Poruke.app</h1>
+              <p className="text-xs text-muted-foreground hidden sm:block">{t("tagline")}</p>
             </div>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 sm:gap-2 shrink-0">
             <LanguageSelector />
             {!loading && (
               <UserMenu
