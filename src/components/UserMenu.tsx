@@ -61,8 +61,9 @@ export function UserMenu({ messageCount, isSubscribed, onSubscriptionChange }: U
           {loadingPortal ? <Loader2 className="w-4 h-4 animate-spin" /> : <Settings className="w-4 h-4" />}
         </Button>
       ) : (
-        <Button variant="default" size="sm" onClick={() => setShowSubscribe(true)} className="gap-1">
-          <Crown className="w-4 h-4" /> Premium
+        <Button variant="default" size="sm" onClick={() => setShowSubscribe(true)} className="gap-1 px-2 sm:px-3">
+          <Crown className="w-4 h-4" />
+          <span className="hidden sm:inline">Premium</span>
         </Button>
       )}
       <Button variant="ghost" size="sm" onClick={handleSignOut}>
