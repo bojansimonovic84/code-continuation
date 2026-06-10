@@ -100,7 +100,12 @@ export default function Auth() {
         }
         toast({ title: t("error"), description: message, variant: "destructive" });
       } else if (mode === "register") {
-        toast({ title: "Uspešno!", description: "Nalog je kreiran. Preusmeravamo vas..." });
+        toast({
+          title: "Proverite email",
+          description: "Poslali smo vam link za potvrdu naloga. Kliknite na link u emailu da aktivirate nalog i otvorite aplikaciju.",
+        });
+        setMode("login");
+        setPassword("");
       }
     } finally {
       setIsLoading(false);
