@@ -94,7 +94,9 @@ export default function Auth() {
         if (error.message.includes("Invalid login credentials")) {
           message = "Pogrešan email ili lozinka";
         } else if (error.message.includes("User already registered")) {
-          message = "Nalog sa ovim emailom već postoji. Prijavite se ili koristite zaboravljenu lozinku."
+          message = "Nalog sa ovim emailom već postoji. Prijavite se ili koristite zaboravljenu lozinku.";
+        } else if (error.message.includes("For security purposes") || error.message.includes("over_email_send_rate_limit")) {
+          message = "Link za potvrdu je već zatražen. Sačekajte minut, pa proverite inbox i spam folder.";
         } else if (error.message.includes("Email not confirmed")) {
           const resend = await resendConfirmation(email);
           if (!resend.error) {
