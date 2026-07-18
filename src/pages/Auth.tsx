@@ -108,6 +108,7 @@ export default function Auth() {
         }
         toast({ title: t("error"), description: message, variant: "destructive" });
       } else if (mode === "register") {
+        await resendConfirmation(email);
         toast({
           title: "Proverite email",
           description: "Poslali smo vam link za potvrdu naloga. Kliknite na link u emailu da aktivirate nalog i otvorite aplikaciju.",
