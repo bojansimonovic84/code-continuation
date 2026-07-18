@@ -28,7 +28,7 @@ export default function Auth() {
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
 
-  const { signIn, signUp, user, loading } = useAuth();
+  const { signIn, signUp, resendConfirmation, user, loading } = useAuth();
   const { t } = useLanguage();
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -94,12 +94,23 @@ export default function Auth() {
         if (error.message.includes("Invalid login credentials")) {
           message = "Pogrešan email ili lozinka";
         } else if (error.message.includes("User already registered")) {
-          message = "Korisnik sa ovim emailom već postoji";
+          message = "Nalog sa ovim emailom već postoji. Prijavite se ili koristite zaboravljenu lozinku.";
+        } else if (error.message.includes("For security purposes") || error.message.includes("over_email_send_rate_limit")) {
+          message = "Link za potvrdu je već zatražen. Sačekajte minut, pa proverite inbox i spam folder.";
         } else if (error.message.includes("Email not confirmed")) {
-          message = "Potvrdite email adresu";
+          const resend = await resendConfirmation(email);
+          if (!resend.error) {
+            toast({
+              title: "Proverite email",
+              description: "Poslali smo vam novi link za potvrdu naloga. Kliknite na link u emailu da otvorite aplikaciju.",
+            });
+            return;
+          }
+          message = "Potvrdite email adresu. Ako link nije stigao, probajte ponovo za minut.";
         }
         toast({ title: t("error"), description: message, variant: "destructive" });
       } else if (mode === "register") {
+        await resendConfirmation(email);
         toast({
           title: "Proverite email",
           description: "Poslali smo vam link za potvrdu naloga. Kliknite na link u emailu da aktivirate nalog i otvorite aplikaciju.",
