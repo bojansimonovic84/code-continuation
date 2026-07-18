@@ -94,7 +94,7 @@ export default function Auth() {
         if (error.message.includes("Invalid login credentials")) {
           message = "Pogrešan email ili lozinka";
         } else if (error.message.includes("User already registered")) {
-          message = "Korisnik sa ovim emailom već postoji";
+          message = "Nalog sa ovim emailom već postoji. Prijavite se ili koristite zaboravljenu lozinku."
         } else if (error.message.includes("Email not confirmed")) {
           message = "Potvrdite email adresu";
         }
