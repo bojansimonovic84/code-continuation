@@ -17,12 +17,12 @@ const corsHeaders = {
 }
 
 const EMAIL_SUBJECTS: Record<string, string> = {
-  signup: 'Confirm your email',
-  invite: "You've been invited",
-  magiclink: 'Your login link',
-  recovery: 'Reset your password',
-  email_change: 'Confirm your new email',
-  reauthentication: 'Your verification code',
+  signup: 'Potvrdi nalog na Poruke.app',
+  invite: 'Pozivnica za Poruke.app',
+  magiclink: 'Tvoj link za prijavu na Poruke.app',
+  recovery: 'Resetuj lozinku za Poruke.app',
+  email_change: 'Potvrdi novu email adresu',
+  reauthentication: 'Tvoj verifikacioni kod',
 }
 
 // Template mapping
@@ -36,7 +36,7 @@ const EMAIL_TEMPLATES: Record<string, React.ComponentType<any>> = {
 }
 
 // Configuration
-const SITE_NAME = "poruke-ai"
+const SITE_NAME = "Poruke.app"
 const SENDER_DOMAIN = "notify.poruke.app"
 const ROOT_DOMAIN = "poruke.app"
 const FROM_DOMAIN = "poruke.app" // Domain shown in From address (may be root or sender subdomain)
@@ -46,7 +46,7 @@ const FROM_DOMAIN = "poruke.app" // Domain shown in From address (may be root or
 // The sample email uses a fixed placeholder (RFC 6761 .test TLD) so the Go backend
 // can always find-and-replace it with the actual recipient when sending test emails,
 // even if the project's domain has changed since the template was scaffolded.
-const SAMPLE_PROJECT_URL = "https://poruke-ai.lovable.app"
+const SAMPLE_PROJECT_URL = "https://poruke.app"
 const SAMPLE_EMAIL = "user@example.test"
 const SAMPLE_DATA: Record<string, object> = {
   signup: {
