@@ -45,17 +45,20 @@ Deno.serve(async (req) => {
       customerId = customers.data[0].id;
       const subs = await stripe.subscriptions.list({
         customer: customerId,
-        status: "active",
-        limit: 1,
+        status: "all",
+        limit: 10,
       });
-      if (subs.data.length > 0) {
-        const sub = subs.data[0];
+      const sub = subs.data.find(
+        (s) => s.status === "active" || s.status === "trialing"
+      );
+      if (sub) {
         subscribed = true;
         endIso = new Date(sub.current_period_end * 1000).toISOString();
         const interval = sub.items.data[0]?.price?.recurring?.interval;
         tier = interval === "year" ? "yearly" : "monthly";
       }
     }
+
 
     await supabaseAdmin.from("subscribers").upsert(
       {
