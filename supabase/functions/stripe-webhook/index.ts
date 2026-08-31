@@ -48,10 +48,22 @@ Deno.serve(async (req) => {
         .select("user_id")
         .eq("email", email)
         .maybeSingle();
-      if (!userData?.user_id) {
+
+      let userId = userData?.user_id as string | undefined;
+      if (!userId) {
+        // Fallback: first-time subscriber has no subscribers row yet
+        const { data: profile } = await supabaseAdmin
+          .from("profiles")
+          .select("user_id")
+          .eq("email", email)
+          .maybeSingle();
+        userId = profile?.user_id as string | undefined;
+      }
+      if (!userId) {
         console.log("No user found for email:", email);
         return;
       }
+
 
       const subs = await stripe.subscriptions.list({
         customer: customerId,
