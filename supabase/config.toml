@@ -11,7 +11,5 @@ project_id = "xsevtttpkslpfwqfpucr"
     verify_jwt = true
   [functions.generate-message]
     verify_jwt = true
-  [functions.process-email-queue]
-    verify_jwt = true
   [functions.stripe-webhook]
     verify_jwt = false
