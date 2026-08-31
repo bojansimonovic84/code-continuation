@@ -20,9 +20,10 @@ const EMAIL_SUBJECTS: Record<string, string> = {
   signup: 'Potvrdi nalog na Poruke.app',
   invite: 'Pozivnica za Poruke.app',
   magiclink: 'Tvoj link za prijavu na Poruke.app',
-  recovery: 'Resetuj lozinku za Poruke.app',
-  email_change: 'Potvrdi novu email adresu',
-  reauthentication: 'Tvoj verifikacioni kod',
+  recovery: 'Postavi novu lozinku za Poruke.app',
+  email_change: 'Potvrdi novu email adresu — Poruke.app',
+  reauthentication: 'Tvoj sigurnosni kod za Poruke.app',
+
 }
 
 // Template mapping
