@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { toast } from "sonner";
+
 import { PizzaAnimation } from "@/components/PizzaAnimation";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -43,6 +45,18 @@ const Landing = () => {
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const handleContact = async () => {
+    const email = "getclients.studio@gmail.com";
+    try {
+      await navigator.clipboard.writeText(email);
+      toast.success("Email kopiran", { description: email });
+    } catch {
+      toast.info("Kontakt email", { description: email });
+    }
+    window.open(`mailto:${email}?subject=Poruke.app%20-%20upit`, "_blank");
+  };
+
 
   const handleStartClick = () => {
     // If user is already logged in, go to app
@@ -1783,25 +1797,42 @@ const Landing = () => {
 
       {/* Footer */}
       <footer className="py-8 px-4 border-t border-border">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
+        <div className="max-w-6xl mx-auto flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+          <div className="flex items-center justify-center gap-2 md:justify-start">
             <div className="w-8 h-8 rounded-xl gradient-primary flex items-center justify-center">
               <MessageSquareText className="w-4 h-4 text-primary-foreground" />
             </div>
             <span className="font-display font-bold text-foreground">Poruke.app</span>
+            <span className="hidden md:inline text-xs text-muted-foreground ml-2">
+              © {new Date().getFullYear()} · {language === "mk" ? "Сите права задржани" : language === "en" ? "All rights reserved" : language === "ru" ? "Все права защищены" : language === "uk" ? "Всі права захищені" : "Sva prava zadržana"}
+            </span>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
+
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
             <a href="/terms" className="hover:text-foreground transition">Uslovi korišćenja</a>
             <a href="/privacy" className="hover:text-foreground transition">Privatnost</a>
-            <a href="mailto:getclients.studio@gmail.com" className="hover:text-foreground transition">Kontakt</a>
+            <button type="button" onClick={handleContact} className="hover:text-foreground transition">Kontakt</button>
           </div>
-          <p className="text-xs text-muted-foreground text-center md:text-right">
-            © 2026 Poruke.app. {language === "mk" ? "Сите права задржани." : language === "en" ? "All rights reserved." : language === "ru" ? "Все права защищены." : language === "uk" ? "Всі права захищені." : "Sva prava zadržana."}<br />
-            Razvija: <a href="mailto:getclients.studio@gmail.com" className="hover:text-foreground">GetClients</a>
-          </p>
+
+          <a
+            href="https://getclients.agency/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center justify-center gap-2 text-xs text-muted-foreground hover:text-foreground transition md:justify-end"
+          >
+            <span>Design by</span>
+            <span className="relative inline-flex items-center">
+              <span className="absolute inset-0 -m-1 rounded-lg bg-primary/20 blur-sm animate-pulse group-hover:bg-primary/40 transition" />
+              <span className="relative font-display font-bold text-foreground tracking-tight">GetClients</span>
+            </span>
+          </a>
         </div>
 
+        <p className="mt-4 text-center text-[11px] text-muted-foreground md:hidden">
+          © {new Date().getFullYear()} Poruke.app
+        </p>
       </footer>
+
     </div>
   );
 };

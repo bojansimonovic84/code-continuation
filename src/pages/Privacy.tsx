@@ -27,33 +27,25 @@ const Privacy = () => (
         </section>
 
         <section>
-          <h2 className="text-xl font-bold">3. Procesori podataka</h2>
-          <ul className="list-disc pl-5 space-y-1">
-            <li><b>Supabase</b> — hosting baze i autentifikacija</li>
-            <li><b>Google Gemini (Lovable AI)</b> — generisanje poruka</li>
-            <li><b>Stripe</b> — obrada plaćanja (mi ne čuvamo podatke o kartici)</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold">4. Tvoja prava (GDPR)</h2>
+          <h2 className="text-xl font-bold">3. Tvoja prava (GDPR)</h2>
           <p>Imaš pravo na uvid, izmenu i brisanje svojih podataka. Zahtev šalji na <a className="text-primary" href="mailto:getclients.studio@gmail.com">getclients.studio@gmail.com</a> i odgovorićemo u roku od 30 dana.</p>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold">5. Kolačići</h2>
+          <h2 className="text-xl font-bold">4. Kolačići</h2>
           <p>Koristimo isključivo neophodne kolačiće za rad sesije (autentifikacija). Ne koristimo marketinške ili analitičke kolačiće trećih strana.</p>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold">6. Bezbednost</h2>
-          <p>Komunikacija je šifrovana (HTTPS). Pristup bazi je ograničen Row-Level Security politikama tako da svaki korisnik vidi samo svoje podatke.</p>
+          <h2 className="text-xl font-bold">5. Bezbednost</h2>
+          <p>Komunikacija je šifrovana (HTTPS). Pristup podacima je ograničen tako da svaki korisnik vidi samo svoje podatke.</p>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold">7. Kontakt</h2>
+          <h2 className="text-xl font-bold">6. Kontakt</h2>
           <p>Aplikaciju razvija agencija GetClients. Email: <a className="text-primary" href="mailto:getclients.studio@gmail.com">getclients.studio@gmail.com</a></p>
         </section>
+
       </div>
     </div>
   </div>
