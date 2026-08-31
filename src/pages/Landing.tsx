@@ -44,6 +44,18 @@ const Landing = () => {
     setIsVisible(true);
   }, []);
 
+  const handleContact = async () => {
+    const email = "getclients.studio@gmail.com";
+    try {
+      await navigator.clipboard.writeText(email);
+      toast.success("Email kopiran", { description: email });
+    } catch {
+      toast.info("Kontakt email", { description: email });
+    }
+    window.open(`mailto:${email}?subject=Poruke.app%20-%20upit`, "_blank");
+  };
+
+
   const handleStartClick = () => {
     // If user is already logged in, go to app
     if (user) {
