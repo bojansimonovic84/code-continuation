@@ -284,6 +284,29 @@ export default function Admin() {
           </CardContent>
         </Card>
       </main>
+
+      <AlertDialog open={confirm !== null} onOpenChange={(o) => !o && setConfirm(null)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Brisanje naloga</AlertDialogTitle>
+            <AlertDialogDescription>
+              Ovo trajno briše {confirm?.label} i sve njihove poruke. Radnja se ne može poništiti.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel disabled={deleting !== null}>Odustani</AlertDialogCancel>
+            <AlertDialogAction
+              onClick={(e) => {
+                e.preventDefault();
+                runDelete();
+              }}
+              disabled={deleting !== null}
+            >
+              {deleting !== null ? "Brisanje…" : "Obriši"}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
