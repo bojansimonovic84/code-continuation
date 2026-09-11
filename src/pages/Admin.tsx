@@ -74,8 +74,37 @@ export default function Admin() {
   const stats = useMemo(() => {
     const paying = rows.filter((r) => r.subscribed || r.is_lifetime_premium).length;
     const active = rows.filter((r) => r.message_count > 0).length;
-    return { total: rows.length, paying, active };
+    const mustPay = rows.filter(
+      (r) => !r.subscribed && !r.is_lifetime_premium && r.message_count >= FREE_LIMIT
+    ).length;
+    return { total: rows.length, paying, active, mustPay };
   }, [rows]);
+
+  const runDelete = async () => {
+    if (!confirm) return;
+    const isAll = confirm.ids === "all";
+    setDeleting(isAll ? "all" : (confirm.ids as string[])[0]);
+    try {
+      const { data, error } = await supabase.functions.invoke("admin-delete-users", {
+        body: isAll ? { all: true } : { user_ids: confirm.ids },
+      });
+      if (error) throw error;
+      toast({
+        title: "Obrisano",
+        description: `Obrisano naloga: ${data?.deleted ?? 0}${data?.failed ? `, neuspešno: ${data.failed}` : ""}`,
+      });
+      await load();
+    } catch (err) {
+      toast({
+        title: "Greška",
+        description: err instanceof Error ? err.message : "Pokušaj ponovo.",
+        variant: "destructive",
+      });
+    } finally {
+      setDeleting(null);
+      setConfirm(null);
+    }
+  };
 
   if (loading || checking) {
     return (
