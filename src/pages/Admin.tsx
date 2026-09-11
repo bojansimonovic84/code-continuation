@@ -138,7 +138,7 @@ export default function Admin() {
       </header>
 
       <main className="px-4 pb-16 max-w-5xl mx-auto space-y-4">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <Card>
             <CardHeader className="pb-2 flex-row items-center justify-between space-y-0">
               <CardTitle className="text-sm text-muted-foreground">Ukupno naloga</CardTitle>
@@ -160,16 +160,35 @@ export default function Admin() {
             </CardHeader>
             <CardContent className="text-2xl font-bold">{stats.paying}</CardContent>
           </Card>
+          <Card>
+            <CardHeader className="pb-2 flex-row items-center justify-between space-y-0">
+              <CardTitle className="text-sm text-muted-foreground">Potrošili besplatne</CardTitle>
+              <AlertTriangle className="w-4 h-4 text-muted-foreground" />
+            </CardHeader>
+            <CardContent className="text-2xl font-bold">{stats.mustPay}</CardContent>
+          </Card>
         </div>
 
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-          <Input
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-            placeholder="Pretraga po emailu…"
-            className="pl-10"
-          />
+        <div className="flex items-center gap-2">
+          <div className="relative flex-1">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+            <Input
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              placeholder="Pretraga po emailu…"
+              className="pl-10"
+            />
+          </div>
+          <Button
+            variant="destructive"
+            size="sm"
+            disabled={busy || rows.length === 0 || deleting !== null}
+            onClick={() => setConfirm({ ids: "all", label: "sve naloge (osim tvog)" })}
+            className="gap-1 shrink-0"
+          >
+            {deleting === "all" ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
+            <span className="hidden sm:inline">Obriši sve</span>
+          </Button>
         </div>
 
         <Card>
