@@ -198,17 +198,18 @@ export default function Admin() {
                 <tr className="text-left text-muted-foreground">
                   <th className="p-3 font-medium">Email</th>
                   <th className="p-3 font-medium">Registrovan</th>
-                  <th className="p-3 font-medium">Poruke</th>
+                  <th className="p-3 font-medium">Besplatne poruke</th>
                   <th className="p-3 font-medium">Poslednja aktivnost</th>
                   <th className="p-3 font-medium">Status</th>
+                  <th className="p-3 font-medium text-right">Akcija</th>
                 </tr>
               </thead>
               <tbody>
                 {busy && (
-                  <tr><td colSpan={5} className="p-6 text-center text-muted-foreground">Učitavanje…</td></tr>
+                  <tr><td colSpan={6} className="p-6 text-center text-muted-foreground">Učitavanje…</td></tr>
                 )}
                 {!busy && filtered.length === 0 && (
-                  <tr><td colSpan={5} className="p-6 text-center text-muted-foreground">Nema rezultata.</td></tr>
+                  <tr><td colSpan={6} className="p-6 text-center text-muted-foreground">Nema rezultata.</td></tr>
                 )}
                 {!busy && filtered.map((r) => (
                   <tr key={r.user_id} className="border-b border-border/60 last:border-0">
