@@ -220,7 +220,29 @@ export default function Admin() {
                       )}
                     </td>
                     <td className="p-3 whitespace-nowrap text-muted-foreground">{fmt(r.signed_up_at)}</td>
-                    <td className="p-3 font-medium">{r.message_count}</td>
+                    <td className="p-3">
+                      {r.is_lifetime_premium || r.subscribed ? (
+                        <span className="font-medium">{r.message_count} <span className="text-muted-foreground text-xs">(neograničeno)</span></span>
+                      ) : (
+                        <div className="space-y-1 min-w-[110px]">
+                          <div className="font-medium">
+                            {Math.min(r.message_count, FREE_LIMIT)}/{FREE_LIMIT}
+                            {r.message_count > FREE_LIMIT && (
+                              <span className="text-muted-foreground text-xs"> (ukupno {r.message_count})</span>
+                            )}
+                          </div>
+                          <div className="h-1.5 w-full rounded-full bg-muted overflow-hidden">
+                            <div
+                              className={`h-full rounded-full ${r.message_count >= FREE_LIMIT ? "bg-destructive" : "bg-primary"}`}
+                              style={{ width: `${Math.min(100, (r.message_count / FREE_LIMIT) * 100)}%` }}
+                            />
+                          </div>
+                          {r.message_count >= FREE_LIMIT && (
+                            <span className="text-xs text-destructive font-medium">mora da plati</span>
+                          )}
+                        </div>
+                      )}
+                    </td>
                     <td className="p-3 whitespace-nowrap text-muted-foreground">
                       {fmt(r.last_message_at ?? r.last_sign_in_at)}
                     </td>
