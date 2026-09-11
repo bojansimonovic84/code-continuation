@@ -46,6 +46,8 @@ export default function Admin() {
   const [rows, setRows] = useState<AdminUser[]>([]);
   const [busy, setBusy] = useState(true);
   const [q, setQ] = useState("");
+  const [deleting, setDeleting] = useState<string | null>(null);
+  const [confirm, setConfirm] = useState<{ ids: string[] | "all"; label: string } | null>(null);
 
   useEffect(() => {
     if (!loading && !user) navigate("/auth");
