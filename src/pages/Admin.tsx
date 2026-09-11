@@ -7,7 +7,20 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Crown, RefreshCw, Search, Users, CreditCard, MessageSquareText } from "lucide-react";
+import { ArrowLeft, Crown, RefreshCw, Search, Users, CreditCard, MessageSquareText, Trash2, Loader2, AlertTriangle } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
+
+const FREE_LIMIT = 5;
 
 type AdminUser = {
   user_id: string;
@@ -33,6 +46,8 @@ export default function Admin() {
   const [rows, setRows] = useState<AdminUser[]>([]);
   const [busy, setBusy] = useState(true);
   const [q, setQ] = useState("");
+  const [deleting, setDeleting] = useState<string | null>(null);
+  const [confirm, setConfirm] = useState<{ ids: string[] | "all"; label: string } | null>(null);
 
   useEffect(() => {
     if (!loading && !user) navigate("/auth");
@@ -59,8 +74,37 @@ export default function Admin() {
   const stats = useMemo(() => {
     const paying = rows.filter((r) => r.subscribed || r.is_lifetime_premium).length;
     const active = rows.filter((r) => r.message_count > 0).length;
-    return { total: rows.length, paying, active };
+    const mustPay = rows.filter(
+      (r) => !r.subscribed && !r.is_lifetime_premium && r.message_count >= FREE_LIMIT
+    ).length;
+    return { total: rows.length, paying, active, mustPay };
   }, [rows]);
+
+  const runDelete = async () => {
+    if (!confirm) return;
+    const isAll = confirm.ids === "all";
+    setDeleting(isAll ? "all" : (confirm.ids as string[])[0]);
+    try {
+      const { data, error } = await supabase.functions.invoke("admin-delete-users", {
+        body: isAll ? { all: true } : { user_ids: confirm.ids },
+      });
+      if (error) throw error;
+      toast({
+        title: "Obrisano",
+        description: `Obrisano naloga: ${data?.deleted ?? 0}${data?.failed ? `, neuspešno: ${data.failed}` : ""}`,
+      });
+      await load();
+    } catch (err) {
+      toast({
+        title: "Greška",
+        description: err instanceof Error ? err.message : "Pokušaj ponovo.",
+        variant: "destructive",
+      });
+    } finally {
+      setDeleting(null);
+      setConfirm(null);
+    }
+  };
 
   if (loading || checking) {
     return (
@@ -94,7 +138,7 @@ export default function Admin() {
       </header>
 
       <main className="px-4 pb-16 max-w-5xl mx-auto space-y-4">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <Card>
             <CardHeader className="pb-2 flex-row items-center justify-between space-y-0">
               <CardTitle className="text-sm text-muted-foreground">Ukupno naloga</CardTitle>
@@ -116,16 +160,35 @@ export default function Admin() {
             </CardHeader>
             <CardContent className="text-2xl font-bold">{stats.paying}</CardContent>
           </Card>
+          <Card>
+            <CardHeader className="pb-2 flex-row items-center justify-between space-y-0">
+              <CardTitle className="text-sm text-muted-foreground">Potrošili besplatne</CardTitle>
+              <AlertTriangle className="w-4 h-4 text-muted-foreground" />
+            </CardHeader>
+            <CardContent className="text-2xl font-bold">{stats.mustPay}</CardContent>
+          </Card>
         </div>
 
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-          <Input
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-            placeholder="Pretraga po emailu…"
-            className="pl-10"
-          />
+        <div className="flex items-center gap-2">
+          <div className="relative flex-1">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+            <Input
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              placeholder="Pretraga po emailu…"
+              className="pl-10"
+            />
+          </div>
+          <Button
+            variant="destructive"
+            size="sm"
+            disabled={busy || rows.length === 0 || deleting !== null}
+            onClick={() => setConfirm({ ids: "all", label: "sve naloge (osim tvog)" })}
+            className="gap-1 shrink-0"
+          >
+            {deleting === "all" ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
+            <span className="hidden sm:inline">Obriši sve</span>
+          </Button>
         </div>
 
         <Card>
@@ -135,17 +198,18 @@ export default function Admin() {
                 <tr className="text-left text-muted-foreground">
                   <th className="p-3 font-medium">Email</th>
                   <th className="p-3 font-medium">Registrovan</th>
-                  <th className="p-3 font-medium">Poruke</th>
+                  <th className="p-3 font-medium">Besplatne poruke</th>
                   <th className="p-3 font-medium">Poslednja aktivnost</th>
                   <th className="p-3 font-medium">Status</th>
+                  <th className="p-3 font-medium text-right">Akcija</th>
                 </tr>
               </thead>
               <tbody>
                 {busy && (
-                  <tr><td colSpan={5} className="p-6 text-center text-muted-foreground">Učitavanje…</td></tr>
+                  <tr><td colSpan={6} className="p-6 text-center text-muted-foreground">Učitavanje…</td></tr>
                 )}
                 {!busy && filtered.length === 0 && (
-                  <tr><td colSpan={5} className="p-6 text-center text-muted-foreground">Nema rezultata.</td></tr>
+                  <tr><td colSpan={6} className="p-6 text-center text-muted-foreground">Nema rezultata.</td></tr>
                 )}
                 {!busy && filtered.map((r) => (
                   <tr key={r.user_id} className="border-b border-border/60 last:border-0">
@@ -156,7 +220,29 @@ export default function Admin() {
                       )}
                     </td>
                     <td className="p-3 whitespace-nowrap text-muted-foreground">{fmt(r.signed_up_at)}</td>
-                    <td className="p-3 font-medium">{r.message_count}</td>
+                    <td className="p-3">
+                      {r.is_lifetime_premium || r.subscribed ? (
+                        <span className="font-medium">{r.message_count} <span className="text-muted-foreground text-xs">(neograničeno)</span></span>
+                      ) : (
+                        <div className="space-y-1 min-w-[110px]">
+                          <div className="font-medium">
+                            {Math.min(r.message_count, FREE_LIMIT)}/{FREE_LIMIT}
+                            {r.message_count > FREE_LIMIT && (
+                              <span className="text-muted-foreground text-xs"> (ukupno {r.message_count})</span>
+                            )}
+                          </div>
+                          <div className="h-1.5 w-full rounded-full bg-muted overflow-hidden">
+                            <div
+                              className={`h-full rounded-full ${r.message_count >= FREE_LIMIT ? "bg-destructive" : "bg-primary"}`}
+                              style={{ width: `${Math.min(100, (r.message_count / FREE_LIMIT) * 100)}%` }}
+                            />
+                          </div>
+                          {r.message_count >= FREE_LIMIT && (
+                            <span className="text-xs text-destructive font-medium">mora da plati</span>
+                          )}
+                        </div>
+                      )}
+                    </td>
                     <td className="p-3 whitespace-nowrap text-muted-foreground">
                       {fmt(r.last_message_at ?? r.last_sign_in_at)}
                     </td>
@@ -174,6 +260,23 @@ export default function Admin() {
                         <Badge variant="outline">Samo nalog</Badge>
                       )}
                     </td>
+                    <td className="p-3 text-right">
+                      {r.user_id !== user?.id && (
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="text-destructive hover:text-destructive"
+                          disabled={deleting !== null}
+                          onClick={() => setConfirm({ ids: [r.user_id], label: r.email ?? "ovaj nalog" })}
+                        >
+                          {deleting === r.user_id ? (
+                            <Loader2 className="w-4 h-4 animate-spin" />
+                          ) : (
+                            <Trash2 className="w-4 h-4" />
+                          )}
+                        </Button>
+                      )}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -181,6 +284,29 @@ export default function Admin() {
           </CardContent>
         </Card>
       </main>
+
+      <AlertDialog open={confirm !== null} onOpenChange={(o) => !o && setConfirm(null)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Brisanje naloga</AlertDialogTitle>
+            <AlertDialogDescription>
+              Ovo trajno briše {confirm?.label} i sve njihove poruke. Radnja se ne može poništiti.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel disabled={deleting !== null}>Odustani</AlertDialogCancel>
+            <AlertDialogAction
+              onClick={(e) => {
+                e.preventDefault();
+                runDelete();
+              }}
+              disabled={deleting !== null}
+            >
+              {deleting !== null ? "Brisanje…" : "Obriši"}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
