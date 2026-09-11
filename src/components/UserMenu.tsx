@@ -1,8 +1,9 @@
 import { useAuth } from "@/contexts/AuthContext";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useIsAdmin } from "@/hooks/useIsAdmin";
 import { Button } from "@/components/ui/button";
 import { UsageIndicator } from "./UsageIndicator";
-import { LogOut, User, Crown, Settings, Loader2 } from "lucide-react";
+import { LogOut, User, Crown, Settings, Loader2, Cog } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
