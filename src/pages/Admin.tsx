@@ -260,6 +260,23 @@ export default function Admin() {
                         <Badge variant="outline">Samo nalog</Badge>
                       )}
                     </td>
+                    <td className="p-3 text-right">
+                      {r.user_id !== user?.id && (
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="text-destructive hover:text-destructive"
+                          disabled={deleting !== null}
+                          onClick={() => setConfirm({ ids: [r.user_id], label: r.email ?? "ovaj nalog" })}
+                        >
+                          {deleting === r.user_id ? (
+                            <Loader2 className="w-4 h-4 animate-spin" />
+                          ) : (
+                            <Trash2 className="w-4 h-4" />
+                          )}
+                        </Button>
+                      )}
+                    </td>
                   </tr>
                 ))}
               </tbody>
