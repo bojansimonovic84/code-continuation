@@ -19,6 +19,7 @@ interface UserMenuProps {
 export function UserMenu({ messageCount, isSubscribed, onSubscriptionChange }: UserMenuProps) {
   const { user, signOut } = useAuth();
   const { t } = useLanguage();
+  const { isAdmin } = useIsAdmin();
   const navigate = useNavigate();
   const [showSubscribe, setShowSubscribe] = useState(false);
   const [loadingPortal, setLoadingPortal] = useState(false);
@@ -57,6 +58,18 @@ export function UserMenu({ messageCount, isSubscribed, onSubscriptionChange }: U
   return (
     <div className="flex items-center gap-2">
       <UsageIndicator messageCount={messageCount} isSubscribed={isSubscribed} />
+      {isAdmin && (
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => navigate("/admin")}
+          title="Admin"
+          className="gap-1 px-2 sm:px-3"
+        >
+          <Cog className="w-4 h-4" />
+          <span className="hidden sm:inline text-xs">Admin</span>
+        </Button>
+      )}
       {isSubscribed ? (
         <Button variant="ghost" size="sm" onClick={openPortal} disabled={loadingPortal} title="Upravljaj pretplatom">
           {loadingPortal ? <Loader2 className="w-4 h-4 animate-spin" /> : <Settings className="w-4 h-4" />}
